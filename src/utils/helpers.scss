@@ -1,0 +1,24 @@
+@mixin breakpoint($size) {
+  @if $size == s {
+    @media (min-width: 640px) {
+      @content;
+    }
+  } @else if $size == m {
+    @media (min-width: 960px) {
+      @content;
+    }
+  } @else if $size == l {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+}
+
+@mixin font-face($name, $filename, $weight: 400, $style: normal, $ext: woff2) {
+  @font-face {
+    font-family: quote($name);
+    font-weight: $weight;
+    font-style: $style;
+    src: url(quote("../fonts/" + $filename + "." + $ext)) format(quote($ext));
+  }
+}

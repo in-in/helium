@@ -1,0 +1,47 @@
+{
+  "name": "helium",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "serve": "gatsby serve",
+    "start": "npm run develop",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "browserslist": [
+    "last 2 versions and > 0.4%",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "autoprefixer": "9.5.1",
+    "gatsby": "2.3.22",
+    "gatsby-plugin-manifest": "2.0.29",
+    "gatsby-plugin-react-helmet": "3.0.12",
+    "gatsby-plugin-react-svg": "2.1.1",
+    "gatsby-plugin-robots-txt": "1.4.0",
+    "gatsby-plugin-sass": "2.0.11",
+    "node-sass": "4.11.0",
+    "postcss-normalize": "7.0.1",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-helmet": "5.2.0"
+  },
+  "devDependencies": {
+    "browserslist": "4.5.4",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-import": "2.17.1",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react-hooks": "1.6.0",
+    "prettier": "1.17.0",
+    "stylelint": "10.0.0",
+    "stylelint-config-recommended-scss": "3.2.0",
+    "stylelint-order": "2.2.1",
+    "stylelint-scss": "3.5.4"
+  }
+}
