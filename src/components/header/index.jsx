@@ -14,7 +14,7 @@ const Header = () => (
     <Container>
       <HeaderContent>
         <Logo />
-        <Button>click</Button>
+        <Button>Get started</Button>
       </HeaderContent>
     </Container>
   </header>

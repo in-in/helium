@@ -6,12 +6,18 @@
 @include font-face(Roboto, roboto-v19-latin-regular);
 @include font-face(Roboto, roboto-v19-latin-500, 500);
 
-$blue_cobalt: hsl(229, 45%, 43%);
+$blue_cobalt: hsl(229, 68%, 34%);
 $blue_cornflower: adjust-color(
   $blue_cobalt,
   $hue: -2,
   $saturation: 55%,
   $lightness: 27%
+);
+$blue_dodger: adjust-color(
+  $blue_cobalt,
+  $hue: -8,
+  $saturation: 55%,
+  $lightness: 18%
 );
 $blue_gray: adjust-color($blue_cobalt, $saturation: -18%, $lightness: 22%);
 $blue_haze: adjust-color(
@@ -30,9 +36,12 @@ $blue_periwinkle: adjust-color(
 :root {
   --blue_cobalt: #{$blue_cobalt};
   --blue_cornflower: #{$blue_cornflower};
+  --blue_dodger: #{$blue_dodger};
   --blue_gray: #{$blue_gray};
   --blue_haze: #{$blue_haze};
   --blue_periwinkle: #{$blue_periwinkle};
+
+  --border_radius: 4px;
 }
 
 body {
