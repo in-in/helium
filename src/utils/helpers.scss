@@ -23,6 +23,10 @@
   }
 }
 
+@function hover($color) {
+  @return darken($color, 10%);
+}
+
 @mixin divider {
   &::after {
     position: absolute;

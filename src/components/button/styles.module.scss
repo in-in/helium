@@ -1,4 +1,5 @@
 @import "styles/theme";
+@import "utils/helpers";
 
 .button {
   padding-top: 16px;
@@ -18,7 +19,7 @@
 
   &:hover,
   &:focus {
-    background-color: darken($blue_periwinkle, 10%);
-    color: darken($blue_dodger, 10%);
+    background-color: hover($blue_periwinkle);
+    color: hover($blue_dodger);
   }
 }
