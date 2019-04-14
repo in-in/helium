@@ -1,11 +1,3 @@
-@import "utils/helpers";
-
-@include font-face(Quicksand, quicksand-v9-latin-regular);
-@include font-face(Quicksand, quicksand-v9-latin-500, 500);
-@include font-face(Quicksand, quicksand-v9-latin-700, 700);
-@include font-face(Roboto, roboto-v19-latin-regular);
-@include font-face(Roboto, roboto-v19-latin-500, 500);
-
 $blue_cobalt: hsl(229, 68%, 34%);
 $blue_cornflower: adjust-color(
   $blue_cobalt,
@@ -44,6 +36,8 @@ $white: hsl(0, 0%, 100%);
   --white: #{$white};
 
   --border_radius: 4px;
+  --transition_duration: 0.4s;
+  --transition_easeing: ease-in-out;
 }
 
 body {
