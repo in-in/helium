@@ -32,6 +32,7 @@ $blue_periwinkle: adjust-color(
   $saturation: 55%,
   $lightness: 48%
 );
+$white: hsl(0, 0%, 100%);
 
 :root {
   --blue_cobalt: #{$blue_cobalt};
@@ -40,11 +41,13 @@ $blue_periwinkle: adjust-color(
   --blue_gray: #{$blue_gray};
   --blue_haze: #{$blue_haze};
   --blue_periwinkle: #{$blue_periwinkle};
+  --white: #{$white};
 
   --border_radius: 4px;
 }
 
 body {
+  background-color: var(--white);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
