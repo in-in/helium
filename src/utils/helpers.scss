@@ -23,10 +23,6 @@
   }
 }
 
-@function hover($color) {
-  @return darken($color, 10%);
-}
-
 @mixin divider {
   &::after {
     position: absolute;
@@ -34,7 +30,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--blue_periwinkle);
+    background-color: var(--blue_cornflower_l_20);
     content: "";
   }
 }

@@ -7,8 +7,8 @@
   padding-bottom: 16px;
   padding-left: 24px;
   border-radius: var(--border_radius);
-  background-color: var(--blue_periwinkle);
-  color: var(--blue_dodger);
+  background-color: var(--blue_cornflower_l_20);
+  color: var(--blue_cobalt);
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -19,7 +19,7 @@
 
   &:hover,
   &:focus {
-    background-color: hover($blue_periwinkle);
-    color: hover($blue_dodger);
+    background-color: var(--blue_cornflower_l_10);
+    color: var(--blue_cobalt_d_20);
   }
 }
