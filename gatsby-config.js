@@ -17,9 +17,17 @@ module.exports = {
         background_color: `#3c4e9f`,
         theme_color: `#3c4e9f`,
         display: `standalone`,
-        icon: `src/images/favicon.png`,
+        icon: `src/images/favicon/favicon.png`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {

@@ -1,0 +1,11 @@
+.social {
+  display: flex;
+
+  &__item {
+    display: block;
+  }
+
+  &__icon {
+    width: 1.5em;
+  }
+}
