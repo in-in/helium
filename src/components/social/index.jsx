@@ -18,20 +18,18 @@ const Social = () => {
   `)
 
   return (
-    <div className={st.social}>
+    <ul className={st.social}>
       {data.allSocialItemsJson.edges.map(item => (
-        <a
-          href={item.node.url}
-          key={item.node.name}
-          className={st.social__item}
-        >
-          <Icon
-            filename={`social/${item.node.name}`}
-            classname={st.social__icon}
-          />
-        </a>
+        <li className={st.social__item}>
+          <a href={item.node.url} key={item.node.name}>
+            <Icon
+              filename={`social/${item.node.name}`}
+              classname={st.social__icon}
+            />
+          </a>
+        </li>
       ))}
-    </div>
+    </ul>
   )
 }
 

@@ -1,13 +1,10 @@
-@import "styles/theme";
-@import "utils/helpers";
-
 .button {
   padding-top: 16px;
   padding-right: 24px;
   padding-bottom: 16px;
   padding-left: 24px;
   border-radius: var(--border_radius);
-  background-color: var(--blue_cornflower_l_20);
+  background-color: var(--blue_cornflower--l_20);
   color: var(--blue_cobalt);
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
@@ -19,7 +16,7 @@
 
   &:hover,
   &:focus {
-    background-color: var(--blue_cornflower_l_10);
-    color: var(--blue_cobalt_d_20);
+    background-color: var(--blue_cornflower--l_10);
+    color: var(--blue_cobalt--d_20);
   }
 }

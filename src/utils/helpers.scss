@@ -30,7 +30,18 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--blue_cornflower_l_20);
+    background-color: var(--blue_cornflower--l_20);
     content: "";
+  }
+}
+
+@mixin hover {
+  transition-property: background-color, color, fill;
+  transition-duration: var(--transition_duration);
+  transition-timing-function: var(--transition_easeing);
+
+  &:hover,
+  &:focus {
+    @content;
   }
 }

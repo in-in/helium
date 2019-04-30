@@ -1,21 +1,28 @@
 $blue_cobalt: hsl(229, 68%, 34%);
-$blue_cobalt_d_20: darken($blue_cobalt, 20);
+$blue_cobalt--d_20: darken($blue_cobalt, 20);
 $blue_cornflower: adjust-color(
   $blue_cobalt,
   $hue: -2,
   $saturation: 55%,
   $lightness: 27%
 );
-$blue_cornflower_l_20: lighten($blue_cornflower, 20);
-$blue_cornflower_l_10: lighten($blue_cornflower, 10);
+$blue_cornflower--l_20: lighten($blue_cornflower, 20);
+$blue_cornflower--l_10: lighten($blue_cornflower, 10);
+$gray_french: adjust-color(
+  $blue_cobalt,
+  $hue: -3,
+  $saturation: -55%,
+  $lightness: 41%
+);
 $white: hsl(0, 0%, 100%);
 
 :root {
   --blue_cobalt: #{$blue_cobalt};
   --blue_cornflower: #{$blue_cornflower};
-  --blue_cobalt_d_20: #{$blue_cobalt_d_20};
-  --blue_cornflower_l_20: #{$blue_cornflower_l_20};
-  --blue_cornflower_l_10: #{$blue_cornflower_l_10};
+  --blue_cobalt--d_20: #{$blue_cobalt--d_20};
+  --blue_cornflower--l_20: #{$blue_cornflower--l_20};
+  --blue_cornflower--l_10: #{$blue_cornflower--l_10};
+  --gray_french: #{$gray_french};
   --white: #{$white};
 
   --border_radius: 4px;
