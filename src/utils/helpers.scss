@@ -45,3 +45,15 @@
     @content;
   }
 }
+
+@function t_c($target, $context, $unit: p) {
+  $result: ($target / $context) * 100;
+
+  @if $unit == p {
+    @return ($result + 0%);
+  } @else if $unit == vw {
+    @return ($result + 0vw);
+  } @else {
+    @error "Unknown unit #{$unit}.";
+  }
+}

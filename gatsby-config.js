@@ -32,6 +32,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: [`src/`],
+        precision: 10,
         cssLoaderOptions: {
           localIdentName: `[local]_[hash:base64:5]`,
         },
