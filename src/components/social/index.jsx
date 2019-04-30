@@ -20,8 +20,8 @@ const Social = () => {
   return (
     <ul className={st.social}>
       {data.allSocialItemsJson.edges.map(item => (
-        <li className={st.social__item}>
-          <a href={item.node.url} key={item.node.name}>
+        <li className={st.social__item} key={item.node.name}>
+          <a href={item.node.url}>
             <Icon
               filename={`social/${item.node.name}`}
               classname={st.social__icon}
