@@ -1,22 +1,22 @@
+@import "utils/helpers";
+
 .button {
+  --button_background_color: var(--blue_cornflower--l_20);
+  --button_color: var(--blue_cobalt);
   padding-top: 16px;
   padding-right: 24px;
   padding-bottom: 16px;
   padding-left: 24px;
   border-radius: var(--border_radius);
-  background-color: var(--blue_cornflower--l_20);
-  color: var(--blue_cobalt);
+  background-color: var(--button_background_color);
+  color: var(--button_color);
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  transition-property: background-color, color;
-  transition-duration: var(--transition_duration);
-  transition-timing-function: var(--transition_easeing);
 
-  &:hover,
-  &:focus {
-    background-color: var(--blue_cornflower--l_10);
-    color: var(--blue_cobalt--d_20);
+  @include hover() {
+    --button_background_color: var(--blue_cornflower--l_10);
+    --button_color: var(--blue_cobalt--d_20);
   }
 }
