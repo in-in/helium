@@ -35,13 +35,23 @@
   }
 }
 
-@mixin hover {
+@mixin hover_transition() {
   transition-property: background-color, color, fill;
   transition-duration: var(--transition_duration);
   transition-timing-function: var(--transition_easeing);
+}
 
-  &:hover,
-  &:focus {
+@mixin hover($selector: null, $combinator: " ") {
+  @if $selector {
+    #{$selector} {
+      @include hover_transition;
+    }
+  } @else {
+    @include hover_transition;
+  }
+
+  &:hover#{$combinator}#{$selector},
+  &:focus#{$combinator}#{$selector} {
     @content;
   }
 }

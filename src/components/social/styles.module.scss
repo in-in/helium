@@ -1,11 +1,18 @@
 @import "utils/helpers";
 
 .social {
+  $root: &;
   display: flex;
 
   &__item {
     display: block;
     margin: 0.5em;
+  }
+
+  &__link {
+    @include hover(#{$root}__icon) {
+      --icon_fill_color: var(--blue_cornflower);
+    }
   }
 
   &__icon {
@@ -14,9 +21,5 @@
     box-sizing: content-box;
     padding: 0.5em;
     fill: var(--icon_fill_color);
-
-    @include hover {
-      --icon_fill_color: var(--blue_cornflower);
-    }
   }
 }
