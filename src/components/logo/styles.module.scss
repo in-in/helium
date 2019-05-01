@@ -1,8 +1,9 @@
 .logo {
   display: block;
+  padding: 0.5em;
 
   &__icon {
-    width: 26px;
+    width: 1.5em;
     fill: var(--blue_cornflower);
   }
 }

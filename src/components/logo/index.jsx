@@ -1,10 +1,10 @@
 import React from "react"
 import st from "./styles.module.scss"
-import Icon from "./logo.svg"
+import Icon from "../icon"
 
 const Logo = () => (
   <a href="/" className={st.logo}>
-    <Icon className={st.logo__icon} />
+    <Icon filename="logo" classname={st.logo__icon} />
   </a>
 )
 
