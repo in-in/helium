@@ -44,6 +44,7 @@
     "stylelint": "10.0.1",
     "stylelint-a11y": "1.1.11",
     "stylelint-config-recommended-scss": "3.3.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.1.0",
     "stylelint-order": "3.0.0",
     "stylelint-scss": "3.6.1"
   }

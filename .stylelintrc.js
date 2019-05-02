@@ -1,7 +1,13 @@
 module.exports = {
   extends: ["stylelint-config-recommended-scss", "stylelint-a11y/recommended"],
-  plugins: ["stylelint-scss", "stylelint-order", "stylelint-a11y"],
+  plugins: [
+    "stylelint-a11y",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-order",
+    "stylelint-scss",
+  ],
   rules: {
+    "plugin/declaration-block-no-ignored-properties": true,
     "order/order": [["custom-properties", "declarations"]],
     "order/properties-order": [
       "position",
