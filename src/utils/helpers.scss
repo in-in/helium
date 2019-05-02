@@ -67,3 +67,7 @@
     @error "Unknown unit #{$unit}.";
   }
 }
+
+@function em($px, $context) {
+  @return calc((#{$px} / #{$context}) * 1em);
+}

@@ -3,15 +3,16 @@
 .button {
   --button_background_color: var(--blue_cornflower--l_20);
   --button_color: var(--blue_cobalt);
-  padding-top: 16px;
-  padding-right: 24px;
-  padding-bottom: 16px;
-  padding-left: 24px;
+  --button_font_size: 13;
+  padding-top: em(16, var(--button_font_size));
+  padding-right: em(24, var(--button_font_size));
+  padding-bottom: em(16, var(--button_font_size));
+  padding-left: em(24, var(--button_font_size));
   border-radius: var(--border_radius);
   background-color: var(--button_background_color);
   color: var(--button_color);
   font-family: "Quicksand", sans-serif;
-  font-size: 14px;
+  font-size: calc(var(--button_font_size) * 1px);
   font-weight: 700;
   cursor: pointer;
 
