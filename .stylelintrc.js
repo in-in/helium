@@ -5,8 +5,10 @@ module.exports = {
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-order",
     "stylelint-scss",
+    "stylelint-use-nesting",
   ],
   rules: {
+    "csstools/use-nesting": "always",
     "plugin/declaration-block-no-ignored-properties": true,
     "order/order": [["custom-properties", "declarations"]],
     "order/properties-order": [
