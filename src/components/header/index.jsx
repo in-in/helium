@@ -14,9 +14,15 @@ const Header = () => (
   <header className={st.header}>
     <Container>
       <HeaderContent>
-        <Logo />
-        <Social />
-        <Button>Get started</Button>
+        <div className={st.header__itemLogo}>
+          <Logo />
+        </div>
+        <div className={st.header__itemSocial}>
+          <Social />
+        </div>
+        <div className={st.header__itemButton}>
+          <Button>Get started</Button>
+        </div>
       </HeaderContent>
     </Container>
   </header>

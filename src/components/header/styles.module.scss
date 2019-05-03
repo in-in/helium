@@ -1,18 +1,51 @@
 @import "utils/helpers";
 
 .header {
+  $root: &;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 64px;
-  height: 5.5556vw;
+  padding-top: 1em;
+  padding-bottom: 1em;
 
   @include divider;
 
   &__content {
+    display: grid;
+    grid-template-areas:
+      "logo button"
+      "social social";
+    gap: 1em;
+
+    @include breakpoint(s) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    $wrapper: str-slice(#{&}, 2);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    &--logo {
+      composes: $wrapper;
+      grid-area: logo;
+      justify-content: flex-start;
+    }
+
+    &--social {
+      composes: $wrapper;
+      grid-area: social;
+      justify-content: flex-end;
+
+      @include breakpoint(s) {
+        flex-grow: 1;
+        padding-right: 2em;
+      }
+    }
+
+    &--button {
+      composes: $wrapper;
+      grid-area: button;
+      justify-content: flex-end;
+    }
   }
 }
