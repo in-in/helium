@@ -1,9 +1,10 @@
 import React from "react"
+import Heading from "../heading"
 import st from "./styles.module.scss"
 
 const Hero = () => (
   <div className={st.hero}>
-    <p>hero block</p>
+    <Heading title="plan your life" subtitle="Increase your productivity" />
   </div>
 )
 
