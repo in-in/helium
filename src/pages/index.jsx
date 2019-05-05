@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 import Section from "../components/section"
 import Hero from "../components/hero"
+import Software from "../components/software"
 
 const IndexPage = () => (
   <Layout>
@@ -11,7 +12,9 @@ const IndexPage = () => (
       <Hero />
     </Section>
     <Section>partners</Section>
-    <Section>apps</Section>
+    <Section>
+      <Software />
+    </Section>
     <Section>about</Section>
     <Section>stats</Section>
     <Section>blog</Section>
