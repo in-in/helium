@@ -1,11 +1,34 @@
 @import "utils/helpers";
 
 .heading {
+  $root: &;
   color: var(--blue_cobalt--l_10);
   text-align: center;
+
+  &--left {
+    composes: str-slice(#{$root}, 2);
+    text-align: left;
+  }
 }
 
 .title {
+  $title: &;
+  font-family: "Quicksand", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.2;
+
+  &--big {
+    composes: str-slice(#{$title}, 2);
+    font-size: 48px;
+  }
+}
+
+.strong {
+  font-weight: 500;
+}
+
+.subtitle {
   --button_font_size: 12;
   margin-bottom: em(8, var(--button_font_size));
   text-transform: uppercase;
@@ -13,15 +36,4 @@
   font-size: calc(var(--button_font_size) * 1px);
   font-weight: 500;
   line-height: 1.5;
-}
-
-.subtitle {
-  font-family: "Quicksand", sans-serif;
-  font-size: 48px;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-.strong {
-  font-weight: 500;
 }

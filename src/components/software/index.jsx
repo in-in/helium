@@ -5,8 +5,9 @@ import Heading from "../heading"
 const Software = () => (
   <div className={st.software}>
     <Heading
-      title="Desktop and mobile app"
-      subtitle={{ text: `Plan and manage`, strongs: [0, 2] }}
+      subtitle="Desktop and mobile app"
+      title={{ text: `Plan and manage`, strongs: [0, 2] }}
+      left
     />
   </div>
 )

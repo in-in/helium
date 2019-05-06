@@ -19,19 +19,30 @@ const strongify = ({ text, strongs }) => {
   return result
 }
 
-const Heading = ({ title, subtitle }) => (
-  <div className={st.heading}>
-    <h1 className={st.title}>{title}</h1>
-    <p className={st.subtitle}>{strongify(subtitle)}</p>
+const Heading = ({ title, subtitle, left, h1 }) => (
+  <div className={left ? st.headingLeft : st.heading}>
+    <p className={st.subtitle}>{subtitle}</p>
+    {h1 ? (
+      <h1 className={st.titleBig}>{strongify(title)}</h1>
+    ) : (
+      <h2 className={st.title}>{strongify(title)}</h2>
+    )}
   </div>
 )
 
 Heading.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.shape({
+  subtitle: PropTypes.string.isRequired,
+  title: PropTypes.shape({
     text: PropTypes.string,
     strongs: PropTypes.array,
   }).isRequired,
+  left: PropTypes.bool,
+  h1: PropTypes.bool,
+}
+
+Heading.defaultProps = {
+  left: false,
+  h1: false,
 }
 
 export default Heading
