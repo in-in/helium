@@ -21,7 +21,12 @@ const Social = () => {
     <ul className={st.social}>
       {data.allSocialItemsJson.edges.map(item => (
         <li className={st.social__item} key={item.node.name}>
-          <a href={item.node.url} className={st.social__link}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={item.node.url}
+            className={st.social__link}
+          >
             <Icon
               filename={`social/${item.node.name}`}
               classname={st.social__icon}
