@@ -4,7 +4,10 @@ import st from "./styles.module.scss"
 
 const Hero = () => (
   <div className={st.hero}>
-    <Heading title="plan your life" subtitle="Increase your productivity" />
+    <Heading
+      title="plan your life"
+      subtitle={{ text: `Increase your productivity`, strongs: [2] }}
+    />
   </div>
 )
 
