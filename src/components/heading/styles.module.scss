@@ -16,7 +16,7 @@
   font-family: "Quicksand", sans-serif;
   font-size: 36px;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.15;
 
   &--big {
     composes: str-slice(#{$title}, 2);

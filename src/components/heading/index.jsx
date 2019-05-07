@@ -2,9 +2,9 @@ import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import st from "./styles.module.scss"
 
-const strongify = ({ text, strongs }) => {
+const strongify = ({ text, accent }) => {
   const result = text.split(` `).map((word, i) => {
-    if (strongs && strongs.some(el => el === i)) {
+    if (accent && accent.some(el => el === i)) {
       return (
         // eslint-disable-next-line react/no-array-index-key
         <strong key={i} className={st.strong}>
@@ -19,10 +19,10 @@ const strongify = ({ text, strongs }) => {
   return result
 }
 
-const Heading = ({ title, subtitle, left, h1 }) => (
+const Heading = ({ title, subtitle, left, big }) => (
   <div className={left ? st.headingLeft : st.heading}>
     <p className={st.subtitle}>{subtitle}</p>
-    {h1 ? (
+    {big ? (
       <h1 className={st.titleBig}>{strongify(title)}</h1>
     ) : (
       <h2 className={st.title}>{strongify(title)}</h2>
@@ -34,15 +34,15 @@ Heading.propTypes = {
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.shape({
     text: PropTypes.string,
-    strongs: PropTypes.array,
+    accent: PropTypes.array,
   }).isRequired,
   left: PropTypes.bool,
-  h1: PropTypes.bool,
+  big: PropTypes.bool,
 }
 
 Heading.defaultProps = {
   left: false,
-  h1: false,
+  big: false,
 }
 
 export default Heading

@@ -1,0 +1,22 @@
+[
+  {
+    "section": "hero",
+    "subtitle": "plan your life",
+    "title": {
+      "text": "Increase your productivity",
+      "accent": [2]
+    },
+    "big": true,
+    "left": false
+  },
+  {
+    "section": "software",
+    "subtitle": "Desktop and mobile app",
+    "title": {
+      "text": "Plan and manage",
+      "accent": [0, 2]
+    },
+    "big": false,
+    "left": true
+  }
+]

@@ -1,15 +1,43 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Heading from "../heading"
 import st from "./styles.module.scss"
 
-const Hero = () => (
-  <div className={st.hero}>
-    <Heading
-      subtitle="plan your life"
-      title={{ text: `Increase your productivity`, strongs: [2] }}
-      h1
-    />
-  </div>
-)
+const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allSectionHeadingsJson(filter: { section: { eq: "hero" } }) {
+        edges {
+          node {
+            subtitle
+            title {
+              text
+              accent
+            }
+            big
+            left
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <div className={st.hero}>
+      {data.allSectionHeadingsJson.edges.map(item => (
+        <Heading
+          key={item.node.subtitle}
+          subtitle={item.node.subtitle}
+          title={{
+            text: item.node.title.text,
+            accent: item.node.title.accent,
+          }}
+          big={item.node.big}
+          left={item.node.left}
+        />
+      ))}
+    </div>
+  )
+}
 
 export default Hero

@@ -5,7 +5,7 @@ import Icon from "../icon"
 
 const Social = () => {
   const data = useStaticQuery(graphql`
-    query SocialItemsQuery {
+    query {
       allSocialItemsJson(sort: { fields: name, order: ASC }) {
         edges {
           node {
