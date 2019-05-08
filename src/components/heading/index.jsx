@@ -7,7 +7,7 @@ const strongify = ({ text, accent }) => {
     if (accent && accent.some(el => el === i)) {
       return (
         // eslint-disable-next-line react/no-array-index-key
-        <strong key={i} className={st.strong}>
+        <strong key={i} className={st.accent}>
           {word}
           {` `}
         </strong>
