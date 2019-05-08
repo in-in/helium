@@ -26,16 +26,7 @@ const Software = () => {
     <section className={st.software}>
       <Container>
         {data.allSectionHeadingsJson.edges.map(item => (
-          <Heading
-            key={item.node.subtitle}
-            subtitle={item.node.subtitle}
-            title={{
-              text: item.node.title.text,
-              accent: item.node.title.accent,
-            }}
-            big={item.node.big}
-            left={item.node.left}
-          />
+          <Heading key={item.node.subtitle} {...item.node} />
         ))}
       </Container>
     </section>
