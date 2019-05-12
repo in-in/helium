@@ -19,9 +19,9 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "apexcharts": "3.6.10",
+    "apexcharts": "3.6.11",
     "autoprefixer": "9.5.1",
-    "gatsby": "2.4.2",
+    "gatsby": "2.4.3",
     "gatsby-plugin-manifest": "2.1.1",
     "gatsby-plugin-react-helmet": "3.0.12",
     "gatsby-plugin-react-svg": "2.1.1",
@@ -48,7 +48,7 @@
     "plop": "2.3.0",
     "prettier": "1.17.0",
     "stylelint": "10.0.1",
-    "stylelint-a11y": "1.1.11",
+    "stylelint-a11y": "1.2.0",
     "stylelint-config-recommended-scss": "3.3.0",
     "stylelint-declaration-block-no-ignored-properties": "2.1.0",
     "stylelint-order": "3.0.0",
