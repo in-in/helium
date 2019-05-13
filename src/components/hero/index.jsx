@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Chart from "react-apexcharts"
 import Container from "../container"
 import Heading from "../heading"
+import Text from "../text"
 import st from "./styles.module.scss"
 
 const chartColors = {
@@ -121,24 +122,15 @@ const Hero = () => {
         {data.allSectionHeadingsJson.edges.map(item => (
           <div className={st.hero__heading} key={item.node.subtitle}>
             <Heading {...item.node} />
-            <p
-              style={{
-                maxWidth: `60ch`,
-                paddingTop: `3.33333vw`,
-                marginLeft: `auto`,
-                marginRight: `auto`,
-                fontSize: `15px`,
-                lineHeight: `1.8`,
-                textAlign: `center`,
-                color: `#2440bc`,
-              }}
-            >
-              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
-              Usu atqui laudem an, insolens gubergren similique est cu. Et vel
-              modus congue vituperata.
-            </p>
           </div>
         ))}
+        <div className={st.hero__text}>
+          <Text>
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+            atqui laudem an, insolens gubergren similique est cu. Et vel modus
+            congue vituperata.
+          </Text>
+        </div>
       </Container>
       <Chart
         className={st.hero_chart}

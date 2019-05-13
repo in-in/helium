@@ -14,6 +14,15 @@
     filter: drop-shadow(0 0 0.5em white);
   }
 
+  &__text {
+    max-width: 60ch;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: t_c(48, 1440, vw);
+    text-align: center;
+    filter: drop-shadow(0 0 0.5em white);
+  }
+
   &_chart {
     --hero_chart_gap: 12px;
     position: absolute;

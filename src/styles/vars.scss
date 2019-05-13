@@ -17,4 +17,6 @@ $gray_french: adjust-color(
   $saturation: -55%,
   $lightness: 41%
 );
+$gray_french--d_20: darken($gray_french, 20);
+
 $white: hsl(0, 0%, 100%);
