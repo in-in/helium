@@ -14,6 +14,7 @@ module.exports = {
         ignoreProperties: ["composes"],
       },
     ],
+    "length-zero-no-unit": true,
     "rule-empty-line-before": [
       "always-multi-line",
       {
@@ -27,6 +28,7 @@ module.exports = {
     "order/properties-order": [
       [
         "composes",
+        "content",
         "position",
         "top",
         "right",
@@ -163,7 +165,6 @@ module.exports = {
         "list-style-type",
         "list-style-image",
         "quotes",
-        "content",
         "counter-increment",
         "counter-reset",
         "vertical-align",

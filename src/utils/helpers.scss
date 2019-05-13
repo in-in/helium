@@ -25,13 +25,13 @@
 
 @mixin divider {
   &::after {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 1px;
     background-color: var(--blue_cornflower--l_20);
-    content: "";
   }
 }
 
@@ -62,7 +62,7 @@
   @if $unit == p {
     @return ($result + 0%);
   } @else if $unit == vw {
-    @return ($result + 0vw);
+    @return ($result + 0);
   } @else {
     @error "Unknown unit #{$unit}.";
   }
