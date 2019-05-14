@@ -62,7 +62,7 @@
   @if $unit == p {
     @return ($result + 0%);
   } @else if $unit == vw {
-    @return ($result + 0);
+    @return ($result + vw);
   } @else {
     @error "Unknown unit #{$unit}.";
   }
