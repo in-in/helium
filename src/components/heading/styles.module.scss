@@ -13,19 +13,14 @@
 
 .title {
   $title: &;
-  --title_font_size: 24;
   font-family: "Quicksand", sans-serif;
-  font-size: calc(var(--title_font_size) * 1px);
+  font-size: locks(24, 40);
   font-weight: 300;
   line-height: 1.15;
 
-  @include breakpoint(s) {
-    --title_font_size: 40;
-  }
-
   &--big {
     composes: str-slice(#{$title}, 2);
-    font-size: calc((var(--title_font_size) * 1px) + 8px);
+    font-size: locks(32, 48);
   }
 }
 

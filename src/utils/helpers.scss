@@ -1,16 +1,12 @@
+@import "styles/vars";
+
 @mixin breakpoint($size) {
-  @if $size == s {
-    @media (min-width: 640px) {
+  @if map-get($sizes, $size) {
+    @media (min-width: map-get($sizes, $size) + px) {
       @content;
     }
-  } @else if $size == m {
-    @media (min-width: 960px) {
-      @content;
-    }
-  } @else if $size == l {
-    @media (min-width: 1280px) {
-      @content;
-    }
+  } @else {
+    @error "Unknown size: #{$size}";
   }
 }
 
@@ -70,4 +66,15 @@
 
 @function em($px, $context) {
   @return calc((#{$px} / #{$context}) * 1em);
+}
+
+@function locks(
+  $font_min,
+  $font_max,
+  $viewport_min: map-get($sizes, xs),
+  $viewport_max: map-get($sizes, xl)
+) {
+  $m: ($font_max - $font_min) / ($viewport_max - $viewport_min);
+  $b: ($font_min - $m * $viewport_min) / $base_font;
+  @return calc(#{$m} * 100vw + #{$b + rem});
 }

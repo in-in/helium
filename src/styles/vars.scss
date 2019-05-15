@@ -1,3 +1,13 @@
+$base_font: 16;
+
+$sizes: (
+  "xs": 320,
+  "s": 640,
+  "m": 960,
+  "l": 1280,
+  "xl": 1440
+);
+
 $blue_cobalt: hsl(229, 68%, 34%);
 $blue_cobalt--d_20: darken($blue_cobalt, 20);
 $blue_cobalt--l_10: lighten($blue_cobalt, 10);
