@@ -31,6 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
+        data: `@import "styles/helpers";`,
         includePaths: [`src/`],
         precision: 10,
         cssLoaderOptions: {

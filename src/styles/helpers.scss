@@ -1,4 +1,4 @@
-@import "styles/vars";
+@import "vars";
 
 @mixin breakpoint($size) {
   @if map-get($sizes, $size) {
