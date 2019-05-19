@@ -4,6 +4,7 @@ import Chart from "react-apexcharts"
 import Container from "../container"
 import Heading from "../heading"
 import Text from "../text"
+import Icon from "../icon"
 import st from "./styles.module.scss"
 
 const chartColors = {
@@ -97,6 +98,8 @@ const chartData = {
   ],
 }
 
+const clouds = Array(13).fill(0)
+
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -133,13 +136,21 @@ const Hero = () => {
         </div>
       </Container>
       <Chart
-        className={st.hero_chart}
+        className={st.hero__chart}
         options={chartData.options}
         series={chartData.series}
         type="area"
         width="100%"
         height="100%"
       />
+      {clouds.map((item, i) => (
+        <Icon
+          filename="cloud"
+          // eslint-disable-next-line react/no-array-index-key
+          key={i}
+          classname={`${st[`hero__cloud${i + 1}`]}`}
+        />
+      ))}
     </section>
   )
 }
