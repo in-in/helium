@@ -74,8 +74,8 @@ $clouds: (
   $hero_height: 560;
   position: relative;
   min-height: ($hero_height / 2) * 1px;
-  max-height: t_c($hero_height, 1440, vw);
-  height: t_c($hero_height, 1440, vw);
+  max-height: t_c($hero_height, map-get($sizes, xl), vw);
+  height: t_c($hero_height, map-get($sizes, xl), vw);
   overflow: hidden;
 
   @at-root %item {
@@ -84,7 +84,7 @@ $clouds: (
 
   &__heading {
     @extend %item;
-    padding-top: t_c(72, 1440, vw);
+    padding-top: t_c(72, map-get($sizes, xl), vw);
   }
 
   &__text {
