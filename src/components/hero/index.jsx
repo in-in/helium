@@ -68,26 +68,10 @@ const chartData = {
     tooltip: {
       enabled: false,
     },
-    xaxis: {
-      type: `numeric`,
-      labels: {
-        show: false,
-      },
-      axisBorder: {
-        show: false,
-      },
-    },
     yaxis: {
       show: false,
       min: 0,
       max: 100,
-    },
-    grid: {
-      show: false,
-      padding: {
-        left: 0,
-        right: 0,
-      },
     },
   },
   series: [
