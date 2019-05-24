@@ -19,15 +19,15 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "apexcharts": "3.6.11",
+    "apexcharts": "3.6.12",
     "autoprefixer": "9.5.1",
-    "gatsby": "2.5.5",
+    "gatsby": "2.7.1",
     "gatsby-plugin-manifest": "2.1.1",
     "gatsby-plugin-react-helmet": "3.0.12",
     "gatsby-plugin-react-svg": "2.1.1",
     "gatsby-plugin-robots-txt": "1.4.0",
     "gatsby-plugin-sass": "2.0.11",
-    "gatsby-source-filesystem": "2.0.36",
+    "gatsby-source-filesystem": "2.0.37",
     "gatsby-transformer-json": "2.1.11",
     "node-sass": "4.12.0",
     "postcss-normalize": "7.0.1",
