@@ -19,15 +19,27 @@
   }
 }
 
-@mixin divider {
+@mixin divider($top: true, $bottom: true) {
+  position: relative;
+
+  &::before,
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
     left: 0;
     width: 100%;
     height: 1px;
     background-color: var(--blue_cornflower--l_20);
+  }
+
+  &::before {
+    top: 0;
+    display: if($top, null, none);
+  }
+
+  &::after {
+    bottom: 0;
+    display: if($bottom, null, none);
   }
 }
 
