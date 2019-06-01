@@ -1,5 +1,77 @@
 .customers {
-  height: 144px;
+  $root: &;
+  display: flex;
+  align-items: center;
+  height: locks(120, 144);
 
   @include divider;
+
+  &__wrapper {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      min-width: 1em;
+      min-height: 100%;
+    }
+
+    &::before {
+      left: 0;
+      background-image: linear-gradient(to left, transparent, var(--white));
+    }
+
+    &::after {
+      right: 0;
+      background-image: linear-gradient(to right, transparent, var(--white));
+    }
+
+    @include breakpoint(m) {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1em;
+
+    @include breakpoint(m) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-right: locks(40, 80);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0.2em;
+
+    @include hover(#{$root}__logo) {
+      --logo_fill_color: var(--blue_cornflower);
+    }
+  }
+
+  &__logo {
+    --logo_fill_color: var(--gray_french);
+    width: locks(100, 120);
+    fill: var(--logo_fill_color);
+  }
 }
