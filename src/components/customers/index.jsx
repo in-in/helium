@@ -21,6 +21,7 @@ const Customers = () => {
   return (
     <section className={st.customers}>
       <Container>
+        <h2 className="sr">Customers</h2>
         <div className={st.customers__wrapper}>
           <ul className={st.customers__list}>
             {data.allCustomersJson.edges.map(item => (

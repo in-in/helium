@@ -90,3 +90,14 @@
   $b: ($font_min - $m * $viewport_min) / $base_font;
   @return calc(#{$m} * 100vw + #{$b + rem});
 }
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
