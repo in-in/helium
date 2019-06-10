@@ -81,13 +81,13 @@
 }
 
 @function locks(
-  $font_min,
-  $font_max,
+  $size_min,
+  $size_max,
   $viewport_min: map-get($sizes, xs),
   $viewport_max: map-get($sizes, xl)
 ) {
-  $m: ($font_max - $font_min) / ($viewport_max - $viewport_min);
-  $b: ($font_min - $m * $viewport_min) / $base_font;
+  $m: ($size_max - $size_min) / ($viewport_max - $viewport_min);
+  $b: ($size_min - $m * $viewport_min) / $base_font;
   @return calc(#{$m} * 100vw + #{$b + rem});
 }
 
