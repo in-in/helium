@@ -80,6 +80,10 @@
   @return calc((#{$px} / #{$context}) * 1em);
 }
 
+@function rem($px, $base: $base_font) {
+  @return calc((#{$px} / #{$base_font}) * 1rem);
+}
+
 @function locks(
   $size_min,
   $size_max,
