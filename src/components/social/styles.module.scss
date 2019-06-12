@@ -4,7 +4,7 @@
 
   &__item {
     display: block;
-    margin: 0.5em;
+    margin: locks(8, 9);
   }
 
   &__link {
@@ -15,9 +15,9 @@
 
   &__icon {
     --icon_fill_color: var(--gray_french);
-    width: 1em;
+    width: locks(16, 17);
     box-sizing: content-box;
-    padding: 0.5em;
+    padding: locks(8, 9);
     fill: var(--icon_fill_color);
   }
 }
