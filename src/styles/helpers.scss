@@ -86,9 +86,12 @@
   $viewport_min: map-get($sizes, xs),
   $viewport_max: map-get($sizes, xl)
 ) {
-  $m: ($size_max - $size_min) / ($viewport_max - $viewport_min);
-  $b: ($size_min - $m * $viewport_min) / $base_font;
-  @return calc(#{$m} * 100vw + #{$b + rem});
+  $size_increase: ($size_max - $size_min);
+  $viewport_increase: ($viewport_max - $viewport_min);
+  $slope: ($size_increase) / ($viewport_increase);
+  $initial_size: ($size_min - $slope * $viewport_min) / $base_font;
+
+  @return calc(#{$slope * 100}vw + #{$initial_size}rem);
 }
 
 .sr {
