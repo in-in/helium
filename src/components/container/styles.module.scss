@@ -2,6 +2,6 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: t_c(16, map-get($sizes, xs), vw);
-  padding-left: t_c(16, map-get($sizes, xs), vw);
+  padding-right: t2c(16, map-get($sizes, xs), vw);
+  padding-left: t2c(16, map-get($sizes, xs), vw);
 }

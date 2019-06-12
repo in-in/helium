@@ -64,13 +64,13 @@
   }
 }
 
-@function t_c($target, $context, $unit: p) {
-  $result: ($target / $context) * 100;
+@function t2c($target, $context, $unit: p) {
+  $result: calc((#{$target} / #{$context}) * 100);
 
   @if $unit == p {
-    @return ($result + 0%);
+    @return (calc(#{$result} * 1%));
   } @else if $unit == vw {
-    @return ($result + vw);
+    @return (calc(#{$result} * 1vw));
   } @else {
     @error "Unknown unit #{$unit}.";
   }

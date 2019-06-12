@@ -74,8 +74,8 @@ $clouds: (
   $hero_height: 560;
   position: relative;
   min-height: ($hero_height / 2) * 1px;
-  max-height: t_c($hero_height, map-get($sizes, xl), vw);
-  height: t_c($hero_height, map-get($sizes, xl), vw);
+  max-height: t2c($hero_height, map-get($sizes, xl), vw);
+  height: t2c($hero_height, map-get($sizes, xl), vw);
   overflow: hidden;
 
   @at-root %item {
@@ -86,7 +86,7 @@ $clouds: (
 
   &__heading {
     @extend %item;
-    padding-top: t_c(72, map-get($sizes, xl), vw);
+    padding-top: t2c(72, map-get($sizes, xl), vw);
   }
 
   &__text {
@@ -124,22 +124,22 @@ $clouds: (
         composes: str-slice(#{$cloud}, 2);
         top: if(
           map-get($item, top),
-          #{t_c(map-get($item, top), $hero_height)},
+          #{t2c(map-get($item, top), $hero_height)},
           null
         );
         right: if(
           map-get($item, right),
-          #{t_c(map-get($item, right), map-get($sizes, xl), vw)},
+          #{t2c(map-get($item, right), map-get($sizes, xl), vw)},
           null
         );
         bottom: if(
           map-get($item, bottom),
-          #{t_c(map-get($item, bottom), $hero_height)},
+          #{t2c(map-get($item, bottom), $hero_height)},
           null
         );
         left: if(
           map-get($item, left),
-          #{t_c(map-get($item, left), map-get($sizes, xl), vw)},
+          #{t2c(map-get($item, left), map-get($sizes, xl), vw)},
           null
         );
         width: locks($width / 3, $width);
