@@ -1,20 +1,29 @@
 .button {
   --button_background_color: var(--blue_cornflower--l_20);
   --button_color: var(--blue_cobalt);
-  padding-top: locks(16, 17);
-  padding-right: locks(24, 25);
-  padding-bottom: locks(16, 17);
-  padding-left: locks(24, 25);
-  border-radius: var(--border_radius);
+  --button_padding_t_b: #{locks(8, 16)};
+  --button_padding_r_l: #{locks(16, 24)};
+  padding-top: var(--button_padding_t_b);
+  padding-right: var(--button_padding_r_l);
+  padding-bottom: var(--button_padding_t_b);
+  padding-left: var(--button_padding_r_l);
+  border-radius: rem(var(--border_radius));
   background-color: var(--button_background_color);
   color: var(--button_color);
   font-family: "Quicksand", sans-serif;
-  font-size: locks(13, 14);
+  font-size: rem(13);
   font-weight: 700;
   cursor: pointer;
 
   @include hover() {
     --button_background_color: var(--blue_cornflower--l_10);
     --button_color: var(--blue_cobalt--d_20);
+  }
+
+  @include breakpoint(xl) {
+    --button_padding_t_b: #{t2c(16, map-get($sizes, xl), vw)};
+    --button_padding_r_l: #{t2c(24, map-get($sizes, xl), vw)};
+    border-radius: t2c(var(--border_radius), map-get($sizes, xl), vw);
+    font-size: t2c(13, map-get($sizes, xl), vw);
   }
 }
