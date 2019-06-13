@@ -4,7 +4,7 @@
 
   &__item {
     display: block;
-    margin: locks(8, 9);
+    margin: rem(8);
   }
 
   &__link {
@@ -15,9 +15,20 @@
 
   &__icon {
     --icon_fill_color: var(--gray_french);
-    width: locks(16, 17);
+    width: rem(16);
     box-sizing: content-box;
-    padding: locks(8, 9);
+    padding: rem(8);
     fill: var(--icon_fill_color);
+  }
+
+  @include breakpoint(xl) {
+    &__item {
+      margin: t2c(8, map-get($sizes, xl), vw);
+    }
+
+    &__icon {
+      width: t2c(16, map-get($sizes, xl), vw);
+      padding: t2c(8, map-get($sizes, xl), vw);
+    }
   }
 }

@@ -1,9 +1,17 @@
 .logo {
   display: block;
-  padding: 0.5em;
+  padding: rem(8);
 
   &__icon {
-    width: locks(22, 24);
+    width: rem(24);
     fill: var(--blue_cornflower);
+  }
+
+  @include breakpoint(xl) {
+    padding: t2c(8, map-get($sizes, xl), vw);
+
+    &__icon {
+      width: t2c(24, map-get($sizes, xl), vw);
+    }
   }
 }

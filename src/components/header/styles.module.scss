@@ -1,7 +1,12 @@
 .header {
   $root: &;
-  padding-top: locks(15, 16);
-  padding-bottom: locks(15, 16);
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+
+  @include breakpoint(xl) {
+    padding-top: t2c(16, map-get($sizes, xl), vw);
+    padding-bottom: t2c(16, map-get($sizes, xl), vw);
+  }
 
   @include divider($top: false);
 
