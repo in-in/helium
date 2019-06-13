@@ -96,6 +96,11 @@ $clouds: (
     margin-left: auto;
     padding-top: locks(12, 48);
     text-align: center;
+
+    @include breakpoint(xl) {
+      padding-top: t2c(48, map-get($sizes, xl), vw);
+      font-size: t2c(16, map-get($sizes, xl), vw);
+    }
   }
 
   &__chart {

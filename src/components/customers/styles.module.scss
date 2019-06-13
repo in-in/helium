@@ -4,6 +4,10 @@
   align-items: center;
   height: locks(120, 144);
 
+  @include breakpoint(xl) {
+    height: t2c(144, map-get($sizes, xl), vw);
+  }
+
   @include divider;
 
   &__wrapper {
@@ -47,6 +51,10 @@
     @include breakpoint(m) {
       justify-content: center;
     }
+
+    @include breakpoint(xl) {
+      padding: t2c(16, map-get($sizes, xl), vw);
+    }
   }
 
   &__item {
@@ -54,6 +62,10 @@
     flex-shrink: 0;
     align-items: center;
     margin-right: locks(40, 80);
+
+    @include breakpoint(xl) {
+      margin-right: t2c(80, map-get($sizes, xl), vw);
+    }
 
     &:last-child {
       margin-right: 0;
@@ -64,6 +76,10 @@
     display: block;
     padding: 0.2em;
 
+    @include breakpoint(xl) {
+      padding: t2c(3.2, map-get($sizes, xl), vw);
+    }
+
     @include hover(#{$root}__logo) {
       --logo_fill_color: var(--blue_cornflower);
     }
@@ -73,5 +89,9 @@
     --logo_fill_color: var(--gray_french);
     width: locks(100, 120);
     fill: var(--logo_fill_color);
+
+    @include breakpoint(xl) {
+      width: t2c(120, map-get($sizes, xl), vw);
+    }
   }
 }

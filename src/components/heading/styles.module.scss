@@ -16,9 +16,17 @@
   font-weight: 300;
   line-height: 1.15;
 
+  @include breakpoint(xl) {
+    font-size: t2c(40, map-get($sizes, xl), vw);
+  }
+
   &--big {
     composes: str-slice(#{$title}, 2);
     font-size: locks(32, 48);
+
+    @include breakpoint(xl) {
+      font-size: t2c(48, map-get($sizes, xl), vw);
+    }
   }
 }
 
@@ -34,4 +42,8 @@
   font-size: locks($subtitle_font_min, 13);
   font-weight: 500;
   line-height: 1.5;
+
+  @include breakpoint(xl) {
+    font-size: t2c(13, map-get($sizes, xl), vw);
+  }
 }
