@@ -119,14 +119,16 @@ const Hero = () => {
           </Text>
         </div>
       </Container>
-      <Chart
-        className={st.hero__chart}
-        options={chartData.options}
-        series={chartData.series}
-        type="area"
-        width="100%"
-        height="100%"
-      />
+      {typeof document !== `undefined` && (
+        <Chart
+          className={st.hero__chart}
+          options={chartData.options}
+          series={chartData.series}
+          type="area"
+          width="100%"
+          height="100%"
+        />
+      )}
       {clouds.map((item, i) => (
         <Icon
           filename="cloud"
