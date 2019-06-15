@@ -46,7 +46,7 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    padding: 1em;
+    padding: rem(16);
 
     @include breakpoint(m) {
       justify-content: center;
@@ -74,10 +74,10 @@
 
   &__link {
     display: block;
-    padding: 0.2em;
+    padding: rem(4);
 
     @include breakpoint(xl) {
-      padding: t2c(3.2, map-get($sizes, xl), vw);
+      padding: t2c(4, map-get($sizes, xl), vw);
     }
 
     @include hover(#{$root}__logo) {
@@ -87,10 +87,12 @@
 
   &__logo {
     --logo_fill_color: var(--gray_french);
+    max-height: rem(40);
     width: locks(100, 120);
     fill: var(--logo_fill_color);
 
     @include breakpoint(xl) {
+      max-height: t2c(40, map-get($sizes, xl), vw);
       width: t2c(120, map-get($sizes, xl), vw);
     }
   }
