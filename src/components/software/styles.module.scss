@@ -1,3 +1,33 @@
 .software {
-  // keep
+  height: locks(352, 776);
+  padding-top: locks(72, 168);
+  padding-bottom: locks(72, 168);
+
+  @include breakpoint(xl) {
+    height: t2c(776, map-get($sizes, xl), vw);
+    padding-top: t2c(168, map-get($sizes, xl), vw);
+    padding-bottom: t2c(168, map-get($sizes, xl), vw);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-areas:
+      "desc"
+      "showcase";
+    grid-template-columns: 1fr;
+    grid-gap: rem(40);
+
+    @include breakpoint(m) {
+      grid-template-areas: "desc showcase showcase";
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__desc {
+    grid-area: desc;
+  }
+
+  &__showcase {
+    grid-area: showcase;
+  }
 }
