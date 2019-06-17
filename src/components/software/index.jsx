@@ -18,6 +18,7 @@ const Software = () => {
             }
             big
             left
+            caption
           }
         }
       }
@@ -27,16 +28,12 @@ const Software = () => {
     <section className={st.software}>
       <Container>
         <div className={st.software__wrapper}>
-          <div className={st.software__desc}>
-            {data.allSectionHeadingsJson.edges.map(item => (
+          {data.allSectionHeadingsJson.edges.map(item => (
+            <div className={st.software__desc} key={item.node.subtitle}>
               <Heading key={item.node.subtitle} {...item.node} />
-            ))}
-            <Text>
-              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
-              Usu atqui laudem an, insolens gubergren similique est cu. Et vel
-              modus congue vituperata.
-            </Text>
-          </div>
+              <Text key={item.node.caption}>{item.node.caption}</Text>
+            </div>
+          ))}
           <div className={st.software__showcase}>software__showcase</div>
         </div>
       </Container>

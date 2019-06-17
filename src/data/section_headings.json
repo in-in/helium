@@ -7,7 +7,8 @@
       "accent": [2]
     },
     "big": true,
-    "left": false
+    "left": false,
+    "caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata."
   },
   {
     "section": "software",
@@ -17,6 +18,7 @@
       "accent": [0, 2]
     },
     "big": false,
-    "left": true
+    "left": true,
+    "caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat."
   }
 ]

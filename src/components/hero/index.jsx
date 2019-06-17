@@ -97,6 +97,7 @@ const Hero = () => {
             }
             big
             left
+            caption
           }
         }
       }
@@ -105,20 +106,17 @@ const Hero = () => {
 
   return (
     <section className={st.hero}>
-      <Container>
-        {data.allSectionHeadingsJson.edges.map(item => (
+      {data.allSectionHeadingsJson.edges.map(item => (
+        <Container key={item.node.subtitle}>
           <div className={st.hero__heading} key={item.node.subtitle}>
             <Heading {...item.node} />
           </div>
-        ))}
-        <div className={st.hero__text}>
-          <Text>
-            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
-            atqui laudem an, insolens gubergren similique est cu. Et vel modus
-            congue vituperata.
-          </Text>
-        </div>
-      </Container>
+          <div className={st.hero__text}>
+            <Text key={item.node.caption}>{item.node.caption}</Text>
+          </div>
+        </Container>
+      ))}
+
       {typeof document !== `undefined` && (
         <Chart
           className={st.hero__chart}
