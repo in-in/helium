@@ -11,15 +11,7 @@ const Software = () => {
       allSectionHeadingsJson(filter: { section: { eq: "software" } }) {
         edges {
           node {
-            id
-            subtitle
-            title {
-              text
-              accent
-            }
-            big
-            left
-            caption
+            ...sectionHeadings
           }
         }
       }

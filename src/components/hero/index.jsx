@@ -90,15 +90,7 @@ const Hero = () => {
       allSectionHeadingsJson(filter: { section: { eq: "hero" } }) {
         edges {
           node {
-            id
-            subtitle
-            title {
-              text
-              accent
-            }
-            big
-            left
-            caption
+            ...sectionHeadings
           }
         }
       }
