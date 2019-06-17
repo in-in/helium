@@ -21,8 +21,8 @@ const Software = () => {
         <div className={st.software__wrapper}>
           {data.allSectionHeadingsJson.nodes.map(item => (
             <div className={st.software__desc} key={item.id}>
-              <Heading key={item.subtitle} {...item} />
-              <Text key={item.caption}>{item.caption}</Text>
+              <Heading {...item} />
+              <Text>{item.caption}</Text>
             </div>
           ))}
           <div className={st.software__showcase}>software__showcase</div>

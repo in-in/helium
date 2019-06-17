@@ -99,11 +99,11 @@ const Hero = () => {
     <section className={st.hero}>
       {data.allSectionHeadingsJson.nodes.map(item => (
         <Container key={item.id}>
-          <div className={st.hero__heading} key={item.subtitle}>
+          <div className={st.hero__heading}>
             <Heading {...item} />
           </div>
           <div className={st.hero__text}>
-            <Text key={item.caption}>{item.caption}</Text>
+            <Text>{item.caption}</Text>
           </div>
         </Container>
       ))}
