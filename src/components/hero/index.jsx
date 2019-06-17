@@ -90,6 +90,7 @@ const Hero = () => {
       allSectionHeadingsJson(filter: { section: { eq: "hero" } }) {
         edges {
           node {
+            id
             subtitle
             title {
               text
@@ -107,7 +108,7 @@ const Hero = () => {
   return (
     <section className={st.hero}>
       {data.allSectionHeadingsJson.edges.map(item => (
-        <Container key={item.node.subtitle}>
+        <Container key={item.node.id}>
           <div className={st.hero__heading} key={item.node.subtitle}>
             <Heading {...item.node} />
           </div>

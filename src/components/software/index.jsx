@@ -11,6 +11,7 @@ const Software = () => {
       allSectionHeadingsJson(filter: { section: { eq: "software" } }) {
         edges {
           node {
+            id
             subtitle
             title {
               text
@@ -29,7 +30,7 @@ const Software = () => {
       <Container>
         <div className={st.software__wrapper}>
           {data.allSectionHeadingsJson.edges.map(item => (
-            <div className={st.software__desc} key={item.node.subtitle}>
+            <div className={st.software__desc} key={item.node.id}>
               <Heading key={item.node.subtitle} {...item.node} />
               <Text key={item.node.caption}>{item.node.caption}</Text>
             </div>
