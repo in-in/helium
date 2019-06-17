@@ -88,10 +88,8 @@ const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
       allSectionHeadingsJson(filter: { section: { eq: "hero" } }) {
-        edges {
-          node {
-            ...sectionHeadings
-          }
+        nodes {
+          ...sectionHeadings
         }
       }
     }
@@ -99,13 +97,13 @@ const Hero = () => {
 
   return (
     <section className={st.hero}>
-      {data.allSectionHeadingsJson.edges.map(item => (
-        <Container key={item.node.id}>
-          <div className={st.hero__heading} key={item.node.subtitle}>
-            <Heading {...item.node} />
+      {data.allSectionHeadingsJson.nodes.map(item => (
+        <Container key={item.id}>
+          <div className={st.hero__heading} key={item.subtitle}>
+            <Heading {...item} />
           </div>
           <div className={st.hero__text}>
-            <Text key={item.node.caption}>{item.node.caption}</Text>
+            <Text key={item.caption}>{item.caption}</Text>
           </div>
         </Container>
       ))}

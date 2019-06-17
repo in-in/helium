@@ -9,10 +9,8 @@ const Software = () => {
   const data = useStaticQuery(graphql`
     query {
       allSectionHeadingsJson(filter: { section: { eq: "software" } }) {
-        edges {
-          node {
-            ...sectionHeadings
-          }
+        nodes {
+          ...sectionHeadings
         }
       }
     }
@@ -21,10 +19,10 @@ const Software = () => {
     <section className={st.software}>
       <Container>
         <div className={st.software__wrapper}>
-          {data.allSectionHeadingsJson.edges.map(item => (
-            <div className={st.software__desc} key={item.node.id}>
-              <Heading key={item.node.subtitle} {...item.node} />
-              <Text key={item.node.caption}>{item.node.caption}</Text>
+          {data.allSectionHeadingsJson.nodes.map(item => (
+            <div className={st.software__desc} key={item.id}>
+              <Heading key={item.subtitle} {...item} />
+              <Text key={item.caption}>{item.caption}</Text>
             </div>
           ))}
           <div className={st.software__showcase}>software__showcase</div>
