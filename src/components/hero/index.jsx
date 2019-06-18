@@ -102,7 +102,7 @@ const Hero = () => {
           <div className={st.hero__heading}>
             <Heading {...item} />
           </div>
-          <div className={st.hero__text}>
+          <div className={st.hero__caption}>
             <Text>{item.caption}</Text>
           </div>
         </Container>

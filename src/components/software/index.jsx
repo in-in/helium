@@ -22,7 +22,9 @@ const Software = () => {
           {data.allSectionHeadingsJson.nodes.map(item => (
             <div className={st.software__desc} key={item.id}>
               <Heading {...item} />
-              <Text>{item.caption}</Text>
+              <div className={st.software__caption}>
+                <Text>{item.caption}</Text>
+              </div>
             </div>
           ))}
           <div className={st.software__showcase}>software__showcase</div>

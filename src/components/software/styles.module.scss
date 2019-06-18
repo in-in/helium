@@ -30,4 +30,8 @@
   &__showcase {
     grid-area: showcase;
   }
+
+  &__caption {
+    padding-top: locks(12, 48);
+  }
 }

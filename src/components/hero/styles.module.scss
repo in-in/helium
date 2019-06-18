@@ -89,7 +89,7 @@ $clouds: (
     padding-top: t2c(72, map-get($sizes, xl), vw);
   }
 
-  &__text {
+  &__caption {
     @extend %item;
     max-width: 55ch;
     margin-right: auto;
