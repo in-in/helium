@@ -35,7 +35,8 @@ module.exports = {
         includePaths: [`src/`],
         precision: 10,
         cssLoaderOptions: {
-          localIdentName: `[local]_[hash:base64:5]`,
+          localIdentName: `[local]--[hash:base64:5]`,
+          camelCase: false,
         },
         postCssPlugins: [autoprefixer(), postcssNormalize()],
       },

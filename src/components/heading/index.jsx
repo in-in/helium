@@ -20,10 +20,10 @@ const strongify = ({ text, accent }) => {
 }
 
 const Heading = ({ title, subtitle, left, big }) => (
-  <div className={left ? st.headingLeft : st.heading}>
+  <div className={left ? st.heading_left : st.heading}>
     <p className={st.subtitle}>{subtitle}</p>
     {big ? (
-      <h1 className={st.titleBig}>{strongify(title)}</h1>
+      <h1 className={st.title_big}>{strongify(title)}</h1>
     ) : (
       <h2 className={st.title}>{strongify(title)}</h2>
     )}

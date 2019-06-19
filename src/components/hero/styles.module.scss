@@ -124,7 +124,7 @@ $clouds: (
     fill: var(--white);
 
     @each $index, $item in $clouds {
-      &--#{$index} {
+      &_#{$index} {
         $width: map-get($item, width);
         composes: str-slice(#{$cloud}, 2);
         top: if(

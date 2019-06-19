@@ -27,13 +27,13 @@
     display: flex;
     align-items: center;
 
-    &--logo {
+    &_logo {
       composes: $wrapper;
       grid-area: logo;
       justify-content: flex-start;
     }
 
-    &--social {
+    &_social {
       composes: $wrapper;
       grid-area: social;
       justify-content: flex-end;
@@ -44,7 +44,7 @@
       }
     }
 
-    &--button {
+    &_button {
       composes: $wrapper;
       grid-area: button;
       justify-content: flex-end;
