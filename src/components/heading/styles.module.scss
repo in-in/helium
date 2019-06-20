@@ -1,16 +1,16 @@
 .heading {
-  $root: &;
+  $root: compose(&);
   color: var(--blue_cobalt--l_10);
   text-align: center;
 
   &_left {
-    composes: str-slice(#{$root}, 2);
+    composes: $root;
     text-align: left;
   }
 }
 
 .title {
-  $title: &;
+  $title: compose(&);
   font-family: "Quicksand", sans-serif;
   font-size: locks(24, 40);
   font-weight: 300;
@@ -21,7 +21,7 @@
   }
 
   &_big {
-    composes: str-slice(#{$title}, 2);
+    composes: $title;
     font-size: locks(32, 48);
 
     @include breakpoint(xl) {

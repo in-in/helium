@@ -1,5 +1,4 @@
 .header {
-  $root: &;
   padding-top: rem(16);
   padding-bottom: rem(16);
 
@@ -23,7 +22,7 @@
   }
 
   &__item {
-    $wrapper: str-slice(#{&}, 2);
+    $wrapper: compose(&);
     display: flex;
     align-items: center;
 

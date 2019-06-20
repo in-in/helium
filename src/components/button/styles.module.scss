@@ -1,5 +1,5 @@
 .button {
-  $root: &;
+  $root: compose(&);
   border-radius: rem(var(--border_radius));
   font-family: "Quicksand", sans-serif;
   font-size: rem(13);
@@ -24,7 +24,7 @@
     --button_color: var(--blue_cobalt);
     --button_padding_t_b: #{locks(8, 16)};
     --button_padding_r_l: #{locks(16, 24)};
-    composes: str-slice(#{$root}, 2);
+    composes: $root;
     padding-top: var(--button_padding_t_b);
     padding-right: var(--button_padding_r_l);
     padding-bottom: var(--button_padding_t_b);
@@ -34,7 +34,7 @@
   }
 
   &_secondary {
-    composes: str-slice(#{$root}, 2);
+    composes: $root;
     background-color: plum;
   }
 }

@@ -64,6 +64,10 @@
   }
 }
 
+@function compose($classname) {
+  @return str-slice(#{$classname}, 2);
+}
+
 @function t2c($target, $context, $unit: p) {
   $result: calc((#{$target} / #{$context}) * 100);
 

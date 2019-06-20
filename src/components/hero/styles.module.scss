@@ -118,7 +118,7 @@ $clouds: (
   }
 
   &__cloud {
-    $cloud: &;
+    $cloud: compose(&);
     position: absolute;
     z-index: 0;
     fill: var(--white);
@@ -126,7 +126,7 @@ $clouds: (
     @each $index, $item in $clouds {
       &_#{$index} {
         $width: map-get($item, width);
-        composes: str-slice(#{$cloud}, 2);
+        composes: $cloud;
         top: if(
           map-get($item, top),
           #{t2c(map-get($item, top), $hero_height)},
