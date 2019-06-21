@@ -1,27 +1,13 @@
 @import "vars";
 
 :root {
-  --blue_cobalt: #{$blue_cobalt};
-  --blue_cobalt--d_20: #{$blue_cobalt--d_20};
-  --blue_cobalt--l_10: #{$blue_cobalt--l_10};
-
-  --blue_cornflower: #{$blue_cornflower};
-  --blue_cornflower--l_20: #{$blue_cornflower--l_20};
-  --blue_cornflower--l_10: #{$blue_cornflower--l_10};
-
-  --gray_french: #{$gray_french};
-  --gray_french--d_20: #{$gray_french--d_20};
-
-  --white: #{$white};
-
   --border_radius: 4;
-
   --transition_duration: 0.4s;
   --transition_easeing: ease-in-out;
 }
 
 body {
-  background-color: var(--white);
+  background-color: $white;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 400;

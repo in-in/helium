@@ -121,7 +121,7 @@ $clouds: (
     $cloud: compose(&);
     position: absolute;
     z-index: 0;
-    fill: var(--white);
+    fill: $white;
 
     @each $index, $item in $clouds {
       &_#{$index} {

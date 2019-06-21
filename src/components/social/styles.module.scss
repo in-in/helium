@@ -9,12 +9,12 @@
 
   &__link {
     @include hover(#{$root}__icon) {
-      --icon_fill_color: var(--blue_cornflower);
+      --icon_fill_color: #{$blue_cornflower};
     }
   }
 
   &__icon {
-    --icon_fill_color: var(--gray_french);
+    --icon_fill_color: #{$gray_french};
     width: rem(16);
     box-sizing: content-box;
     padding: rem(8);

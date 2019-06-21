@@ -1,16 +1,17 @@
 .button {
+  --button_padding_t_b: #{locks(8, 16)};
+  --button_padding_r_l: #{locks(16, 24)};
   $root: compose(&);
+  padding-top: var(--button_padding_t_b);
+  padding-right: var(--button_padding_r_l);
+  padding-bottom: var(--button_padding_t_b);
+  padding-left: var(--button_padding_r_l);
   border-radius: rem(var(--border_radius));
   font-family: "Quicksand", sans-serif;
   font-size: rem(13);
   font-weight: 700;
   cursor: pointer;
   appearance: none;
-
-  @include hover() {
-    --button_background_color: var(--blue_cornflower--l_10);
-    --button_color: var(--blue_cobalt--d_20);
-  }
 
   @include breakpoint(xl) {
     --button_padding_t_b: #{t2c(16, map-get($sizes, xl), vw)};
@@ -20,21 +21,24 @@
   }
 
   &_primary {
-    --button_background_color: var(--blue_cornflower--l_20);
-    --button_color: var(--blue_cobalt);
-    --button_padding_t_b: #{locks(8, 16)};
-    --button_padding_r_l: #{locks(16, 24)};
+    --button_background_color: #{$blue_cornflower--l_20};
+    --button_color: #{$blue_cobalt};
     composes: $root;
-    padding-top: var(--button_padding_t_b);
-    padding-right: var(--button_padding_r_l);
-    padding-bottom: var(--button_padding_t_b);
-    padding-left: var(--button_padding_r_l);
     background-color: var(--button_background_color);
     color: var(--button_color);
+
+    @include hover() {
+      --button_background_color: #{$blue_cornflower--l_10};
+      --button_color: #{$blue_cobalt--d_20};
+    }
   }
 
   &_secondary {
+    --button_background_color: #{$blue_cobalt--l_20};
     composes: $root;
-    background-color: plum;
+    background-color: var(--button_background_color);
+    // box-shadow: 0 5px 15px rgba(188, 199, 255, 0.75);
+    // box-shadow: 0 5px 15px darken(var(--button_background_color), 10);
+    color: $white;
   }
 }

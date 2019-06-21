@@ -1,6 +1,6 @@
 .heading {
   $root: compose(&);
-  color: var(--blue_cobalt--l_10);
+  color: $blue_cobalt--l_10;
   text-align: center;
 
   &_left {

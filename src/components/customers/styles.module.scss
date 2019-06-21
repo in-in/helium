@@ -25,12 +25,12 @@
 
     &::before {
       left: 0;
-      background-image: linear-gradient(to left, transparent, var(--white));
+      background-image: linear-gradient(to left, transparent, #{$white});
     }
 
     &::after {
       right: 0;
-      background-image: linear-gradient(to right, transparent, var(--white));
+      background-image: linear-gradient(to right, transparent, #{$white});
     }
 
     @include breakpoint(m) {
@@ -81,12 +81,12 @@
     }
 
     @include hover(#{$root}__logo) {
-      --logo_fill_color: var(--blue_cornflower);
+      --logo_fill_color: #{$blue_cornflower};
     }
   }
 
   &__logo {
-    --logo_fill_color: var(--gray_french);
+    --logo_fill_color: #{$gray_french};
     max-height: rem(40);
     width: locks(100, 120);
     fill: var(--logo_fill_color);

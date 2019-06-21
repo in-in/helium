@@ -4,7 +4,7 @@
 
   &__icon {
     width: rem(24);
-    fill: var(--blue_cornflower);
+    fill: $blue_cornflower;
   }
 
   @include breakpoint(xl) {
