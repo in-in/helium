@@ -1,7 +1,7 @@
 .button {
+  $root: compose(&);
   --button_padding_t_b: #{locks(8, 16)};
   --button_padding_r_l: #{locks(16, 24)};
-  $root: compose(&);
   padding-top: var(--button_padding_t_b);
   padding-right: var(--button_padding_r_l);
   padding-bottom: var(--button_padding_t_b);

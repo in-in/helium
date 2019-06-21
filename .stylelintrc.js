@@ -24,7 +24,7 @@ module.exports = {
     ],
     "csstools/use-nesting": "always",
     "plugin/declaration-block-no-ignored-properties": true,
-    "order/order": [["custom-properties", "declarations"]],
+    "order/order": [["dollar-variables", "custom-properties", "declarations"]],
     "order/properties-order": [
       [
         "composes",
@@ -204,11 +204,7 @@ module.exports = {
         "filter",
         "resize",
         "cursor",
-        "nav-index",
-        "nav-up",
-        "nav-right",
-        "nav-down",
-        "nav-left",
+        "appearance",
         "transition",
         "transition-property",
         "transition-duration",
