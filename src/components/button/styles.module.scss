@@ -1,15 +1,19 @@
 .button {
   $root: compose(&);
+  $button_font_size: 13;
   --button_padding_t_b: #{locks(8, 16)};
   --button_padding_r_l: #{locks(16, 24)};
+  display: inline-flex;
+  align-items: center;
   padding-top: var(--button_padding_t_b);
   padding-right: var(--button_padding_r_l);
   padding-bottom: var(--button_padding_t_b);
   padding-left: var(--button_padding_r_l);
   border-radius: rem(var(--border_radius));
   font-family: "Quicksand", sans-serif;
-  font-size: rem(13);
+  font-size: rem($button_font_size);
   font-weight: 700;
+  line-height: 1;
   cursor: pointer;
   appearance: none;
 
@@ -20,25 +24,73 @@
     font-size: t2c(13, map-get($sizes, xl), vw);
   }
 
+  &__icon {
+    width: 1em;
+    margin-left: em(4, $button_font_size);
+    padding: em(3, $button_font_size);
+    fill: currentColor;
+  }
+
   &_primary {
-    --button_background_color: #{$blue_cornflower--l_20};
-    --button_color: #{$blue_cobalt};
     composes: $root;
-    background-color: var(--button_background_color);
-    color: var(--button_color);
+    background-color: $blue_cornflower--l_30;
+    color: $blue_cobalt--l_10;
 
     @include hover() {
-      --button_background_color: #{$blue_cornflower--l_10};
-      --button_color: #{$blue_cobalt--d_20};
+      background-color: $blue_cornflower--l_20;
+      color: $blue_cobalt;
     }
   }
 
   &_secondary {
-    --button_background_color: #{$blue_cobalt--l_20};
     composes: $root;
-    background-color: var(--button_background_color);
-    // box-shadow: 0 5px 15px rgba(188, 199, 255, 0.75);
-    // box-shadow: 0 5px 15px darken(var(--button_background_color), 10);
+    background-color: $blue_cobalt--l_20;
     color: $white;
+
+    @include hover() {
+      background-color: $blue_cobalt--l_10;
+    }
+  }
+
+  &_plain {
+    composes: $root;
+    box-shadow: inset 0 0 0 em(1, $button_font_size) currentColor;
+    color: $blue_cobalt--l_20;
+
+    @include hover() {
+      color: $blue_cobalt--l_10;
+    }
+
+    &-invert {
+      composes: $root;
+      box-shadow: inset 0 0 0 em(1, $button_font_size) currentColor;
+      color: $blue_cornflower--l_30;
+
+      @include hover() {
+        color: $blue_cornflower--l_20;
+      }
+    }
+  }
+
+  &_dim {
+    composes: $root;
+    background-color: $gray_french--l_10;
+    color: $gray_french--d_40;
+
+    @include hover() {
+      background-color: $gray_french;
+      color: $gray_french--d_50;
+    }
+  }
+
+  &_bright {
+    composes: $root;
+    background-color: $white;
+    color: $blue_cobalt--d_10;
+
+    @include hover() {
+      background-color: $gray_french--l_20;
+      color: $blue_cobalt--d_20;
+    }
   }
 }
