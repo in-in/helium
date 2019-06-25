@@ -102,7 +102,7 @@
   @return calc(#{$slope * 100}vw + #{$initial_size}rem);
 }
 
-.sr {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -111,4 +111,5 @@
   padding: 0;
   border: 0;
   white-space: nowrap;
+  pointer-events: none;
 }
