@@ -22,18 +22,20 @@ const Software = () => {
       <Container>
         <div className={st.software__wrapper}>
           {data.allSectionHeadingsJson.nodes.map(item => (
-            <div className={st.software__desc} key={item.id}>
+            <header className={st.software__header} key={item.id}>
               <Heading {...item} />
               <div className={st.software__caption}>
                 <Text>{item.caption}</Text>
               </div>
-              <ButtonGroup>
-                <Button variant="secondary" icon="triangle">
-                  View video
-                </Button>
-                <Button variant="plain">See features</Button>
-              </ButtonGroup>
-            </div>
+              <div className={st.software__button}>
+                <ButtonGroup>
+                  <Button variant="secondary" icon="triangle">
+                    View video
+                  </Button>
+                  <Button variant="plain">See features</Button>
+                </ButtonGroup>
+              </div>
+            </header>
           ))}
           <div className={st.software__showcase}>software__showcase</div>
         </div>

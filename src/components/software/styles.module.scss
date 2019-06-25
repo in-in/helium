@@ -12,26 +12,27 @@
   &__wrapper {
     display: grid;
     grid-template-areas:
-      "desc"
+      "header"
       "showcase";
     grid-template-columns: 1fr;
     grid-gap: rem(40);
 
     @include breakpoint(m) {
-      grid-template-areas: "desc showcase showcase";
+      grid-template-areas: "header showcase showcase";
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
-  &__desc {
-    grid-area: desc;
+  &__header {
+    grid-area: header;
   }
 
   &__showcase {
     grid-area: showcase;
   }
 
-  &__caption {
-    padding-top: locks(12, 48);
+  &__caption,
+  &__button {
+    padding-top: locks(24, 32);
   }
 }
