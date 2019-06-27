@@ -1,0 +1,35 @@
+.device {
+  &__laptop {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__mockup {
+    $mockup: compose(&);
+    fill: darkgray;
+
+    &_laptop {
+      composes: $mockup;
+      width: 100%;
+    }
+  }
+
+  &__picture {
+    --picture_gap_x: #{t2c(24, 190)};
+    --picture_gap_top: #{t2c(6, 100)};
+    --picture_width: calc(100% - (var(--picture_gap_x) * 2));
+    position: absolute;
+    top: var(--picture_gap_top);
+    left: var(--picture_gap_x);
+    display: block;
+    width: calc(100% - (var(--picture_gap_x) * 2));
+    height: calc(100% - (var(--picture_gap_top) + #{t2c(16, 100)}));
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

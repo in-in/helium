@@ -5,6 +5,7 @@ import Heading from "../heading"
 import Text from "../text"
 import Button from "../button"
 import ButtonGroup from "../button-group"
+import Device from "../device"
 import st from "./styles.module.scss"
 
 const Software = () => {
@@ -37,7 +38,9 @@ const Software = () => {
               </div>
             </header>
           ))}
-          <div className={st.software__showcase}>software__showcase</div>
+          <div className={st.software__showcase}>
+            <Device />
+          </div>
         </div>
       </Container>
     </section>
