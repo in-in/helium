@@ -22,6 +22,8 @@ module.exports = {
         ignore: ["after-comment"],
       },
     ],
+    "a11y/no-obsolete-attribute": true,
+    "a11y/no-obsolete-element": true,
     "csstools/use-nesting": "always",
     "plugin/declaration-block-no-ignored-properties": true,
     "order/order": [["dollar-variables", "custom-properties", "declarations"]],
