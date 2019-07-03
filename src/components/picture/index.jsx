@@ -12,12 +12,12 @@ const Picture = ({ classname, data }) => (
             {item.width > 0 ? (
               <source
                 srcSet={Object.entries(item.sources).map(i => {
-                  return `${i[1]} ${i[0]}x`
+                  return `${i[1]} ${i[0].slice(`1`)}x`
                 })}
                 media={`(min-width: ${item.width}px)`}
               />
             ) : (
-              <img src={item.sources[1]} alt={item.alt} />
+              <img src={item.sources.x1} alt={item.alt} />
             )}
           </Fragment>
         )
