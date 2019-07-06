@@ -5,32 +5,32 @@
       {
         "width": 960,
         "sources": {
-          "x1": "https://satyr.io/640x16:9/3?type=png&text=m&texture=cross",
-          "x2": "https://satyr.io/1280x16:9/3?type=png&text=m@2x&texture=cross",
-          "x3": "https://satyr.io/1920x16:9/3?type=png&text=m@3x&texture=cross"
+          "x1": "laptop_m.jpg",
+          "x2": "laptop_m@2x.jpg",
+          "x3": "laptop_m@3x.jpg"
         }
       },
       {
         "width": 640,
         "sources": {
-          "x1": "https://satyr.io/432x16:9/2?type=png&text=s&texture=cross",
-          "x2": "https://satyr.io/864x16:9/2?type=png&text=s@2x&texture=cross",
-          "x3": "https://satyr.io/1296x16:9/2?type=png&text=s@3x&texture=cross"
+          "x1": "laptop_s.jpg",
+          "x2": "laptop_s@2x.jpg",
+          "x3": "laptop_s@3x.jpg"
         }
       },
       {
         "width": 320,
         "sources": {
-          "x1": "https://satyr.io/296x16:9/1?type=png&text=xs&texture=cross",
-          "x2": "https://satyr.io/592x16:9/1?type=png&text=xs@2x&texture=cross",
-          "x3": "https://satyr.io/888x16:9/1?type=png&text=xs@3x&texture=cross"
+          "x1": "laptop_xs.jpg",
+          "x2": "laptop_xs@2x.jpg",
+          "x3": "laptop_xs@3x.jpg"
         }
       },
       {
         "width": 0,
         "alt": "device laptop",
         "sources": {
-          "x1": "https://satyr.io/640x16:9/3?type=png&text=fallback&texture=cross"
+          "x1": "laptop_m.jpg"
         }
       }
     ]

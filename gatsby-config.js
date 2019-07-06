@@ -1,3 +1,4 @@
+const path = require(`path`)
 const autoprefixer = require(`autoprefixer`)
 const postcssNormalize = require(`postcss-normalize`)
 
@@ -8,6 +9,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-react-svg`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,7 +26,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data`,
+        path: path.join(__dirname, `src`, `data`),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     `gatsby-transformer-json`,
@@ -41,6 +50,5 @@ module.exports = {
         postCssPlugins: [autoprefixer(), postcssNormalize()],
       },
     },
-    `gatsby-plugin-react-svg`,
   ],
 }
