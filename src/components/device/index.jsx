@@ -17,12 +17,18 @@ const Device = () => {
 
 	return (
 		<div className={st.device}>
-			<div className={st.device__laptop}>
-				<Icon filename="laptop" classname={st.device__mockup_laptop} />
+			<div className={st.device__item_phone}>
+				<Icon filename="device/phone" classname={st.device__mockup_phone} />
+			</div>
+			<div className={st.device__item_laptop}>
+				<Icon filename="device/laptop" classname={st.device__mockup_laptop} />
 				<Picture
 					data={data.laptop.nodes[0].images}
 					classname={st.device__picture}
 				/>
+			</div>
+			<div className={st.device__item_tablet}>
+				<Icon filename="device/tablet" classname={st.device__mockup_tablet} />
 			</div>
 		</div>
 	)

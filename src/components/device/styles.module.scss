@@ -1,17 +1,64 @@
 .device {
-	&__laptop {
+	position: relative;
+
+	&__item {
+		$item: compose(&);
 		position: relative;
-		width: 100%;
 		overflow: hidden;
+
+		&_laptop {
+			composes: $item;
+			width: 100%;
+
+			@include breakpoint(s) {
+				width: 97%;
+				margin-left: auto;
+			}
+		}
+
+		&_phone {
+			composes: $item;
+			position: absolute;
+			top: 20%;
+			z-index: 1;
+			display: none;
+			width: 17%;
+
+			@include breakpoint(s) {
+				display: block;
+			}
+		}
+
+		&_tablet {
+			composes: $item;
+			right: 7%;
+			z-index: 2;
+			display: none;
+			width: 30%;
+			margin-top: -30%;
+			margin-left: auto;
+
+			@include breakpoint(l) {
+				display: block;
+			}
+		}
 	}
 
 	&__mockup {
 		$mockup: compose(&);
+		width: 100%;
 		fill: darkgray;
 
 		&_laptop {
 			composes: $mockup;
-			width: 100%;
+		}
+
+		&_phone {
+			composes: $mockup;
+		}
+
+		&_tablet {
+			composes: $mockup;
 		}
 	}
 
