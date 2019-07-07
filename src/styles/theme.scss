@@ -1,12 +1,12 @@
 @import "vars";
 
 :root {
-  --border_radius: 4;
-  --transition_duration: 0.4s;
-  --transition_easeing: ease-in-out;
+	--border_radius: 4;
+	--transition_duration: 0.4s;
+	--transition_easeing: ease-in-out;
 }
 
 body {
-  background-color: $white;
-  font-family: "Roboto", sans-serif;
+	background-color: $white;
+	font-family: "Roboto", sans-serif;
 }

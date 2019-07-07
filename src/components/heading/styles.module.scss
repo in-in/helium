@@ -1,49 +1,49 @@
 .heading {
-  $root: compose(&);
-  color: $blue_cobalt--l_10;
-  text-align: center;
+	$root: compose(&);
+	color: $blue_cobalt--l_10;
+	text-align: center;
 
-  &_left {
-    composes: $root;
-    text-align: left;
-  }
+	&_left {
+		composes: $root;
+		text-align: left;
+	}
 }
 
 .title {
-  $title: compose(&);
-  font-family: "Quicksand", sans-serif;
-  font-size: locks(24, 40);
-  font-weight: 300;
-  line-height: 1.15;
+	$title: compose(&);
+	font-family: "Quicksand", sans-serif;
+	font-size: locks(24, 40);
+	font-weight: 300;
+	line-height: 1.15;
 
-  @include breakpoint(xl) {
-    font-size: t2c(40, map-get($sizes, xl), vw);
-  }
+	@include breakpoint(xl) {
+		font-size: t2c(40, map-get($sizes, xl), vw);
+	}
 
-  &_big {
-    composes: $title;
-    font-size: locks(32, 48);
+	&_big {
+		composes: $title;
+		font-size: locks(32, 48);
 
-    @include breakpoint(xl) {
-      font-size: t2c(48, map-get($sizes, xl), vw);
-    }
-  }
+		@include breakpoint(xl) {
+			font-size: t2c(48, map-get($sizes, xl), vw);
+		}
+	}
 }
 
 .accent {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 .subtitle {
-  $subtitle_font_min: 10;
-  margin-bottom: em(8, $subtitle_font_min);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: locks($subtitle_font_min, 13);
-  font-weight: 500;
-  line-height: 1.5;
+	$subtitle_font_min: 10;
+	margin-bottom: em(8, $subtitle_font_min);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: locks($subtitle_font_min, 13);
+	font-weight: 500;
+	line-height: 1.5;
 
-  @include breakpoint(xl) {
-    font-size: t2c(13, map-get($sizes, xl), vw);
-  }
+	@include breakpoint(xl) {
+		font-size: t2c(13, map-get($sizes, xl), vw);
+	}
 }

@@ -1,36 +1,36 @@
 [
-  {
-    "device": "laptop",
-    "images": [
-      {
-        "width": 640,
-        "sources": {
-          "x1": "laptop_m.jpg",
-          "x2": "laptop_m@2x.jpg",
-          "x3": "laptop_m@3x.jpg"
-        }
-      },
-      {
-        "width": 320,
-        "sources": {
-          "x1": "laptop_s.jpg",
-          "x2": "laptop_s@2x.jpg",
-          "x3": "laptop_s@3x.jpg"
-        }
-      },
-      {
-        "width": 0,
-        "alt": "device laptop",
-        "sources": {
-          "x1": "laptop_m.jpg"
-        }
-      }
-    ]
-  },
-  {
-    "device": "tablet"
-  },
-  {
-    "device": "phone"
-  }
+	{
+		"device": "laptop",
+		"images": [
+			{
+				"width": 640,
+				"sources": {
+					"x1": "laptop_m.jpg",
+					"x2": "laptop_m@2x.jpg",
+					"x3": "laptop_m@3x.jpg"
+				}
+			},
+			{
+				"width": 320,
+				"sources": {
+					"x1": "laptop_s.jpg",
+					"x2": "laptop_s@2x.jpg",
+					"x3": "laptop_s@3x.jpg"
+				}
+			},
+			{
+				"width": 0,
+				"alt": "device laptop",
+				"sources": {
+					"x1": "laptop_m.jpg"
+				}
+			}
+		]
+	},
+	{
+		"device": "tablet"
+	},
+	{
+		"device": "phone"
+	}
 ]

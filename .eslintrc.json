@@ -1,8 +1,8 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["react-hooks"],
-  "rules": {
-    "quotes": ["error", "backtick"],
-    "react-hooks/rules-of-hooks": "error"
-  }
+	"extends": ["airbnb", "prettier", "prettier/react"],
+	"plugins": ["react-hooks"],
+	"rules": {
+		"quotes": ["error", "backtick"],
+		"react-hooks/rules-of-hooks": "error"
+	}
 }

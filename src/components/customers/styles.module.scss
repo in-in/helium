@@ -1,99 +1,99 @@
 .customers {
-  $root: &;
-  display: flex;
-  align-items: center;
-  height: locks(120, 144);
+	$root: &;
+	display: flex;
+	align-items: center;
+	height: locks(120, 144);
 
-  @include breakpoint(xl) {
-    height: t2c(144, map-get($sizes, xl), vw);
-  }
+	@include breakpoint(xl) {
+		height: t2c(144, map-get($sizes, xl), vw);
+	}
 
-  @include divider;
+	@include divider;
 
-  &__wrapper {
-    position: relative;
+	&__wrapper {
+		position: relative;
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      z-index: 1;
-      min-width: 1em;
-      min-height: 100%;
-    }
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			min-width: 1em;
+			min-height: 100%;
+		}
 
-    &::before {
-      left: 0;
-      background-image: linear-gradient(to left, transparent, #{$white});
-    }
+		&::before {
+			left: 0;
+			background-image: linear-gradient(to left, transparent, #{$white});
+		}
 
-    &::after {
-      right: 0;
-      background-image: linear-gradient(to right, transparent, #{$white});
-    }
+		&::after {
+			right: 0;
+			background-image: linear-gradient(to right, transparent, #{$white});
+		}
 
-    @include breakpoint(m) {
-      &::before,
-      &::after {
-        display: none;
-      }
-    }
-  }
+		@include breakpoint(m) {
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+	}
 
-  &__list {
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: rem(16);
+	&__list {
+		position: relative;
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		padding: rem(16);
 
-    @include breakpoint(m) {
-      justify-content: center;
-    }
+		@include breakpoint(m) {
+			justify-content: center;
+		}
 
-    @include breakpoint(xl) {
-      padding: t2c(16, map-get($sizes, xl), vw);
-    }
-  }
+		@include breakpoint(xl) {
+			padding: t2c(16, map-get($sizes, xl), vw);
+		}
+	}
 
-  &__item {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    margin-right: locks(40, 80);
+	&__item {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		margin-right: locks(40, 80);
 
-    @include breakpoint(xl) {
-      margin-right: t2c(80, map-get($sizes, xl), vw);
-    }
+		@include breakpoint(xl) {
+			margin-right: t2c(80, map-get($sizes, xl), vw);
+		}
 
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 
-  &__link {
-    display: block;
-    padding: rem(4);
+	&__link {
+		display: block;
+		padding: rem(4);
 
-    @include breakpoint(xl) {
-      padding: t2c(4, map-get($sizes, xl), vw);
-    }
+		@include breakpoint(xl) {
+			padding: t2c(4, map-get($sizes, xl), vw);
+		}
 
-    @include hover(#{$root}__logo) {
-      --logo_fill_color: #{$blue_cornflower};
-    }
-  }
+		@include hover(#{$root}__logo) {
+			--logo_fill_color: #{$blue_cornflower};
+		}
+	}
 
-  &__logo {
-    --logo_fill_color: #{$gray_french};
-    max-height: rem(40);
-    width: locks(100, 120);
-    fill: var(--logo_fill_color);
+	&__logo {
+		--logo_fill_color: #{$gray_french};
+		max-height: rem(40);
+		width: locks(100, 120);
+		fill: var(--logo_fill_color);
 
-    @include breakpoint(xl) {
-      max-height: t2c(40, map-get($sizes, xl), vw);
-      width: t2c(120, map-get($sizes, xl), vw);
-    }
-  }
+		@include breakpoint(xl) {
+			max-height: t2c(40, map-get($sizes, xl), vw);
+			width: t2c(120, map-get($sizes, xl), vw);
+		}
+	}
 }

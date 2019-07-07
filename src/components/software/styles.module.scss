@@ -1,37 +1,37 @@
 .software {
-  padding-top: locks(72, 168);
-  padding-bottom: locks(72, 168);
+	padding-top: locks(72, 168);
+	padding-bottom: locks(72, 168);
 
-  @include breakpoint(xl) {
-    height: t2c(776, map-get($sizes, xl), vw);
-    padding-top: t2c(168, map-get($sizes, xl), vw);
-    padding-bottom: t2c(168, map-get($sizes, xl), vw);
-  }
+	@include breakpoint(xl) {
+		height: t2c(776, map-get($sizes, xl), vw);
+		padding-top: t2c(168, map-get($sizes, xl), vw);
+		padding-bottom: t2c(168, map-get($sizes, xl), vw);
+	}
 
-  &__wrapper {
-    display: grid;
-    grid-template-areas:
-      "header"
-      "showcase";
-    grid-template-columns: 1fr;
-    grid-gap: rem(40);
+	&__wrapper {
+		display: grid;
+		grid-template-areas:
+			"header"
+			"showcase";
+		grid-template-columns: 1fr;
+		grid-gap: rem(40);
 
-    @include breakpoint(m) {
-      grid-template-areas: "header showcase showcase";
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+		@include breakpoint(m) {
+			grid-template-areas: "header showcase showcase";
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
 
-  &__header {
-    grid-area: header;
-  }
+	&__header {
+		grid-area: header;
+	}
 
-  &__showcase {
-    grid-area: showcase;
-  }
+	&__showcase {
+		grid-area: showcase;
+	}
 
-  &__caption,
-  &__button {
-    padding-top: locks(24, 32);
-  }
+	&__caption,
+	&__button {
+		padding-top: locks(24, 32);
+	}
 }

@@ -1,34 +1,34 @@
 .device {
-  &__laptop {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
+	&__laptop {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+	}
 
-  &__mockup {
-    $mockup: compose(&);
-    fill: darkgray;
+	&__mockup {
+		$mockup: compose(&);
+		fill: darkgray;
 
-    &_laptop {
-      composes: $mockup;
-      width: 100%;
-    }
-  }
+		&_laptop {
+			composes: $mockup;
+			width: 100%;
+		}
+	}
 
-  &__picture {
-    --picture_gap_x: #{t2c(24, 190)};
-    --picture_gap_top: #{t2c(6, 100)};
-    --picture_width: calc(100% - (var(--picture_gap_x) * 2));
-    composes: picture from "../picture/styles.module.scss";
-    position: absolute;
-    top: var(--picture_gap_top);
-    left: var(--picture_gap_x);
-    width: calc(100% - (var(--picture_gap_x) * 2));
-    height: calc(100% - (var(--picture_gap_top) + #{t2c(16, 100)}));
+	&__picture {
+		--picture_gap_x: #{t2c(24, 190)};
+		--picture_gap_top: #{t2c(6, 100)};
+		--picture_width: calc(100% - (var(--picture_gap_x) * 2));
+		composes: picture from "../picture/styles.module.scss";
+		position: absolute;
+		top: var(--picture_gap_top);
+		left: var(--picture_gap_x);
+		width: calc(100% - (var(--picture_gap_x) * 2));
+		height: calc(100% - (var(--picture_gap_top) + #{t2c(16, 100)}));
 
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
 }

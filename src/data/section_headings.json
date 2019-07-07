@@ -1,24 +1,24 @@
 [
-  {
-    "section": "hero",
-    "subtitle": "plan your life",
-    "title": {
-      "text": "Increase your productivity",
-      "accent": [2]
-    },
-    "big": true,
-    "left": false,
-    "caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata."
-  },
-  {
-    "section": "software",
-    "subtitle": "Desktop and mobile app",
-    "title": {
-      "text": "Plan and manage",
-      "accent": [0, 2]
-    },
-    "big": false,
-    "left": true,
-    "caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat."
-  }
+	{
+		"section": "hero",
+		"subtitle": "plan your life",
+		"title": {
+			"text": "Increase your productivity",
+			"accent": [2]
+		},
+		"big": true,
+		"left": false,
+		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata."
+	},
+	{
+		"section": "software",
+		"subtitle": "Desktop and mobile app",
+		"title": {
+			"text": "Plan and manage",
+			"accent": [0, 2]
+		},
+		"big": false,
+		"left": true,
+		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat."
+	}
 ]

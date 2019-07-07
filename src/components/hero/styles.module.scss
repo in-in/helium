@@ -1,159 +1,159 @@
 @import "styles/vars";
 
 $clouds: (
-  "1": (
-    top: 176,
-    left: 0,
-    width: 148,
-    transform: translateX(-50%),
-  ),
-  "2": (
-    top: 88,
-    left: 256,
-    width: 44,
-  ),
-  "3": (
-    bottom: 152,
-    left: 248,
-    width: 24,
-  ),
-  "4": (
-    bottom: 144,
-    left: 264,
-    width: 48,
-  ),
-  "5": (
-    bottom: 144,
-    left: 300,
-    width: 32,
-  ),
-  "6": (
-    bottom: 168,
-    left: 312,
-    width: 20,
-  ),
-  "7": (
-    right: 256,
-    bottom: 40,
-    width: 104,
-  ),
-  "8": (
-    right: 240,
-    bottom: 80,
-    width: 48,
-  ),
-  "9": (
-    right: 200,
-    bottom: 40,
-    width: 64,
-  ),
-  "10": (
-    top: 40,
-    right: 200,
-    width: 32,
-  ),
-  "11": (
-    top: 56,
-    right: 136,
-    width: 80,
-  ),
-  "12": (
-    top: 88,
-    right: 136,
-    width: 48,
-  ),
-  "13": (
-    right: 0,
-    bottom: 120,
-    width: 112,
-    transform: translateX(50%),
-  ),
+	"1": (
+		top: 176,
+		left: 0,
+		width: 148,
+		transform: translateX(-50%),
+	),
+	"2": (
+		top: 88,
+		left: 256,
+		width: 44,
+	),
+	"3": (
+		bottom: 152,
+		left: 248,
+		width: 24,
+	),
+	"4": (
+		bottom: 144,
+		left: 264,
+		width: 48,
+	),
+	"5": (
+		bottom: 144,
+		left: 300,
+		width: 32,
+	),
+	"6": (
+		bottom: 168,
+		left: 312,
+		width: 20,
+	),
+	"7": (
+		right: 256,
+		bottom: 40,
+		width: 104,
+	),
+	"8": (
+		right: 240,
+		bottom: 80,
+		width: 48,
+	),
+	"9": (
+		right: 200,
+		bottom: 40,
+		width: 64,
+	),
+	"10": (
+		top: 40,
+		right: 200,
+		width: 32,
+	),
+	"11": (
+		top: 56,
+		right: 136,
+		width: 80,
+	),
+	"12": (
+		top: 88,
+		right: 136,
+		width: 48,
+	),
+	"13": (
+		right: 0,
+		bottom: 120,
+		width: 112,
+		transform: translateX(50%),
+	),
 );
 
 .hero {
-  $hero_height: 560;
-  position: relative;
-  min-height: ($hero_height / 2) * 1px;
-  max-height: t2c($hero_height, map-get($sizes, xl), vw);
-  height: t2c($hero_height, map-get($sizes, xl), vw);
-  overflow: hidden;
+	$hero_height: 560;
+	position: relative;
+	min-height: ($hero_height / 2) * 1px;
+	max-height: t2c($hero_height, map-get($sizes, xl), vw);
+	height: t2c($hero_height, map-get($sizes, xl), vw);
+	overflow: hidden;
 
-  @at-root %item {
-    position: relative;
-    z-index: 2;
-    filter: drop-shadow(0 0 0.2em white);
-  }
+	@at-root %item {
+		position: relative;
+		z-index: 2;
+		filter: drop-shadow(0 0 0.2em white);
+	}
 
-  &__heading {
-    @extend %item;
-    padding-top: t2c(72, map-get($sizes, xl), vw);
-  }
+	&__heading {
+		@extend %item;
+		padding-top: t2c(72, map-get($sizes, xl), vw);
+	}
 
-  &__caption {
-    @extend %item;
-    max-width: 55ch;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: locks(12, 48);
-    text-align: center;
+	&__caption {
+		@extend %item;
+		max-width: 55ch;
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: locks(12, 48);
+		text-align: center;
 
-    @include breakpoint(xl) {
-      padding-top: t2c(48, map-get($sizes, xl), vw);
-      font-size: t2c(16, map-get($sizes, xl), vw);
-    }
-  }
+		@include breakpoint(xl) {
+			padding-top: t2c(48, map-get($sizes, xl), vw);
+			font-size: t2c(16, map-get($sizes, xl), vw);
+		}
+	}
 
-  &__chart {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    background-color: rgba($blue_cornflower--l_20, 0.2);
-    opacity: 0.5;
+	&__chart {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: 100%;
+		background-color: rgba($blue_cornflower--l_20, 0.2);
+		opacity: 0.5;
 
-    @include breakpoint(m) {
-      opacity: 1;
-    }
-  }
+		@include breakpoint(m) {
+			opacity: 1;
+		}
+	}
 
-  &__cloud {
-    $cloud: compose(&);
-    position: absolute;
-    z-index: 0;
-    fill: $white;
+	&__cloud {
+		$cloud: compose(&);
+		position: absolute;
+		z-index: 0;
+		fill: $white;
 
-    @each $index, $item in $clouds {
-      &_#{$index} {
-        $width: map-get($item, width);
-        composes: $cloud;
-        top: if(
-          map-get($item, top),
-          #{t2c(map-get($item, top), $hero_height)},
-          null
-        );
-        right: if(
-          map-get($item, right),
-          #{t2c(map-get($item, right), map-get($sizes, xl), vw)},
-          null
-        );
-        bottom: if(
-          map-get($item, bottom),
-          #{t2c(map-get($item, bottom), $hero_height)},
-          null
-        );
-        left: if(
-          map-get($item, left),
-          #{t2c(map-get($item, left), map-get($sizes, xl), vw)},
-          null
-        );
-        width: locks($width / 3, $width);
-        transform: if(
-          map-get($item, transform),
-          #{map-get($item, transform)},
-          null
-        );
-      }
-    }
-  }
+		@each $index, $item in $clouds {
+			&_#{$index} {
+				$width: map-get($item, width);
+				composes: $cloud;
+				top: if(
+					map-get($item, top),
+					#{t2c(map-get($item, top), $hero_height)},
+					null
+				);
+				right: if(
+					map-get($item, right),
+					#{t2c(map-get($item, right), map-get($sizes, xl), vw)},
+					null
+				);
+				bottom: if(
+					map-get($item, bottom),
+					#{t2c(map-get($item, bottom), $hero_height)},
+					null
+				);
+				left: if(
+					map-get($item, left),
+					#{t2c(map-get($item, left), map-get($sizes, xl), vw)},
+					null
+				);
+				width: locks($width / 3, $width);
+				transform: if(
+					map-get($item, transform),
+					#{map-get($item, transform)},
+					null
+				);
+			}
+		}
+	}
 }

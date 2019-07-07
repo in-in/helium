@@ -1,52 +1,52 @@
 .header {
-  padding-top: rem(16);
-  padding-bottom: rem(16);
+	padding-top: rem(16);
+	padding-bottom: rem(16);
 
-  @include breakpoint(xl) {
-    padding-top: t2c(16, map-get($sizes, xl), vw);
-    padding-bottom: t2c(16, map-get($sizes, xl), vw);
-  }
+	@include breakpoint(xl) {
+		padding-top: t2c(16, map-get($sizes, xl), vw);
+		padding-bottom: t2c(16, map-get($sizes, xl), vw);
+	}
 
-  @include divider($top: false);
+	@include divider($top: false);
 
-  &__content {
-    display: grid;
-    grid-template-areas:
-      "logo button"
-      "social social";
-    gap: 1em;
+	&__content {
+		display: grid;
+		grid-template-areas:
+			"logo button"
+			"social social";
+		gap: 1em;
 
-    @include breakpoint(s) {
-      display: flex;
-    }
-  }
+		@include breakpoint(s) {
+			display: flex;
+		}
+	}
 
-  &__item {
-    $wrapper: compose(&);
-    display: flex;
-    align-items: center;
+	&__item {
+		$wrapper: compose(&);
+		display: flex;
+		align-items: center;
 
-    &_logo {
-      composes: $wrapper;
-      grid-area: logo;
-      justify-content: flex-start;
-    }
+		&_logo {
+			composes: $wrapper;
+			grid-area: logo;
+			justify-content: flex-start;
+		}
 
-    &_social {
-      composes: $wrapper;
-      grid-area: social;
-      justify-content: flex-end;
+		&_social {
+			composes: $wrapper;
+			grid-area: social;
+			justify-content: flex-end;
 
-      @include breakpoint(s) {
-        flex-grow: 1;
-        padding-right: 2em;
-      }
-    }
+			@include breakpoint(s) {
+				flex-grow: 1;
+				padding-right: 2em;
+			}
+		}
 
-    &_button {
-      composes: $wrapper;
-      grid-area: button;
-      justify-content: flex-end;
-    }
-  }
+		&_button {
+			composes: $wrapper;
+			grid-area: button;
+			justify-content: flex-end;
+		}
+	}
 }

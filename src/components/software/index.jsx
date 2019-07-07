@@ -9,42 +9,42 @@ import Device from "../device"
 import st from "./styles.module.scss"
 
 const Software = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allSectionHeadingsJson(filter: { section: { eq: "software" } }) {
-        nodes {
-          ...sectionHeadings
-        }
-      }
-    }
-  `)
-  return (
-    <section className={st.software}>
-      <Container>
-        <div className={st.software__wrapper}>
-          {data.allSectionHeadingsJson.nodes.map(item => (
-            <header className={st.software__header} key={item.id}>
-              <Heading {...item} />
-              <div className={st.software__caption}>
-                <Text>{item.caption}</Text>
-              </div>
-              <div className={st.software__button}>
-                <ButtonGroup>
-                  <Button variant="secondary" icon="triangle">
-                    View video
-                  </Button>
-                  <Button variant="plain">See features</Button>
-                </ButtonGroup>
-              </div>
-            </header>
-          ))}
-          <div className={st.software__showcase}>
-            <Device />
-          </div>
-        </div>
-      </Container>
-    </section>
-  )
+	const data = useStaticQuery(graphql`
+		query {
+			allSectionHeadingsJson(filter: { section: { eq: "software" } }) {
+				nodes {
+					...sectionHeadings
+				}
+			}
+		}
+	`)
+	return (
+		<section className={st.software}>
+			<Container>
+				<div className={st.software__wrapper}>
+					{data.allSectionHeadingsJson.nodes.map(item => (
+						<header className={st.software__header} key={item.id}>
+							<Heading {...item} />
+							<div className={st.software__caption}>
+								<Text>{item.caption}</Text>
+							</div>
+							<div className={st.software__button}>
+								<ButtonGroup>
+									<Button variant="secondary" icon="triangle">
+										View video
+									</Button>
+									<Button variant="plain">See features</Button>
+								</ButtonGroup>
+							</div>
+						</header>
+					))}
+					<div className={st.software__showcase}>
+						<Device />
+					</div>
+				</div>
+			</Container>
+		</section>
+	)
 }
 
 export default Software

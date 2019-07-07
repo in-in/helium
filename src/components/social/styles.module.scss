@@ -1,34 +1,34 @@
 .social {
-  $root: &;
-  display: flex;
+	$root: &;
+	display: flex;
 
-  &__item {
-    display: block;
-    margin: rem(8);
-  }
+	&__item {
+		display: block;
+		margin: rem(8);
+	}
 
-  &__link {
-    @include hover(#{$root}__icon) {
-      --icon_fill_color: #{$blue_cornflower};
-    }
-  }
+	&__link {
+		@include hover(#{$root}__icon) {
+			--icon_fill_color: #{$blue_cornflower};
+		}
+	}
 
-  &__icon {
-    --icon_fill_color: #{$gray_french};
-    width: rem(16);
-    box-sizing: content-box;
-    padding: rem(8);
-    fill: var(--icon_fill_color);
-  }
+	&__icon {
+		--icon_fill_color: #{$gray_french};
+		width: rem(16);
+		box-sizing: content-box;
+		padding: rem(8);
+		fill: var(--icon_fill_color);
+	}
 
-  @include breakpoint(xl) {
-    &__item {
-      margin: t2c(8, map-get($sizes, xl), vw);
-    }
+	@include breakpoint(xl) {
+		&__item {
+			margin: t2c(8, map-get($sizes, xl), vw);
+		}
 
-    &__icon {
-      width: t2c(16, map-get($sizes, xl), vw);
-      padding: t2c(8, map-get($sizes, xl), vw);
-    }
-  }
+		&__icon {
+			width: t2c(16, map-get($sizes, xl), vw);
+			padding: t2c(8, map-get($sizes, xl), vw);
+		}
+	}
 }

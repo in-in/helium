@@ -1,11 +1,11 @@
 $base_font: 16;
 
 $sizes: (
-  "xs": 320,
-  "s": 640,
-  "m": 960,
-  "l": 1280,
-  "xl": 1440
+	"xs": 320,
+	"s": 640,
+	"m": 960,
+	"l": 1280,
+	"xl": 1440
 );
 
 // blue_cobalt
@@ -17,10 +17,10 @@ $blue_cobalt--l_20: lighten($blue_cobalt, 20);
 
 // blue_cornflower
 $blue_cornflower: adjust-color(
-  $blue_cobalt,
-  $hue: -2,
-  $saturation: 55%,
-  $lightness: 27%
+	$blue_cobalt,
+	$hue: -2,
+	$saturation: 55%,
+	$lightness: 27%
 );
 $blue_cornflower--l_10: lighten($blue_cornflower, 10);
 $blue_cornflower--l_20: lighten($blue_cornflower, 20);
@@ -28,10 +28,10 @@ $blue_cornflower--l_30: lighten($blue_cornflower, 30);
 
 // gray_french
 $gray_french: adjust-color(
-  $blue_cobalt,
-  $hue: -3,
-  $saturation: -55%,
-  $lightness: 41%
+	$blue_cobalt,
+	$hue: -3,
+	$saturation: -55%,
+	$lightness: 41%
 );
 $gray_french--d_10: darken($gray_french, 10);
 $gray_french--d_20: darken($gray_french, 20);
