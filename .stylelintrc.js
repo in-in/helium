@@ -8,6 +8,7 @@ module.exports = {
 		"stylelint-use-nesting",
 	],
 	rules: {
+		"declaration-block-no-duplicate-properties": true,
 		"property-no-unknown": [
 			true,
 			{
@@ -85,6 +86,9 @@ module.exports = {
 				"overflow",
 				"overflow-x",
 				"overflow-y",
+				"shape-outside",
+				"shape-margin",
+				"shape-image-threshold",
 				"clip",
 				"clip-path",
 				"box-sizing",
