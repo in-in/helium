@@ -10,7 +10,7 @@
 		"gen": "plop",
 		"now-build": "npm run build",
 		"serve": "gatsby serve",
-		"start": "npm run develop",
+		"start": "GATSBY_TELEMETRY_DISABLED=1 npm run develop",
 		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
 	},
 	"browserslist": [
