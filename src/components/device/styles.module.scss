@@ -63,19 +63,42 @@
 	}
 
 	&__picture {
-		--picture_gap_x: #{t2c(24, 190)};
-		--picture_gap_top: #{t2c(6, 100)};
-		--picture_width: calc(100% - (var(--picture_gap_x) * 2));
+		$picture: compose(&);
 		composes: picture from "../picture/styles.module.scss";
 		position: absolute;
 		top: var(--picture_gap_top);
-		left: var(--picture_gap_x);
-		width: calc(100% - (var(--picture_gap_x) * 2));
-		height: calc(100% - (var(--picture_gap_top) + #{t2c(16, 100)}));
+		left: var(--picture_gap_left);
+		max-width: calc(100% - (var(--picture_gap_left) * 2));
+		max-height: calc(
+			100% - (var(--picture_gap_top) + var(--picture_gap_bottom))
+		);
+		width: 100%;
+		height: 100%;
 
 		img {
 			width: 100%;
 			height: 100%;
+		}
+
+		&_laptop {
+			--picture_gap_left: #{t2c(24, 190)};
+			--picture_gap_top: #{t2c(6, 100)};
+			--picture_gap_bottom: #{t2c(14, 100)};
+			composes: $picture;
+		}
+
+		&_phone {
+			--picture_gap_left: #{t2c(2, 31)};
+			--picture_gap_top: #{t2c(3, 56)};
+			--picture_gap_bottom: #{t2c(5, 56)};
+			composes: $picture;
+		}
+
+		&_tablet {
+			--picture_gap_left: #{t2c(4, 59)};
+			--picture_gap_top: #{t2c(6, 81)};
+			--picture_gap_bottom: #{t2c(7, 81)};
+			composes: $picture;
 		}
 	}
 }

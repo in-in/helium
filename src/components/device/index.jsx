@@ -12,6 +12,16 @@ const Device = () => {
 					...device
 				}
 			}
+			phone: allDeviceJson(filter: { device: { eq: "phone" } }) {
+				nodes {
+					...device
+				}
+			}
+			tablet: allDeviceJson(filter: { device: { eq: "tablet" } }) {
+				nodes {
+					...device
+				}
+			}
 		}
 	`)
 
@@ -19,16 +29,24 @@ const Device = () => {
 		<div className={st.device}>
 			<div className={st.device__item_phone}>
 				<Icon filename="device/phone" classname={st.device__mockup_phone} />
+				<Picture
+					data={data.phone.nodes[0].images}
+					classname={st.device__picture_phone}
+				/>
 			</div>
 			<div className={st.device__item_laptop}>
 				<Icon filename="device/laptop" classname={st.device__mockup_laptop} />
 				<Picture
 					data={data.laptop.nodes[0].images}
-					classname={st.device__picture}
+					classname={st.device__picture_laptop}
 				/>
 			</div>
 			<div className={st.device__item_tablet}>
 				<Icon filename="device/tablet" classname={st.device__mockup_tablet} />
+				<Picture
+					data={data.tablet.nodes[0].images}
+					classname={st.device__picture_tablet}
+				/>
 			</div>
 		</div>
 	)
