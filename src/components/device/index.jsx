@@ -28,21 +28,21 @@ const Device = () => {
 	return (
 		<div className={st.device}>
 			<div className={st.device__item_phone}>
-				<Icon filename="device/phone" classname={st.device__mockup_phone} />
+				<Icon filename="device/phone" classname={st.device__mockup} />
 				<Picture
 					data={data.phone.nodes[0].images}
 					classname={st.device__picture_phone}
 				/>
 			</div>
 			<div className={st.device__item_laptop}>
-				<Icon filename="device/laptop" classname={st.device__mockup_laptop} />
+				<Icon filename="device/laptop" classname={st.device__mockup} />
 				<Picture
 					data={data.laptop.nodes[0].images}
 					classname={st.device__picture_laptop}
 				/>
 			</div>
 			<div className={st.device__item_tablet}>
-				<Icon filename="device/tablet" classname={st.device__mockup_tablet} />
+				<Icon filename="device/tablet" classname={st.device__mockup} />
 				<Picture
 					data={data.tablet.nodes[0].images}
 					classname={st.device__picture_tablet}
