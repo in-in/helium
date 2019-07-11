@@ -1,6 +1,7 @@
 .software {
 	padding-top: locks(72, 168);
 	padding-bottom: locks(72, 168);
+	background-color: rgba($blue_cornflower--l_20, 0.1);
 
 	@include breakpoint(xl) {
 		height: t2c(776, map-get($sizes, xl), vw);
