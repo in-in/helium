@@ -6,16 +6,16 @@
 				"width": 640,
 				"sources": {
 					"x1": "laptop_s.jpg",
-					"x2": "laptop_s@2x.jpg",
-					"x3": "laptop_s@3x.jpg"
+					"x2": "laptop_s_@2x.jpg",
+					"x3": "laptop_s_@3x.jpg"
 				}
 			},
 			{
 				"width": 320,
 				"sources": {
 					"x1": "laptop_xs.jpg",
-					"x2": "laptop_xs@2x.jpg",
-					"x3": "laptop_xs@3x.jpg"
+					"x2": "laptop_xs_@2x.jpg",
+					"x3": "laptop_xs_@3x.jpg"
 				}
 			},
 			{
@@ -34,8 +34,8 @@
 				"width": 640,
 				"sources": {
 					"x1": "phone_s.jpg",
-					"x2": "phone_s@2x.jpg",
-					"x3": "phone_s@3x.jpg"
+					"x2": "phone_s_@2x.jpg",
+					"x3": "phone_s_@3x.jpg"
 				}
 			},
 			{
@@ -54,8 +54,8 @@
 				"width": 1280,
 				"sources": {
 					"x1": "tablet_l.jpg",
-					"x2": "tablet_l@2x.jpg",
-					"x3": "tablet_l@3x.jpg"
+					"x2": "tablet_l_@2x.jpg",
+					"x3": "tablet_l_@3x.jpg"
 				}
 			},
 			{
