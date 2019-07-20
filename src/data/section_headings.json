@@ -20,5 +20,16 @@
 		"big": false,
 		"left": true,
 		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat."
+	},
+	{
+		"section": "about",
+		"subtitle": "about us",
+		"title": {
+			"text": "Read about our app",
+			"accent": [1, 3]
+		},
+		"big": false,
+		"left": false,
+		"caption": ""
 	}
 ]

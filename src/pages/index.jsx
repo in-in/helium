@@ -4,6 +4,7 @@ import Header from "../components/header"
 import Hero from "../components/hero"
 import Customers from "../components/customers"
 import Software from "../components/software"
+import About from "../components/about"
 
 const IndexPage = () => (
 	<Layout>
@@ -11,7 +12,7 @@ const IndexPage = () => (
 		<Hero />
 		<Customers />
 		<Software />
-		<section>about</section>
+		<About />
 		<section>stats</section>
 		<section>blog</section>
 		<section>testimonials</section>
