@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "../container"
 import Heading from "../heading"
+import Features from "../features"
 import st from "./styles.module.scss"
 
 const About = () => {
@@ -24,6 +25,9 @@ const About = () => {
 							<Heading {...item} />
 						</header>
 					))}
+					<div className={st.about__features}>
+						<Features />
+					</div>
 				</div>
 			</Container>
 		</section>

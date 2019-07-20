@@ -1,0 +1,22 @@
+[
+	{
+		"icon": "overview",
+		"title": "Overview",
+		"desc": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro."
+	},
+	{
+		"icon": "files",
+		"title": "Files",
+		"desc": "No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has."
+	},
+	{
+		"icon": "chats",
+		"title": "Meeting chats",
+		"desc": "Vim ne tacimates neglegentur. Erat diceret omittam at est."
+	},
+	{
+		"icon": "save",
+		"title": "Save events",
+		"desc": "Nisl idque mel ea, nominati voluptatum."
+	}
+]
