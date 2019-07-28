@@ -8,7 +8,7 @@
 		padding-bottom: t2c(168, map-get($sizes, xl), vw);
 	}
 
-	&__wrapper {
-		// keep
+	&__header {
+		margin-bottom: locks(56, 96);
 	}
 }
