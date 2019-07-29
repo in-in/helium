@@ -1,6 +1,7 @@
 const path = require(`path`)
 const autoprefixer = require(`autoprefixer`)
 const postcssNormalize = require(`postcss-normalize`)
+const postcssLogical = require(`postcss-logical`)
 
 module.exports = {
 	siteMetadata: {
@@ -47,7 +48,7 @@ module.exports = {
 					localIdentName: `[local]--[hash:base64:5]`,
 					camelCase: false,
 				},
-				postCssPlugins: [autoprefixer(), postcssNormalize()],
+				postCssPlugins: [autoprefixer(), postcssNormalize(), postcssLogical()],
 			},
 		},
 	],
