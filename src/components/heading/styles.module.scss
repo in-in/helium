@@ -36,7 +36,7 @@
 
 .subtitle {
 	$subtitle_font_min: 10;
-	margin-bottom: em(8, $subtitle_font_min);
+	margin-block-end: em(8, $subtitle_font_min);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	font-size: locks($subtitle_font_min, 13);

@@ -92,8 +92,7 @@ $clouds: (
 	&__caption {
 		@extend %item;
 		max-width: 55ch;
-		margin-right: auto;
-		margin-left: auto;
+		margin-inline: auto;
 		padding-top: locks(12, 48);
 		text-align: center;
 

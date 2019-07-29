@@ -48,7 +48,13 @@ module.exports = {
 					localIdentName: `[local]--[hash:base64:5]`,
 					camelCase: false,
 				},
-				postCssPlugins: [autoprefixer(), postcssNormalize(), postcssLogical()],
+				postCssPlugins: [
+					autoprefixer(),
+					postcssNormalize(),
+					postcssLogical({
+						dir: `ltr`,
+					}),
+				],
 			},
 		},
 	],

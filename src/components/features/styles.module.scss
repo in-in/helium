@@ -12,10 +12,10 @@
 
 	&__item {
 		display: flex;
-		margin-bottom: rem(32);
+		margin-block-end: rem(32);
 
 		@include breakpoint(s) {
-			margin-bottom: 0;
+			margin-block-end: 0;
 		}
 
 		@include breakpoint(m) {
@@ -44,9 +44,9 @@
 		color: $blue_cornflower;
 
 		@include breakpoint(m) {
-			margin-right: auto;
-			margin-bottom: t2c(32, map-get($sizes, xl), vw);
-			margin-left: auto;
+			margin-block-end: t2c(32, map-get($sizes, xl), vw);
+			margin-inline-end: auto;
+			margin-inline-start: auto;
 		}
 
 		@include breakpoint(xl) {
@@ -57,7 +57,7 @@
 	}
 
 	&__title {
-		margin-bottom: locks(16, 24);
+		margin-block-end: locks(16, 24);
 		color: $blue_cornflower;
 		font-size: rem(14);
 		line-height: 1.7;

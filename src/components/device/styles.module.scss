@@ -13,7 +13,7 @@
 
 			@include breakpoint(s) {
 				width: 97%;
-				margin-left: auto;
+				margin-inline-start: auto;
 			}
 		}
 
@@ -36,8 +36,8 @@
 			z-index: 2;
 			display: none;
 			width: 45%;
-			margin-top: -25%;
-			margin-left: auto;
+			margin-block-start: -25%;
+			margin-inline-start: auto;
 
 			@include breakpoint(l) {
 				display: block;

@@ -61,14 +61,14 @@
 		display: flex;
 		flex-shrink: 0;
 		align-items: center;
-		margin-right: locks(40, 80);
+		margin-inline-end: locks(40, 80);
 
 		@include breakpoint(xl) {
-			margin-right: t2c(80, map-get($sizes, xl), vw);
+			margin-inline-end: t2c(80, map-get($sizes, xl), vw);
 		}
 
 		&:last-child {
-			margin-right: 0;
+			margin-inline-end: 0;
 		}
 	}
 

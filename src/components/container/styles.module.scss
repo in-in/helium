@@ -1,7 +1,6 @@
 .container {
 	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
+	margin-inline: auto;
 	padding-right: t2c(16, map-get($sizes, xs), vw);
 	padding-left: t2c(16, map-get($sizes, xs), vw);
 }
