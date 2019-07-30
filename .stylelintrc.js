@@ -9,6 +9,16 @@ module.exports = {
 	],
 	rules: {
 		"declaration-block-no-duplicate-properties": true,
+		"shorthand-property-no-redundant-values": true,
+		"value-keyword-case": "lower",
+		"declaration-property-value-blacklist": [
+			{
+				"/.*/": [/transparent/i],
+			},
+			{
+				message: "Keyword `transparent` is not allowed.",
+			},
+		],
 		"property-no-unknown": [
 			true,
 			{

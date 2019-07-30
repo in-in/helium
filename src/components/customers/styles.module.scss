@@ -25,12 +25,12 @@
 
 		&::before {
 			inset-inline-start: 0;
-			background-image: linear-gradient(to left, transparent, #{$white});
+			background-image: linear-gradient(to left, #{$crystal}, #{$white});
 		}
 
 		&::after {
 			inset-inline-end: 0;
-			background-image: linear-gradient(to right, transparent, #{$white});
+			background-image: linear-gradient(to right, #{$crystal}, #{$white});
 		}
 
 		@include breakpoint(m) {
