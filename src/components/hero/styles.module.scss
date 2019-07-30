@@ -104,8 +104,8 @@ $clouds: (
 
 	&__chart {
 		position: absolute;
-		top: 0;
-		left: 0;
+		inset-block-start: 0;
+		inset-inline-start: 0;
 		z-index: 0;
 		width: 100%;
 		background-color: rgba($blue_cornflower--l_20, 0.2);
@@ -126,24 +126,24 @@ $clouds: (
 			&_#{$index} {
 				$width: map-get($item, width);
 				composes: $cloud;
-				top: if(
+				inset-block-start: if(
 					map-get($item, top),
 					#{t2c(map-get($item, top), $hero_height)},
 					null
 				);
-				right: if(
-					map-get($item, right),
-					#{t2c(map-get($item, right), map-get($sizes, xl), vw)},
-					null
-				);
-				bottom: if(
+				inset-block-end: if(
 					map-get($item, bottom),
 					#{t2c(map-get($item, bottom), $hero_height)},
 					null
 				);
-				left: if(
+				inset-inline-start: if(
 					map-get($item, left),
 					#{t2c(map-get($item, left), map-get($sizes, xl), vw)},
+					null
+				);
+				inset-inline-end: if(
+					map-get($item, right),
+					#{t2c(map-get($item, right), map-get($sizes, xl), vw)},
 					null
 				);
 				width: locks($width / 3, $width);

@@ -17,19 +17,19 @@
 		&::after {
 			content: "";
 			position: absolute;
-			top: 0;
+			inset-block-start: 0;
 			z-index: 1;
 			min-width: 1em;
 			min-height: 100%;
 		}
 
 		&::before {
-			left: 0;
+			inset-inline-start: 0;
 			background-image: linear-gradient(to left, transparent, #{$white});
 		}
 
 		&::after {
-			right: 0;
+			inset-inline-end: 0;
 			background-image: linear-gradient(to right, transparent, #{$white});
 		}
 
