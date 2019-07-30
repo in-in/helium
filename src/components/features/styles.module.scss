@@ -20,17 +20,17 @@
 
 		@include breakpoint(m) {
 			flex-direction: column;
-			padding-right: t2c(50, map-get($sizes, xl), vw);
-			padding-left: t2c(50, map-get($sizes, xl), vw);
+			padding-inline-start: t2c(50, map-get($sizes, xl), vw);
+			padding-inline-end: t2c(50, map-get($sizes, xl), vw);
 			text-align: center;
 		}
 	}
 
 	&__content {
-		padding-left: rem(24);
+		padding-inline-start: rem(24);
 
 		@include breakpoint(m) {
-			padding-left: 0;
+			padding-inline-start: 0;
 		}
 	}
 
@@ -45,8 +45,8 @@
 
 		@include breakpoint(m) {
 			margin-block-end: t2c(32, map-get($sizes, xl), vw);
-			margin-inline-end: auto;
 			margin-inline-start: auto;
+			margin-inline-end: auto;
 		}
 
 		@include breakpoint(xl) {

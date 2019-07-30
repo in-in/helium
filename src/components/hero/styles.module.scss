@@ -86,18 +86,18 @@ $clouds: (
 
 	&__heading {
 		@extend %item;
-		padding-top: t2c(72, map-get($sizes, xl), vw);
+		padding-block-start: t2c(72, map-get($sizes, xl), vw);
 	}
 
 	&__caption {
 		@extend %item;
 		max-width: 55ch;
 		margin-inline: auto;
-		padding-top: locks(12, 48);
+		padding-block-start: locks(12, 48);
 		text-align: center;
 
 		@include breakpoint(xl) {
-			padding-top: t2c(48, map-get($sizes, xl), vw);
+			padding-block-start: t2c(48, map-get($sizes, xl), vw);
 			font-size: t2c(16, map-get($sizes, xl), vw);
 		}
 	}

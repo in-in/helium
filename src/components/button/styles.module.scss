@@ -5,10 +5,10 @@
 	--button_padding_r_l: #{locks(16, 24)};
 	display: inline-flex;
 	align-items: center;
-	padding-top: var(--button_padding_t_b);
-	padding-right: var(--button_padding_r_l);
-	padding-bottom: var(--button_padding_t_b);
-	padding-left: var(--button_padding_r_l);
+	padding-block-start: var(--button_padding_t_b);
+	padding-block-end: var(--button_padding_t_b);
+	padding-inline-start: var(--button_padding_r_l);
+	padding-inline-end: var(--button_padding_r_l);
 	border-radius: rem(var(--border_radius));
 	font-family: "Quicksand", sans-serif;
 	font-size: rem($button_font_size);
