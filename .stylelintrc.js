@@ -257,6 +257,7 @@ module.exports = {
 				"word-spacing",
 				"word-wrap",
 				"word-break",
+				"overflow-wrap",
 				"tab-size",
 				"hyphens",
 				"letter-spacing",
