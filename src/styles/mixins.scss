@@ -1,0 +1,83 @@
+@mixin breakpoint($size) {
+	@if map-get($sizes, $size) {
+		@media (min-width: map-get($sizes, $size) + px) {
+			@content;
+		}
+	} @else {
+		@error "Unknown size: #{$size}";
+	}
+}
+
+@mixin font-face($name, $filename, $weight: 400, $style: normal, $ext: woff2) {
+	@font-face {
+		font-family: quote($name);
+		font-weight: $weight;
+		font-style: $style;
+		src: url(quote("../fonts/" + $filename + "." + $ext)) format(quote($ext));
+	}
+}
+
+@mixin divider($top: true, $bottom: true) {
+	position: relative;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		inset-inline-start: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $blue_cornflower--l_20;
+	}
+
+	&::before {
+		inset-block-start: 0;
+		display: if($top, null, none);
+	}
+
+	&::after {
+		inset-block-end: 0;
+		display: if($bottom, null, none);
+	}
+}
+
+@mixin hover_transition() {
+	transition-property: background-color, color, fill;
+	transition-duration: var(--transition_duration);
+	transition-timing-function: var(--transition_easeing);
+}
+
+@mixin hover($selector: null, $combinator: " ") {
+	@if $selector {
+		#{$selector} {
+			@include hover_transition;
+		}
+	} @else {
+		@include hover_transition;
+	}
+
+	&:hover#{$combinator}#{$selector},
+	&:focus#{$combinator}#{$selector} {
+		@content;
+	}
+}
+
+@mixin truncate_text($lh: 1.5, $unit: 1em, $breakpoint: 4, $color-bg: $white) {
+	position: relative;
+	max-height: calc((#{$breakpoint} * #{$lh}) * #{$unit});
+	overflow: hidden;
+	background-color: $color-bg;
+	line-height: $lh;
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		width: calc((#{$lh} * #{$unit}) + 3ch);
+		height: calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
+		max-height: calc(#{$lh} * #{$unit});
+		background-image: linear-gradient(to right, $crystal, $color-bg 50%);
+	}
+}
