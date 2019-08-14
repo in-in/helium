@@ -64,6 +64,26 @@
 	}
 }
 
+@mixin truncate_text($lh: 1.5, $unit: 1em, $breakpoint: 4, $color-bg: $white) {
+	position: relative;
+	max-height: calc((#{$breakpoint} * #{$lh}) * #{$unit});
+	overflow: hidden;
+	background-color: $color-bg;
+	line-height: $lh;
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		width: calc((#{$lh} * #{$unit}) + 3ch);
+		height: calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
+		max-height: calc(#{$lh} * #{$unit});
+		background-image: linear-gradient(to right, $crystal, $color-bg 50%);
+	}
+}
+
 @function compose($classname) {
 	@return str-slice(#{$classname}, 2);
 }
