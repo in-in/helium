@@ -87,13 +87,13 @@
 
 	&__logo {
 		--logo_fill_color: #{$gray_french};
-		max-height: rem(40);
 		width: locks(100, 120);
+		max-height: rem(40);
 		fill: var(--logo_fill_color);
 
 		@include breakpoint(xl) {
-			max-height: t2c(40, map-get($sizes, xl), vw);
 			width: t2c(120, map-get($sizes, xl), vw);
+			max-height: t2c(40, map-get($sizes, xl), vw);
 		}
 	}
 }

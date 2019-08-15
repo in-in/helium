@@ -1,0 +1,6 @@
+pre-commit:
+  parallel: true
+  commands:
+    styles:
+      glob: "*.{css,scss}"
+      run: prettier --write {staged_files} && stylelint --fix {staged_files} && git add {staged_files}

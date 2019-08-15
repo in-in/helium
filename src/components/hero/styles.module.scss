@@ -73,9 +73,9 @@ $clouds: (
 .hero {
 	$hero_height: 560;
 	position: relative;
+	height: t2c($hero_height, map-get($sizes, xl), vw);
 	min-height: ($hero_height / 2) * 1px;
 	max-height: t2c($hero_height, map-get($sizes, xl), vw);
-	height: t2c($hero_height, map-get($sizes, xl), vw);
 	overflow: hidden;
 
 	@at-root %item {

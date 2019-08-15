@@ -56,12 +56,12 @@
 		position: absolute;
 		inset-block-start: var(--picture_gap_top);
 		inset-inline-start: var(--picture_gap_left);
+		width: 100%;
 		max-width: calc(100% - (var(--picture_gap_left) * 2));
+		height: 100%;
 		max-height: calc(
 			100% - (var(--picture_gap_top) + var(--picture_gap_bottom))
 		);
-		width: 100%;
-		height: 100%;
 		outline: t2c(1, 825, vw) solid $gray_french--l_20;
 
 		img {
