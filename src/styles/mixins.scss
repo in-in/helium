@@ -50,10 +50,10 @@
 @mixin hover($selector: null, $combinator: " ") {
 	@if $selector {
 		#{$selector} {
-			@include hover_transition;
+			@include hover_transition();
 		}
 	} @else {
-		@include hover_transition;
+		@include hover_transition();
 	}
 
 	&:hover#{$combinator}#{$selector},

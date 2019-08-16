@@ -1,5 +1,6 @@
 .customers {
 	$root: &;
+
 	display: flex;
 	align-items: center;
 	height: locks(120, 144);
@@ -8,7 +9,7 @@
 		height: t2c(144, map-get($sizes, xl), vw);
 	}
 
-	@include divider;
+	@include divider();
 
 	&__wrapper {
 		position: relative;
@@ -87,6 +88,7 @@
 
 	&__logo {
 		--logo_fill_color: #{$gray_french};
+
 		width: locks(100, 120);
 		max-height: rem(40);
 		fill: var(--logo_fill_color);

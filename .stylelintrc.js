@@ -1,5 +1,9 @@
 module.exports = {
-	extends: ["stylelint-config-recommended-scss", "stylelint-a11y/recommended"],
+	extends: [
+		"stylelint-config-standard",
+		"stylelint-a11y/recommended",
+		"stylelint-config-prettier",
+	],
 	plugins: [
 		"stylelint-a11y",
 		"stylelint-declaration-block-no-ignored-properties",
@@ -36,6 +40,18 @@ module.exports = {
 		"a11y/no-obsolete-attribute": true,
 		"a11y/no-obsolete-element": true,
 		"csstools/use-nesting": "always",
+		"at-rule-no-unknown": null,
+		"scss/at-function-parentheses-space-before": "never",
+		"scss/at-import-no-partial-leading-underscore": true,
+		"scss/at-import-partial-extension-blacklist": ["scss"],
+		"scss/at-mixin-argumentless-call-parentheses": "always",
+		"scss/at-rule-no-unknown": true,
+		"scss/dollar-variable-no-missing-interpolation": true,
+		"scss/double-slash-comment-whitespace-inside": "always",
+		"scss/map-keys-quotes": "always",
+		"scss/no-duplicate-dollar-variables": true,
+		"scss/operator-no-unspaced": true,
+		"scss/selector-no-redundant-nesting-selector": true,
 		"plugin/declaration-block-no-ignored-properties": true,
 		"order/order": [["dollar-variables", "custom-properties", "declarations"]],
 		"order/properties-order": [

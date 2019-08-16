@@ -1,5 +1,6 @@
 .social {
 	$root: &;
+
 	display: flex;
 
 	&__item {
@@ -15,6 +16,7 @@
 
 	&__icon {
 		--icon_fill_color: #{$gray_french};
+
 		width: rem(16);
 		box-sizing: content-box;
 		padding: rem(8);

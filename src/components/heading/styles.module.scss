@@ -1,5 +1,6 @@
 .heading {
 	$root: compose(&);
+
 	color: $blue_cobalt--l_10;
 	text-align: center;
 
@@ -11,6 +12,7 @@
 
 .title {
 	$title: compose(&);
+
 	font-family: "Quicksand", sans-serif;
 	font-size: locks(24, 40);
 	font-weight: 300;
@@ -36,6 +38,7 @@
 
 .subtitle {
 	$subtitle_font_min: 10;
+
 	margin-block-end: em(8, $subtitle_font_min);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;

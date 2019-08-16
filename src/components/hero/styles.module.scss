@@ -2,76 +2,77 @@
 
 $clouds: (
 	"1": (
-		top: 176,
-		left: 0,
-		width: 148,
-		transform: translateX(-50%),
+		"top": 176,
+		"left": 0,
+		"width": 148,
+		"transform": translateX(-50%),
 	),
 	"2": (
-		top: 88,
-		left: 256,
-		width: 44,
+		"top": 88,
+		"left": 256,
+		"width": 44,
 	),
 	"3": (
-		bottom: 152,
-		left: 248,
-		width: 24,
+		"bottom": 152,
+		"left": 248,
+		"width": 24,
 	),
 	"4": (
-		bottom: 144,
-		left: 264,
-		width: 48,
+		"bottom": 144,
+		"left": 264,
+		"width": 48,
 	),
 	"5": (
-		bottom: 144,
-		left: 300,
-		width: 32,
+		"bottom": 144,
+		"left": 300,
+		"width": 32,
 	),
 	"6": (
-		bottom: 168,
-		left: 312,
-		width: 20,
+		"bottom": 168,
+		"left": 312,
+		"width": 20,
 	),
 	"7": (
-		right: 256,
-		bottom: 40,
-		width: 104,
+		"right": 256,
+		"bottom": 40,
+		"width": 104,
 	),
 	"8": (
-		right: 240,
-		bottom: 80,
-		width: 48,
+		"right": 240,
+		"bottom": 80,
+		"width": 48,
 	),
 	"9": (
-		right: 200,
-		bottom: 40,
-		width: 64,
+		"right": 200,
+		"bottom": 40,
+		"width": 64,
 	),
 	"10": (
-		top: 40,
-		right: 200,
-		width: 32,
+		"top": 40,
+		"right": 200,
+		"width": 32,
 	),
 	"11": (
-		top: 56,
-		right: 136,
-		width: 80,
+		"top": 56,
+		"right": 136,
+		"width": 80,
 	),
 	"12": (
-		top: 88,
-		right: 136,
-		width: 48,
+		"top": 88,
+		"right": 136,
+		"width": 48,
 	),
 	"13": (
-		right: 0,
-		bottom: 120,
-		width: 112,
-		transform: translateX(50%),
+		"right": 0,
+		"bottom": 120,
+		"width": 112,
+		"transform": translateX(50%),
 	),
 );
 
 .hero {
 	$hero_height: 560;
+
 	position: relative;
 	height: t2c($hero_height, map-get($sizes, xl), vw);
 	min-height: ($hero_height / 2) * 1px;
@@ -86,11 +87,13 @@ $clouds: (
 
 	&__heading {
 		@extend %item;
+
 		padding-block-start: t2c(72, map-get($sizes, xl), vw);
 	}
 
 	&__caption {
 		@extend %item;
+
 		max-width: 55ch;
 		margin-inline: auto;
 		padding-block-start: locks(12, 48);
@@ -118,6 +121,7 @@ $clouds: (
 
 	&__cloud {
 		$cloud: compose(&);
+
 		position: absolute;
 		z-index: 0;
 		fill: $white;
@@ -125,6 +129,7 @@ $clouds: (
 		@each $index, $item in $clouds {
 			&_#{$index} {
 				$width: map-get($item, width);
+
 				composes: $cloud;
 				inset-block-start: if(
 					map-get($item, top),
