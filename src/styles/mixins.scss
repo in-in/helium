@@ -62,9 +62,18 @@
 	}
 }
 
-@mixin truncate_text($lh: 1.5, $unit: 1em, $breakpoint: 4, $color-bg: $white) {
+@mixin truncate_text(
+	$lh: 1.5,
+	$unit: 1em,
+	$breakpoint: 4,
+	$color-bg: $white,
+	$min-height: false
+) {
+	$height: calc((#{$breakpoint} * #{$lh}) * #{$unit});
+
 	position: relative;
-	max-height: calc((#{$breakpoint} * #{$lh}) * #{$unit});
+	min-height: if($min-height, $height, auto);
+	max-height: $height;
 	overflow: hidden;
 	background-color: $color-bg;
 	line-height: $lh;
