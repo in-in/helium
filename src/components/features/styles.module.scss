@@ -6,8 +6,19 @@
 	}
 
 	@include breakpoint(m) {
+		position: relative;
 		grid-template-columns: repeat(4, 1fr);
 		gap: t2c(32, map-get($sizes, l), vw);
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			z-index: 0;
+			width: 100%;
+			height: t2c(1, map-get($sizes, m), vw);
+			background-color: $blue_cornflower--l_30;
+		}
 	}
 
 	&__item {
@@ -19,9 +30,12 @@
 		}
 
 		@include breakpoint(m) {
+			position: relative;
+			z-index: 1;
 			flex-direction: column;
 			padding-inline-start: t2c(50, map-get($sizes, xl), vw);
 			padding-inline-end: t2c(50, map-get($sizes, xl), vw);
+			background-color: $white;
 			text-align: center;
 		}
 	}
@@ -70,6 +84,10 @@
 	&__text {
 		composes: text from "../text/styles.module.scss";
 		min-width: 100%;
-		@include truncate_text($lh: var(--text_line_height), $breakpoint: 4);
+		@include truncate_text(
+			$lh: var(--text_line_height),
+			$breakpoint: 4,
+			$min-height: true
+		);
 	}
 }
