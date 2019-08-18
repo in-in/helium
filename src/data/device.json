@@ -3,26 +3,10 @@
 		"device": "laptop",
 		"images": [
 			{
-				"width": 640,
-				"sources": {
-					"x1": "laptop_s.jpg",
-					"x2": "laptop_s_@2x.jpg",
-					"x3": "laptop_s_@3x.jpg"
-				}
-			},
-			{
-				"width": 320,
-				"sources": {
-					"x1": "laptop_xs.jpg",
-					"x2": "laptop_xs_@2x.jpg",
-					"x3": "laptop_xs_@3x.jpg"
-				}
-			},
-			{
 				"width": 0,
 				"alt": "device laptop",
 				"sources": {
-					"x1": "laptop_s.jpg"
+					"x1": "device_laptop.svg"
 				}
 			}
 		]
@@ -31,18 +15,10 @@
 		"device": "phone",
 		"images": [
 			{
-				"width": 640,
-				"sources": {
-					"x1": "phone_s.jpg",
-					"x2": "phone_s_@2x.jpg",
-					"x3": "phone_s_@3x.jpg"
-				}
-			},
-			{
 				"width": 0,
 				"alt": "device phone",
 				"sources": {
-					"x1": "phone_s.jpg"
+					"x1": "device_phone.svg"
 				}
 			}
 		]
@@ -51,18 +27,10 @@
 		"device": "tablet",
 		"images": [
 			{
-				"width": 1280,
-				"sources": {
-					"x1": "tablet_l.jpg",
-					"x2": "tablet_l_@2x.jpg",
-					"x3": "tablet_l_@3x.jpg"
-				}
-			},
-			{
 				"width": 0,
 				"alt": "device tablet",
 				"sources": {
-					"x1": "tablet_l.jpg"
+					"x1": "device_tablet.svg"
 				}
 			}
 		]

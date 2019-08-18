@@ -7,8 +7,6 @@ export const device = graphql`
 			width
 			sources {
 				x1
-				x2
-				x3
 			}
 		}
 	}
