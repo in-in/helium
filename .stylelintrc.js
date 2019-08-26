@@ -13,6 +13,7 @@ module.exports = {
 	],
 	rules: {
 		"declaration-block-no-duplicate-properties": true,
+		"selector-pseudo-class-no-unknown": true,
 		"shorthand-property-no-redundant-values": true,
 		"value-keyword-case": "lower",
 		"declaration-property-value-blacklist": [
