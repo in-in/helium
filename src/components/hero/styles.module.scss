@@ -120,44 +120,6 @@ $clouds: (
 	}
 
 	&__cloud {
-		$cloud: compose(&);
-
-		position: absolute;
-		z-index: 0;
-		fill: $white;
-
-		@each $index, $item in $clouds {
-			&_#{$index} {
-				$width: map-get($item, width);
-
-				composes: $cloud;
-				inset-block-start: if(
-					map-get($item, top),
-					#{t2c(map-get($item, top), $hero_height)},
-					null
-				);
-				inset-block-end: if(
-					map-get($item, bottom),
-					#{t2c(map-get($item, bottom), $hero_height)},
-					null
-				);
-				inset-inline-start: if(
-					map-get($item, left),
-					#{t2c(map-get($item, left), map-get($sizes, xl), vw)},
-					null
-				);
-				inset-inline-end: if(
-					map-get($item, right),
-					#{t2c(map-get($item, right), map-get($sizes, xl), vw)},
-					null
-				);
-				width: locks($width / 3, $width);
-				transform: if(
-					map-get($item, transform),
-					#{map-get($item, transform)},
-					null
-				);
-			}
-		}
+		@include cloud($clouds, $hero_height);
 	}
 }
