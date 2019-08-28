@@ -91,12 +91,12 @@
 	}
 }
 
-@mixin cloud($data, $height) {
+@mixin cloud($data, $height, $color: $white) {
 	$cloud: compose(&);
 
 	position: absolute;
 	z-index: 0;
-	fill: $white;
+	fill: $color;
 
 	@each $index, $item in $data {
 		&_#{$index} {
@@ -129,6 +129,7 @@
 				#{map-get($item, transform)},
 				null
 			);
+			fill: if(map-get($item, fill), #{map-get($item, fill)}, $color);
 		}
 	}
 }

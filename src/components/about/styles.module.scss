@@ -1,4 +1,64 @@
+$clouds: (
+	"1": (
+		"bottom": 208,
+		"left": 120,
+		"width": 48,
+	),
+	"2": (
+		"bottom": 200,
+		"left": 152,
+		"width": 80,
+		"fill": $blue_cornflower--l_30,
+	),
+	"3": (
+		"bottom": 232,
+		"left": 160,
+		"width": 40,
+	),
+	"4": (
+		"bottom": 216,
+		"left": 208,
+		"width": 32,
+		"fill": $blue_cornflower--l_30,
+	),
+	"5": (
+		"top": 144,
+		"left": 224,
+		"width": 48,
+	),
+	"6": (
+		"top": 144,
+		"left": 256,
+		"width": 24,
+		"fill": $blue_cornflower--l_30,
+	),
+	"7": (
+		"top": 224,
+		"right": 192,
+		"width": 40,
+	),
+	"8": (
+		"top": 216,
+		"right": 136,
+		"width": 80,
+		"fill": $blue_cornflower--l_30,
+	),
+	"9": (
+		"top": 240,
+		"right": 112,
+		"width": 48,
+	),
+	"10": (
+		"top": 200,
+		"right": 112,
+		"width": 32,
+	),
+);
+
 .about {
+	$about_height: 929;
+
+	position: relative;
 	padding-block-start: locks(72, 168);
 	padding-block-end: locks(72, 168);
 
@@ -16,7 +76,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding-block-start: t2c(88, map-get($sizes, xl), vw);
+		padding-block-start: t2c(112, map-get($sizes, xl), vw);
 
 		@include breakpoint(s) {
 			flex-direction: row;
@@ -72,6 +132,12 @@
 				margin-block-start: 0;
 				margin-inline-start: 2ch;
 			}
+		}
+	}
+
+	@include breakpoint(s) {
+		&__cloud {
+			@include cloud($clouds, $about_height, rgba($blue_cornflower--l_20, 0.3));
 		}
 	}
 }

@@ -5,7 +5,10 @@ import Heading from "../heading"
 import Features from "../features"
 import Button from "../button"
 import Text from "../text"
+import Icon from "../icon"
 import st from "./styles.module.scss"
+
+const clouds = Array(10).fill(0)
 
 const About = () => {
 	const data = useStaticQuery(graphql`
@@ -37,6 +40,16 @@ const About = () => {
 					</div>
 				</div>
 			</Container>
+
+			{clouds.map((item, i) => (
+				<Icon
+					hidden
+					filename="cloud"
+					// eslint-disable-next-line react/no-array-index-key
+					key={i}
+					classname={st[`about__cloud_${i + 1}`]}
+				/>
+			))}
 		</section>
 	)
 }
