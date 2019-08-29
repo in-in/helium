@@ -135,8 +135,11 @@ $clouds: (
 		}
 	}
 
-	@include breakpoint(s) {
-		&__cloud {
+	&__cloud {
+		display: none;
+
+		@include breakpoint(s) {
+			display: block;
 			@include cloud($clouds, $about_height, rgba($blue_cornflower--l_20, 0.3));
 		}
 	}

@@ -24,20 +24,16 @@ const About = () => {
 	return (
 		<section className={st.about}>
 			<Container>
-				<div className={st.about__wrapper}>
-					{data.allSectionHeadingsJson.nodes.map(item => (
-						<header className={st.about__header} key={item.id}>
-							<Heading {...item} />
-						</header>
-					))}
-					<div className={st.about__features}>
-						<Features />
-					</div>
-					<div className={st.about__button}>
-						<Button variant="primary">Read more</Button>
-						<Text classname={st.about__text}>or</Text>
-						<Button variant="primary">Get started</Button>
-					</div>
+				{data.allSectionHeadingsJson.nodes.map(item => (
+					<header className={st.about__header} key={item.id}>
+						<Heading {...item} />
+					</header>
+				))}
+				<Features />
+				<div className={st.about__button}>
+					<Button variant="primary">Read more</Button>
+					<Text classname={st.about__text}>or</Text>
+					<Button variant="primary">Get started</Button>
 				</div>
 			</Container>
 
