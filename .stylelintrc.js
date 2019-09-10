@@ -124,6 +124,8 @@ module.exports = {
 				`min-height`,
 				`max-height`,
 				`overflow`,
+				`overflow-block`,
+				`overflow-inline`,
 				`overflow-x`,
 				`overflow-y`,
 				`shape-outside`,
