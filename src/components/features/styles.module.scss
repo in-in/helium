@@ -78,6 +78,7 @@
 		margin-block-end: locks(16, 24);
 		color: $blue_cornflower;
 		font-size: rem(14);
+		font-weight: 500;
 		line-height: 1.7;
 
 		@include breakpoint(xl) {
