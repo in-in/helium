@@ -4,12 +4,11 @@
 	"private": true,
 	"scripts": {
 		"build": "gatsby build",
-		"develop": "NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop --https --key-file $KEY_FILE_LOCALHOST --cert-file $CERT_FILE_LOCALHOST",
-		"develop-m": "gatsby develop -H 0.0.0.0 -p 8000",
+		"develop": "GATSBY_TELEMETRY_DISABLED=1 NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop --https --key-file $KEY_FILE_LOCALHOST --cert-file $CERT_FILE_LOCALHOST -H 0.0.0.0 -p 8000",
 		"gen": "plop",
 		"now-build": "npm run build",
 		"serve": "gatsby serve",
-		"start": "GATSBY_TELEMETRY_DISABLED=1 npm run develop"
+		"start": "npm run develop"
 	},
 	"browserslist": [
 		"last 2 versions and > 0.4%",
