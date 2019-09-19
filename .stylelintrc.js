@@ -38,6 +38,7 @@ module.exports = {
 				ignore: [`after-comment`],
 			},
 		],
+		"a11y/content-property-no-static-value": true,
 		"a11y/no-obsolete-attribute": true,
 		"a11y/no-obsolete-element": true,
 		"csstools/use-nesting": `always`,
