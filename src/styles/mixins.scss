@@ -56,9 +56,38 @@
 		@include hover_transition();
 	}
 
-	&:hover#{$combinator}#{$selector},
-	&:focus#{$combinator}#{$selector} {
-		@content;
+	@media (hover: hover) {
+		&:hover#{$combinator}#{$selector},
+		&:focus#{$combinator}#{$selector} {
+			@content;
+		}
+	}
+}
+
+@mixin active() {
+	background-image: radial-gradient(
+		circle at center center,
+		$crystal 1%,
+		currentColor 1%
+	);
+	background-position: center;
+	background-size: 15000%;
+	transition-property: background;
+	transition-duration: var(--transition_duration);
+
+	@media screen and (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+
+	&:active {
+		background-color: $crystal;
+		background-size: 100%;
+		transition-property: background-size;
+		transition-duration: 0s;
+
+		@media screen and (prefers-reduced-motion: reduce) {
+			transition: none;
+		}
 	}
 }
 

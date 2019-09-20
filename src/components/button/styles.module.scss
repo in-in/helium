@@ -38,11 +38,12 @@
 		composes: $root;
 		background-color: $blue_cornflower--l_30;
 		color: $blue_cobalt--l_10;
-
 		@include hover() {
 			background-color: $blue_cornflower--l_20;
 			color: $blue_cobalt;
 		}
+
+		@include active();
 	}
 
 	&_secondary {
@@ -53,6 +54,8 @@
 		@include hover() {
 			background-color: $blue_cobalt--l_10;
 		}
+
+		@include active();
 	}
 
 	&_plain {
@@ -63,6 +66,8 @@
 		@include hover() {
 			color: $blue_cobalt--l_10;
 		}
+
+		@include active();
 
 		&-invert {
 			composes: $root;
@@ -84,6 +89,8 @@
 			background-color: $gray_french;
 			color: $gray_french--d_50;
 		}
+
+		@include active();
 	}
 
 	&_bright {
@@ -95,5 +102,7 @@
 			background-color: $gray_french--l_20;
 			color: $blue_cobalt--d_20;
 		}
+
+		@include active();
 	}
 }
