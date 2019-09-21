@@ -1,0 +1,54 @@
+.stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
+}
+
+.stats-block {
+	--background: #{$blue_cornflower};
+	--foreground: #{$white};
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: t2c(90, map-get($sizes, xl), vw);
+	background-color: var(--background);
+	color: var(--foreground);
+	font-family: "Quicksand", sans-serif;
+	font-size: 1rem;
+
+	@include breakpoint(xl) {
+		font-size: t2c(16, map-get($sizes, xl), vw);
+	}
+
+	&__icon {
+		width: em(64);
+		margin-block-end: em(24);
+		fill: currentColor;
+	}
+
+	&__number {
+		margin-block-end: em(24, 48);
+		font-size: em(48);
+		font-weight: 500;
+		line-height: 1;
+	}
+
+	&__desc {
+		font-size: em(18);
+		font-weight: 500;
+		line-height: 1.5;
+	}
+
+	&:nth-of-type(odd) {
+		padding-inline-start: t2c(370, map-get($sizes, xl), vw);
+		text-align: right;
+	}
+
+	&:nth-of-type(even) {
+		--background: #{$blue_cornflower--l_30};
+		--foreground: #{$blue_cobalt--l_10};
+
+		align-items: flex-start;
+		padding-inline-end: t2c(370, map-get($sizes, xl), vw);
+	}
+}

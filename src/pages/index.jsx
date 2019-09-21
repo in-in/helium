@@ -5,6 +5,7 @@ import Hero from "../components/hero"
 import Customers from "../components/customers"
 import Software from "../components/software"
 import About from "../components/about"
+import Stats from "../components/stats"
 
 const IndexPage = () => (
 	<Layout>
@@ -13,7 +14,7 @@ const IndexPage = () => (
 		<Customers />
 		<Software />
 		<About />
-		<section>stats</section>
+		<Stats />
 		<section>blog</section>
 		<section>testimonials</section>
 		<section>help</section>

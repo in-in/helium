@@ -1,0 +1,12 @@
+[
+	{
+		"icon": "chart-line",
+		"number": "89%",
+		"desc": "Customers who have increased their productivity"
+	},
+	{
+		"icon": "users",
+		"number": "3123",
+		"desc": "Users who have used our application"
+	}
+]
