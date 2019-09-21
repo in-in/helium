@@ -14,7 +14,7 @@
 	}
 }
 
-@function em($px, $context) {
+@function em($px, $context: 16) {
 	@return calc((#{$px} / #{$context}) * 1em);
 }
 
