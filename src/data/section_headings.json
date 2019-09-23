@@ -31,5 +31,16 @@
 		"big": false,
 		"left": false,
 		"caption": ""
+	},
+	{
+		"section": "blog",
+		"subtitle": "Our resources",
+		"title": {
+			"text": "Start reading our blog",
+			"accent": [0, 2]
+		},
+		"big": false,
+		"left": false,
+		"caption": ""
 	}
 ]

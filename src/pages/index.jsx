@@ -6,6 +6,7 @@ import Customers from "../components/customers"
 import Software from "../components/software"
 import About from "../components/about"
 import Stats from "../components/stats"
+import Blog from "../components/blog"
 
 const IndexPage = () => (
 	<Layout>
@@ -15,7 +16,7 @@ const IndexPage = () => (
 		<Software />
 		<About />
 		<Stats />
-		<section>blog</section>
+		<Blog />
 		<section>testimonials</section>
 		<section>help</section>
 		<section>pricing</section>

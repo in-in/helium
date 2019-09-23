@@ -1,0 +1,13 @@
+.blog {
+	padding-block-start: locks(72, 104);
+	padding-block-end: locks(72, 104);
+
+	@include breakpoint(xl) {
+		padding-block-start: t2c(104, map-get($sizes, xl), vw);
+		padding-block-end: t2c(104, map-get($sizes, xl), vw);
+	}
+
+	&__header {
+		margin-block-end: locks(48, 88);
+	}
+}
