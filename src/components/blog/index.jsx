@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "../container"
 import Heading from "../heading"
+import Carousel from "../carousel"
 import st from "./styles.module.scss"
 
 const Blog = () => {
@@ -19,10 +20,13 @@ const Blog = () => {
 		<section className={st.blog}>
 			<Container>
 				{data.allSectionHeadingsJson.nodes.map(item => (
-					<header className={st.blog__header} key={item.id}>
+					<header key={item.id}>
 						<Heading {...item} />
 					</header>
 				))}
+				<div className={st.blog__carousel}>
+					<Carousel />
+				</div>
 			</Container>
 		</section>
 	)
