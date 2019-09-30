@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import ReactIdSwiper from "react-id-swiper/lib/ReactIdSwiper.custom"
 import {
 	Swiper,
@@ -10,7 +11,7 @@ import {
 import Icon from "../icon"
 import st from "./styles.module.scss"
 
-const Carousel = () => {
+const Carousel = ({ children }) => {
 	const params = {
 		Swiper,
 		modules: [Navigation, Pagination, A11y, EffectFade],
@@ -20,7 +21,6 @@ const Carousel = () => {
 		slideActiveClass: `${st.carousel__slide_active}`,
 		loop: true,
 		effect: `fade`,
-		spaceBetween: 50,
 		pagination: {
 			el: `.${st.carousel__pagination}`,
 			clickable: true,
@@ -44,39 +44,18 @@ const Carousel = () => {
 	}
 
 	return (
-		<>
-			{/* eslint-disable-next-line react/jsx-props-no-spreading */}
-			<ReactIdSwiper {...params}>
-				<div>
-					<p>slide 1</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-						officiis sapiente magnam aliquam ullam delectus recusandae,
-						inventore similique in esse accusantium nihil earum cum molestiae
-						optio omnis maxime deserunt cupiditate.
-					</p>
-				</div>
-				<div>
-					<p>slide 2</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-						officiis sapiente magnam aliquam ullam delectus recusandae,
-						inventore similique in esse accusantium nihil earum cum molestiae
-						optio omnis maxime deserunt cupiditate.
-					</p>
-				</div>
-				<div>
-					<p>slide 3</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-						officiis sapiente magnam aliquam ullam delectus recusandae,
-						inventore similique in esse accusantium nihil earum cum molestiae
-						optio omnis maxime deserunt cupiditate.
-					</p>
-				</div>
-			</ReactIdSwiper>
-		</>
+		// eslint-disable-next-line react/jsx-props-no-spreading
+		<ReactIdSwiper {...params}>
+			{children.map((child, i) => (
+				// eslint-disable-next-line react/no-array-index-key
+				<div key={i}>{child}</div>
+			))}
+		</ReactIdSwiper>
 	)
+}
+
+Carousel.propTypes = {
+	children: PropTypes.node.isRequired,
 }
 
 export default Carousel
