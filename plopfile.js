@@ -1,4 +1,7 @@
 module.exports = plop => {
+	plop.setHelper(`testHyphen`, str =>
+		str.includes(`-`) ? `[\`${str.toLowerCase()}\`]` : `.${str.toLowerCase()}`
+	)
 	plop.setGenerator(`component`, {
 		description: `Create a component`,
 		prompts: [
