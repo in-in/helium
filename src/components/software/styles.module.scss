@@ -15,7 +15,7 @@
 			"header"
 			"showcase";
 		grid-template-columns: 1fr;
-		grid-gap: rem(40);
+		gap: rem(40);
 
 		@include breakpoint(m) {
 			grid-template-areas: "header showcase showcase";
