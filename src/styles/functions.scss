@@ -35,3 +35,7 @@
 
 	@return calc(#{$slope * 100}vw + #{$initial_size}rem);
 }
+
+@function aspect-ratio($size, $ratio) {
+	@return calc(#{$size} / (#{$ratio}));
+}
