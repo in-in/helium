@@ -45,3 +45,10 @@ button {
 	background: none;
 	appearance: none;
 }
+
+textarea,
+input {
+	word-spacing: inherit;
+	letter-spacing: inherit;
+	font: inherit;
+}
