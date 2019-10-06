@@ -1,0 +1,126 @@
+.article-preview {
+	display: grid;
+	gap: t2c(64, map-get($sizes, xl), vw);
+	max-width: rem(272);
+	margin-inline: auto;
+
+	@include breakpoint(s) {
+		max-width: rem(416);
+	}
+
+	@include breakpoint(m) {
+		grid-template-columns: min-content 1fr;
+		max-width: none;
+		margin-inline: 0;
+	}
+
+	&__media {
+		--grid-temp: "main main" ". .";
+
+		display: grid;
+		grid-template-areas: var(--grid-temp);
+		gap: rem(16);
+		justify-content: start;
+		align-content: start;
+
+		@include breakpoint(s) {
+			--grid-temp: "main ." "main .";
+		}
+
+		@include breakpoint(m) {
+			--grid-temp: "main main" ". .";
+		}
+
+		@include breakpoint(l) {
+			--grid-temp: "main ." "main .";
+		}
+
+		@include breakpoint(xl) {
+			gap: t2c(16, map-get($sizes, xl), vw);
+		}
+	}
+
+	&__picture {
+		--width: #{rem(272)};
+		--height: #{aspect-ratio(var(--width), 1/1)};
+		--border-radius: #{rem(var(--border_radius))};
+		--gradient1: rgba(255, 227, 154, 0.7);
+		--gradient2: rgba(255, 159, 90, 0);
+
+		composes: picture from "../picture/styles.module.scss";
+		position: relative;
+		min-width: var(--width);
+		max-width: var(--width);
+		min-height: var(--height);
+		max-height: var(--height);
+		overflow: hidden;
+		border-radius: var(--border-radius);
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(
+				20deg,
+				var(--gradient1) 2%,
+				var(--gradient2) 68%
+			);
+		}
+
+		@include breakpoint(xl) {
+			--width: #{t2c(272, map-get($sizes, xl), vw)};
+			--border-radius: #{t2c(var(--border_radius), map-get($sizes, xl), vw)};
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&:nth-child(1) {
+			grid-area: main;
+		}
+
+		&:nth-child(2) {
+			--gradient1: rgba(255, 53, 53, 0.4);
+			--gradient2: rgba(255, 179, 90, 0);
+		}
+
+		&:nth-child(3) {
+			--gradient1: rgba(53, 170, 255, 0.68);
+			--gradient2: rgba(90, 136, 255, 0);
+		}
+
+		&:not(:nth-child(1)) {
+			--width: #{rem(128)};
+
+			@include breakpoint(xl) {
+				--width: #{t2c(128, map-get($sizes, xl), vw)};
+			}
+		}
+	}
+
+	&__title {
+		margin-block-end: t2c(32, map-get($sizes, xl), vw);
+		color: $blue_cobalt;
+		font-family: "Quicksand", sans-serif;
+		font-size: locks(24, 36);
+		font-weight: 400;
+		line-height: 1.1;
+	}
+
+	&__excerpt {
+		composes: text from "../text/styles.module.scss";
+		margin-block-end: t2c(40, map-get($sizes, xl), vw);
+
+		@include truncate_text(
+			$lh: var(--text_line_height),
+			$breakpoint: 4,
+			$min-height: true
+		);
+	}
+}

@@ -1,0 +1,173 @@
+[
+	{
+		"title": "Blog Article 1",
+		"excerpt": "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.",
+		"images": [
+			[
+				{
+					"width": 320,
+					"sources": {
+						"x1": "ap_1_main.jpg",
+						"x2": "ap_1_main@2x.jpg",
+						"x3": "ap_1_main@3x.jpg"
+					}
+				},
+				{
+					"width": 0,
+					"alt": "ap_1_main",
+					"sources": {
+						"x1": "ap_1_main@3x.jpg"
+					}
+				}
+			],
+			[
+				{
+					"width": 320,
+					"sources": {
+						"x1": "ap_1_thumb1.jpg",
+						"x2": "ap_1_thumb1@2x.jpg",
+						"x3": "ap_1_thumb1@3x.jpg"
+					}
+				},
+				{
+					"width": 0,
+					"alt": "ap_1_thumb1",
+					"sources": {
+						"x1": "ap_1_thumb1@3x.jpg"
+					}
+				}
+			],
+			[
+				{
+					"width": 320,
+					"sources": {
+						"x1": "ap_1_thumb2.jpg",
+						"x2": "ap_1_thumb2@2x.jpg",
+						"x3": "ap_1_thumb2@3x.jpg"
+					}
+				},
+				{
+					"width": 0,
+					"alt": "ap_1_thumb2",
+					"sources": {
+						"x1": "ap_1_thumb2@3x.jpg"
+					}
+				}
+			]
+		]
+	},
+	{
+		"title": "Blog Article 2",
+		"excerpt": "No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has. Vim ne tacimates neglegentur. Erat diceret omittam at est. Nisl idque mel ea, nominati voluptatum.",
+		"images": [
+			[
+				{
+					"width": 320,
+					"sources": {
+						"x1": "ap_2_main.jpg",
+						"x2": "ap_2_main@3x.jpg",
+						"x3": "ap_2_main@3x.jpg"
+					}
+				},
+				{
+					"width": 0,
+					"alt": "ap_2_main",
+					"sources": {
+						"x1": "ap_2_main@3x.jpg"
+					}
+				}
+			],
+			[
+				{
+					"width": 320,
+					"sources": {
+						"x1": "ap_2_thumb1.jpg",
+						"x2": "ap_2_thumb1@2x.jpg",
+						"x3": "ap_2_thumb1@3x.jpg"
+					}
+				},
+				{
+					"width": 0,
+					"alt": "ap_2_thumb1",
+					"sources": {
+						"x1": "ap_2_thumb1@3x.jpg"
+					}
+				}
+			],
+			[
+				{
+					"width": 320,
+					"sources": {
+						"x1": "ap_2_thumb2.jpg",
+						"x2": "ap_2_thumb2@2x.jpg",
+						"x3": "ap_2_thumb2@3x.jpg"
+					}
+				},
+				{
+					"width": 0,
+					"alt": "ap_2_thumb2",
+					"sources": {
+						"x1": "ap_2_thumb2@3x.jpg"
+					}
+				}
+			]
+		]
+	},
+	{
+		"title": "Blog Article 3",
+		"excerpt": "Vim ne tacimates neglegentur. Erat diceret omittam at est.",
+		"images": [
+			[
+				{
+					"width": 320,
+					"sources": {
+						"x1": "ap_3_main.jpg",
+						"x2": "ap_3_main@3x.jpg",
+						"x3": "ap_3_main@3x.jpg"
+					}
+				},
+				{
+					"width": 0,
+					"alt": "ap_3_main",
+					"sources": {
+						"x1": "ap_3_main@3x.jpg"
+					}
+				}
+			],
+			[
+				{
+					"width": 320,
+					"sources": {
+						"x1": "ap_3_thumb1.jpg",
+						"x2": "ap_3_thumb1@2x.jpg",
+						"x3": "ap_3_thumb1@3x.jpg"
+					}
+				},
+				{
+					"width": 0,
+					"alt": "ap_3_thumb1",
+					"sources": {
+						"x1": "ap_3_thumb1@3x.jpg"
+					}
+				}
+			],
+			[
+				{
+					"width": 320,
+					"sources": {
+						"x1": "ap_3_thumb2.jpg",
+						"x2": "ap_3_thumb2@2x.jpg",
+						"x3": "ap_3_thumb2@3x.jpg"
+					}
+				},
+				{
+					"width": 0,
+					"alt": "ap_3_thumb2",
+					"sources": {
+						"x1": "ap_3_thumb2@3x.jpg"
+					}
+				}
+			]
+		]
+	}
+]
