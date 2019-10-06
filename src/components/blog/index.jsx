@@ -41,8 +41,8 @@ const Blog = () => {
 						<Heading {...item} />
 					</header>
 				))}
-				<div className={st.blog__carousel}>
-					<Carousel>
+				<div className={st[`blog__carousel-wrapper`]}>
+					<Carousel parentClass={st.blog__carousel}>
 						{data.allArticlesJson.nodes.map(item => {
 							const { title, excerpt, images, id } = item
 							return (

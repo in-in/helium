@@ -8,11 +8,16 @@
 		padding-block-end: t2c(104, map-get($sizes, xl), vw);
 	}
 
-	&__carousel {
+	&__carousel-wrapper {
 		margin-inline: auto;
 
 		@include breakpoint(m) {
 			width: t2c(1152, map-get($sizes, xl), vw);
 		}
+	}
+
+	&__carousel {
+		padding-block: t2c(64, map-get($sizes, xl), vw);
+		padding-inline: t2c(32, map-get($sizes, xl), vw);
 	}
 }

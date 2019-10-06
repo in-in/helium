@@ -11,7 +11,7 @@ import {
 import Icon from "../icon"
 import st from "./styles.module.scss"
 
-const Carousel = ({ children }) => {
+const Carousel = ({ children, parentClass = `` }) => {
 	const params = {
 		Swiper,
 		modules: [Navigation, Pagination, A11y, EffectFade],
@@ -48,7 +48,9 @@ const Carousel = ({ children }) => {
 		<ReactIdSwiper {...params}>
 			{children.map((child, i) => (
 				// eslint-disable-next-line react/no-array-index-key
-				<div key={i}>{child}</div>
+				<div key={i} className={parentClass}>
+					{child}
+				</div>
 			))}
 		</ReactIdSwiper>
 	)
@@ -56,6 +58,7 @@ const Carousel = ({ children }) => {
 
 Carousel.propTypes = {
 	children: PropTypes.node.isRequired,
+	parentClass: PropTypes.string.isRequired,
 }
 
 export default Carousel
