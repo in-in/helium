@@ -99,16 +99,11 @@ $clouds: (
 		&::before,
 		&::after {
 			content: "";
-			display: block;
-			width: 1px;
-			height: 2ch;
-			margin-inline: auto;
 			background-color: $gray_french--l_10;
 
 			@include breakpoint(s) {
 				width: 2ch;
-				height: 1px;
-				margin-inline: 0;
+				height: rem(1);
 			}
 
 			@include breakpoint(xl) {
@@ -117,21 +112,13 @@ $clouds: (
 		}
 
 		&::before {
-			margin-block-end: 2ch;
-
-			@include breakpoint(s) {
-				margin-block-end: 0;
-				margin-inline-end: 2ch;
-			}
+			margin-block-end: 0;
+			margin-inline-end: 2ch;
 		}
 
 		&::after {
-			margin-block-start: 2ch;
-
-			@include breakpoint(s) {
-				margin-block-start: 0;
-				margin-inline-start: 2ch;
-			}
+			margin-block-start: 0;
+			margin-inline-start: 2ch;
 		}
 	}
 
