@@ -7,6 +7,7 @@ import {
 	Pagination,
 	A11y,
 	EffectFade,
+	Lazy,
 } from "swiper/js/swiper.esm"
 import Icon from "../icon"
 import st from "./styles.module.scss"
@@ -14,13 +15,15 @@ import st from "./styles.module.scss"
 const Carousel = ({ children, parentClass = `` }) => {
 	const params = {
 		Swiper,
-		modules: [Navigation, Pagination, A11y, EffectFade],
+		modules: [Navigation, Pagination, A11y, EffectFade, Lazy],
 		containerClass: `${st.carousel__container}`,
 		wrapperClass: `${st.carousel__wrapper}`,
 		slideClass: `${st.carousel__slide}`,
 		slideActiveClass: `${st.carousel__slide_active}`,
 		loop: true,
 		effect: `fade`,
+		preloadImages: false,
+		lazy: true,
 		pagination: {
 			el: `.${st.carousel__pagination}`,
 			clickable: true,
