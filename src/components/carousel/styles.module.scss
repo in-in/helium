@@ -24,9 +24,12 @@
 		overflow: hidden;
 		margin-block-end: t2c(104, map-get($sizes, xl), vw);
 		border: 1px solid $blue_cornflower--l_30;
-		box-shadow: 0 0 rem(50) $blue_cornflower--l_30;
 		transition-property: transform;
 		transform: translate3d(0, 0, 0);
+
+		@include breakpoint(m) {
+			box-shadow: 0 0 rem(50) $blue_cornflower--l_30;
+		}
 
 		@include breakpoint(xl) {
 			border-width: t2c(1, map-get($sizes, xl), vw);
