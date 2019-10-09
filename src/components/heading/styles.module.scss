@@ -1,3 +1,8 @@
+@use "sass:map";
+@use "styles/functions" as *;
+@use "styles/mixins" as *;
+@use "styles/vars" as *;
+
 .heading {
 	$root: compose(&);
 
@@ -19,7 +24,7 @@
 	line-height: 1.15;
 
 	@include breakpoint(xl) {
-		font-size: t2c(40, map-get($sizes, xl), vw);
+		font-size: t2c(40, map.get($sizes, xl), vw);
 	}
 
 	&_big {
@@ -27,7 +32,7 @@
 		font-size: locks(32, 48);
 
 		@include breakpoint(xl) {
-			font-size: t2c(48, map-get($sizes, xl), vw);
+			font-size: t2c(48, map.get($sizes, xl), vw);
 		}
 	}
 }
@@ -47,6 +52,6 @@
 	line-height: 1.5;
 
 	@include breakpoint(xl) {
-		font-size: t2c(13, map-get($sizes, xl), vw);
+		font-size: t2c(13, map.get($sizes, xl), vw);
 	}
 }

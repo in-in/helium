@@ -1,3 +1,5 @@
+@use "mixins" as *;
+
 @include font-face(Quicksand, quicksand-v9-latin-300, 300);
 @include font-face(Quicksand, quicksand-v9-latin-regular);
 @include font-face(Quicksand, quicksand-v9-latin-500, 500);

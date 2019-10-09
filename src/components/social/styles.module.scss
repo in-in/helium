@@ -1,3 +1,8 @@
+@use "sass:map";
+@use "styles/functions" as *;
+@use "styles/mixins" as *;
+@use "styles/vars" as *;
+
 .social {
 	$root: &;
 
@@ -25,12 +30,12 @@
 
 	@include breakpoint(xl) {
 		&__item {
-			margin: t2c(8, map-get($sizes, xl), vw);
+			margin: t2c(8, map.get($sizes, xl), vw);
 		}
 
 		&__icon {
-			width: t2c(16, map-get($sizes, xl), vw);
-			padding: t2c(8, map-get($sizes, xl), vw);
+			width: t2c(16, map.get($sizes, xl), vw);
+			padding: t2c(8, map.get($sizes, xl), vw);
 		}
 	}
 }

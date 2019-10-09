@@ -1,6 +1,10 @@
+@use "sass:map";
+@use "styles/functions" as *;
+@use "styles/vars" as *;
+
 .container {
 	width: 100%;
 	margin-inline: auto;
-	padding-inline-start: t2c(16, map-get($sizes, xs), vw);
-	padding-inline-end: t2c(16, map-get($sizes, xs), vw);
+	padding-inline-start: t2c(16, map.get($sizes, xs), vw);
+	padding-inline-end: t2c(16, map.get($sizes, xs), vw);
 }

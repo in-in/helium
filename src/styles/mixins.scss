@@ -1,6 +1,10 @@
+@use "sass:map";
+@use "styles/functions" as *;
+@use "vars" as *;
+
 @mixin breakpoint($size) {
-	@if map-get($sizes, $size) {
-		@media (min-width: map-get($sizes, $size) + px) {
+	@if map.get($sizes, $size) {
+		@media (min-width: map.get($sizes, $size) + px) {
 			@content;
 		}
 	} @else {
@@ -129,36 +133,36 @@
 
 	@each $index, $item in $data {
 		&_#{$index} {
-			$width: map-get($item, width);
+			$width: map.get($item, width);
 
 			composes: $cloud;
 			inset-block-start: if(
-				map-get($item, top),
-				#{t2c(map-get($item, top), $height)},
+				map.get($item, top),
+				#{t2c(map.get($item, top), $height)},
 				null
 			);
 			inset-block-end: if(
-				map-get($item, bottom),
-				#{t2c(map-get($item, bottom), $height)},
+				map.get($item, bottom),
+				#{t2c(map.get($item, bottom), $height)},
 				null
 			);
 			inset-inline-start: if(
-				map-get($item, left),
-				#{t2c(map-get($item, left), map-get($sizes, xl), vw)},
+				map.get($item, left),
+				#{t2c(map.get($item, left), map.get($sizes, xl), vw)},
 				null
 			);
 			inset-inline-end: if(
-				map-get($item, right),
-				#{t2c(map-get($item, right), map-get($sizes, xl), vw)},
+				map.get($item, right),
+				#{t2c(map.get($item, right), map.get($sizes, xl), vw)},
 				null
 			);
 			width: locks($width / 3, $width);
 			transform: if(
-				map-get($item, transform),
-				#{map-get($item, transform)},
+				map.get($item, transform),
+				#{map.get($item, transform)},
 				null
 			);
-			fill: if(map-get($item, fill), #{map-get($item, fill)}, $color);
+			fill: if(map.get($item, fill), #{map.get($item, fill)}, $color);
 		}
 	}
 }

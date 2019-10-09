@@ -1,3 +1,8 @@
+@use "sass:map";
+@use "styles/functions" as *;
+@use "styles/mixins" as *;
+@use "styles/vars" as *;
+
 .features {
 	@include breakpoint(s) {
 		display: grid;
@@ -8,7 +13,7 @@
 	@include breakpoint(m) {
 		position: relative;
 		grid-template-columns: repeat(4, 1fr);
-		gap: t2c(32, map-get($sizes, l), vw);
+		gap: t2c(32, map.get($sizes, l), vw);
 
 		&::after {
 			content: "";
@@ -16,7 +21,7 @@
 			top: 50%;
 			z-index: 0;
 			width: 100%;
-			height: t2c(1, map-get($sizes, m), vw);
+			height: t2c(1, map.get($sizes, m), vw);
 			background-color: $blue_cornflower--l_30;
 		}
 	}
@@ -33,8 +38,8 @@
 			position: relative;
 			z-index: 1;
 			flex-direction: column;
-			padding-inline-start: t2c(50, map-get($sizes, xl), vw);
-			padding-inline-end: t2c(50, map-get($sizes, xl), vw);
+			padding-inline-start: t2c(50, map.get($sizes, xl), vw);
+			padding-inline-end: t2c(50, map.get($sizes, xl), vw);
 			background-color: $white;
 			text-align: center;
 		}
@@ -62,15 +67,15 @@
 		color: $blue_cornflower;
 
 		@include breakpoint(m) {
-			margin-block-end: t2c(32, map-get($sizes, xl), vw);
+			margin-block-end: t2c(32, map.get($sizes, xl), vw);
 			margin-inline-start: auto;
 			margin-inline-end: auto;
 		}
 
 		@include breakpoint(xl) {
-			width: t2c(72, map-get($sizes, xl), vw);
-			height: t2c(72, map-get($sizes, xl), vw);
-			padding: t2c(20, map-get($sizes, xl), vw);
+			width: t2c(72, map.get($sizes, xl), vw);
+			height: t2c(72, map.get($sizes, xl), vw);
+			padding: t2c(20, map.get($sizes, xl), vw);
 		}
 	}
 
@@ -82,7 +87,7 @@
 		line-height: 1.7;
 
 		@include breakpoint(xl) {
-			font-size: t2c(14, map-get($sizes, xl), vw);
+			font-size: t2c(14, map.get($sizes, xl), vw);
 		}
 	}
 

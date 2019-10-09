@@ -1,3 +1,8 @@
+@use "sass:map";
+@use "styles/functions" as *;
+@use "styles/mixins" as *;
+@use "styles/vars" as *;
+
 $clouds: (
 	"1": (
 		"bottom": 208,
@@ -63,8 +68,8 @@ $clouds: (
 	padding-block-end: locks(72, 168);
 
 	@include breakpoint(xl) {
-		padding-block-start: t2c(168, map-get($sizes, xl), vw);
-		padding-block-end: t2c(168, map-get($sizes, xl), vw);
+		padding-block-start: t2c(168, map.get($sizes, xl), vw);
+		padding-block-end: t2c(168, map.get($sizes, xl), vw);
 	}
 
 	&__header {
@@ -76,7 +81,7 @@ $clouds: (
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding-block-start: t2c(112, map-get($sizes, xl), vw);
+		padding-block-start: t2c(112, map.get($sizes, xl), vw);
 
 		@include breakpoint(s) {
 			flex-direction: row;
@@ -107,7 +112,7 @@ $clouds: (
 			}
 
 			@include breakpoint(xl) {
-				height: t2c(1, map-get($sizes, xl), vw);
+				height: t2c(1, map.get($sizes, xl), vw);
 			}
 		}
 

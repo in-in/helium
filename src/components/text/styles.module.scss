@@ -1,3 +1,8 @@
+@use "sass:map";
+@use "styles/functions" as *;
+@use "styles/mixins" as *;
+@use "styles/vars" as *;
+
 .text {
 	--text_line_height: 1.8;
 
@@ -7,6 +12,6 @@
 	line-height: var(--text_line_height);
 
 	@include breakpoint(xl) {
-		font-size: t2c(15, map-get($sizes, xl), vw);
+		font-size: t2c(15, map.get($sizes, xl), vw);
 	}
 }

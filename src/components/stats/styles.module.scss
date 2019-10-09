@@ -1,3 +1,8 @@
+@use "sass:map";
+@use "styles/functions" as *;
+@use "styles/mixins" as *;
+@use "styles/vars" as *;
+
 .stats {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
@@ -10,14 +15,14 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	padding: t2c(90, map-get($sizes, xl), vw);
+	padding: t2c(90, map.get($sizes, xl), vw);
 	background-color: var(--background);
 	color: var(--foreground);
 	font-family: "Quicksand", sans-serif;
 	font-size: 1rem;
 
 	@include breakpoint(xl) {
-		font-size: t2c(16, map-get($sizes, xl), vw);
+		font-size: t2c(16, map.get($sizes, xl), vw);
 	}
 
 	&__icon {
@@ -40,7 +45,7 @@
 	}
 
 	&:nth-of-type(odd) {
-		padding-inline-start: t2c(370, map-get($sizes, xl), vw);
+		padding-inline-start: t2c(370, map.get($sizes, xl), vw);
 		text-align: right;
 	}
 
@@ -49,6 +54,6 @@
 		--foreground: #{$blue_cobalt--l_10};
 
 		align-items: flex-start;
-		padding-inline-end: t2c(370, map-get($sizes, xl), vw);
+		padding-inline-end: t2c(370, map.get($sizes, xl), vw);
 	}
 }

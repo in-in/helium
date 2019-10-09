@@ -1,4 +1,7 @@
-@import "styles/vars";
+@use "sass:map";
+@use "styles/functions" as *;
+@use "styles/mixins" as *;
+@use "styles/vars" as *;
 
 $clouds: (
 	"1": (
@@ -74,9 +77,9 @@ $clouds: (
 	$hero_height: 560;
 
 	position: relative;
-	height: t2c($hero_height, map-get($sizes, xl), vw);
+	height: t2c($hero_height, map.get($sizes, xl), vw);
 	min-height: ($hero_height / 2) * 1px;
-	max-height: t2c($hero_height, map-get($sizes, xl), vw);
+	max-height: t2c($hero_height, map.get($sizes, xl), vw);
 	overflow: hidden;
 
 	@at-root %item {
@@ -88,7 +91,7 @@ $clouds: (
 	&__heading {
 		@extend %item;
 
-		padding-block-start: t2c(72, map-get($sizes, xl), vw);
+		padding-block-start: t2c(72, map.get($sizes, xl), vw);
 	}
 
 	&__caption {
@@ -100,8 +103,8 @@ $clouds: (
 		text-align: center;
 
 		@include breakpoint(xl) {
-			padding-block-start: t2c(48, map-get($sizes, xl), vw);
-			font-size: t2c(16, map-get($sizes, xl), vw);
+			padding-block-start: t2c(48, map.get($sizes, xl), vw);
+			font-size: t2c(16, map.get($sizes, xl), vw);
 		}
 	}
 

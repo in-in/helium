@@ -1,3 +1,7 @@
+@use "styles/functions" as *;
+@use "styles/mixins" as *;
+@use "styles/vars" as *;
+
 .device {
 	position: relative;
 
