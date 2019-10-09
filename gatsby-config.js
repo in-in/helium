@@ -41,9 +41,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-sass`,
 			options: {
-				data: `@import "styles/helpers";`,
 				includePaths: [`src/`],
-				precision: 10,
 				cssLoaderOptions: {
 					localIdentName: `[local]--[hash:base64:5]`,
 					camelCase: false,
