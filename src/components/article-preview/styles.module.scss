@@ -1,11 +1,10 @@
-@use "sass:map";
 @use "styles/functions" as *;
 @use "styles/mixins" as *;
 @use "styles/vars" as *;
 
 .article-preview {
 	display: grid;
-	gap: t2c(64, map.get($sizes, xl), vw);
+	gap: t2c(64, xl);
 	max-width: rem(272);
 	margin-inline: auto;
 
@@ -41,7 +40,7 @@
 		}
 
 		@include breakpoint(xl) {
-			gap: t2c(16, map.get($sizes, xl), vw);
+			gap: t2c(16, xl);
 		}
 	}
 
@@ -77,8 +76,8 @@
 		}
 
 		@include breakpoint(xl) {
-			--width: #{t2c(272, map.get($sizes, xl), vw)};
-			--border-radius: #{t2c(var(--border_radius), map.get($sizes, xl), vw)};
+			--width: #{t2c(272, xl)};
+			--border-radius: #{t2c(var(--border_radius), xl)};
 		}
 
 		img {
@@ -104,13 +103,13 @@
 			--width: #{rem(128)};
 
 			@include breakpoint(xl) {
-				--width: #{t2c(128, map.get($sizes, xl), vw)};
+				--width: #{t2c(128, xl)};
 			}
 		}
 	}
 
 	&__title {
-		margin-block-end: t2c(32, map.get($sizes, xl), vw);
+		margin-block-end: t2c(32, xl);
 		color: $blue_cobalt;
 		font-family: "Quicksand", sans-serif;
 		font-size: locks(24, 36);
@@ -120,7 +119,7 @@
 
 	&__excerpt {
 		composes: text from "../text/styles.module.scss";
-		margin-block-end: t2c(40, map.get($sizes, xl), vw);
+		margin-block-end: t2c(40, xl);
 
 		@include truncate_text(
 			$lh: var(--text_line_height),

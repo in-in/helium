@@ -1,4 +1,3 @@
-@use "sass:map";
 @use "styles/functions" as *;
 @use "styles/mixins" as *;
 @use "styles/vars" as *;
@@ -25,11 +24,11 @@
 	appearance: none;
 
 	@include breakpoint(xl) {
-		--button_padding_t_b: #{t2c(16, map.get($sizes, xl), vw)};
-		--button_padding_r_l: #{t2c(24, map.get($sizes, xl), vw)};
+		--button_padding_t_b: #{t2c(16, xl)};
+		--button_padding_r_l: #{t2c(24, xl)};
 
-		border-radius: t2c(var(--border_radius), map.get($sizes, xl), vw);
-		font-size: t2c(13, map.get($sizes, xl), vw);
+		border-radius: t2c(var(--border_radius), xl);
+		font-size: t2c(13, xl);
 	}
 
 	&__icon {

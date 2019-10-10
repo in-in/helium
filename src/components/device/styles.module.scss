@@ -68,7 +68,7 @@
 		max-height: calc(
 			100% - (var(--picture_gap_top) + var(--picture_gap_bottom))
 		);
-		outline: t2c(1, 825, vw) solid $gray_french--l_20;
+		outline: t2c(1, 825) solid $gray_french--l_20;
 
 		img {
 			width: 100%;
@@ -76,25 +76,25 @@
 		}
 
 		&_laptop {
-			--picture_gap_left: #{t2c(12, 95)};
-			--picture_gap_top: #{t2c(3, 50)};
-			--picture_gap_bottom: #{t2c(7, 50)};
+			--picture_gap_left: #{t2c(12, 95, p)};
+			--picture_gap_top: #{t2c(3, 50, p)};
+			--picture_gap_bottom: #{t2c(7, 50, p)};
 
 			composes: $picture;
 		}
 
 		&_phone {
-			--picture_gap_left: #{t2c(2, 31)};
-			--picture_gap_top: #{t2c(3, 56)};
-			--picture_gap_bottom: #{t2c(5, 56)};
+			--picture_gap_left: #{t2c(2, 31, p)};
+			--picture_gap_top: #{t2c(3, 56, p)};
+			--picture_gap_bottom: #{t2c(5, 56, p)};
 
 			composes: $picture;
 		}
 
 		&_tablet {
-			--picture_gap_left: #{t2c(6, 80)};
-			--picture_gap_top: #{t2c(4, 59)};
-			--picture_gap_bottom: #{t2c(4, 59)};
+			--picture_gap_left: #{t2c(6, 80, p)};
+			--picture_gap_top: #{t2c(4, 59, p)};
+			--picture_gap_bottom: #{t2c(4, 59, p)};
 
 			composes: $picture;
 		}

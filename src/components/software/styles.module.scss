@@ -1,4 +1,3 @@
-@use "sass:map";
 @use "styles/functions" as *;
 @use "styles/mixins" as *;
 @use "styles/vars" as *;
@@ -9,9 +8,9 @@
 	background-color: rgba($blue_cornflower--l_20, 0.1);
 
 	@include breakpoint(xl) {
-		height: t2c(776, map.get($sizes, xl), vw);
-		padding-block-start: t2c(168, map.get($sizes, xl), vw);
-		padding-block-end: t2c(168, map.get($sizes, xl), vw);
+		height: t2c(776, xl);
+		padding-block-start: t2c(168, xl);
+		padding-block-end: t2c(168, xl);
 	}
 
 	&__wrapper {

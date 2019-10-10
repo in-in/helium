@@ -1,4 +1,3 @@
-@use "sass:map";
 @use "styles/functions" as *;
 @use "styles/mixins" as *;
 @use "styles/vars" as *;
@@ -8,8 +7,8 @@
 	padding-block-end: rem(16);
 
 	@include breakpoint(xl) {
-		padding-block-start: t2c(16, map.get($sizes, xl), vw);
-		padding-block-end: t2c(16, map.get($sizes, xl), vw);
+		padding-block-start: t2c(16, xl);
+		padding-block-end: t2c(16, xl);
 	}
 
 	@include divider($top: false);

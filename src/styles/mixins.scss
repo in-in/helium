@@ -138,22 +138,22 @@
 			composes: $cloud;
 			inset-block-start: if(
 				map.get($item, top),
-				#{t2c(map.get($item, top), $height)},
+				#{t2c(map.get($item, top), $height, p)},
 				null
 			);
 			inset-block-end: if(
 				map.get($item, bottom),
-				#{t2c(map.get($item, bottom), $height)},
+				#{t2c(map.get($item, bottom), $height, p)},
 				null
 			);
 			inset-inline-start: if(
 				map.get($item, left),
-				#{t2c(map.get($item, left), map.get($sizes, xl), vw)},
+				#{t2c(map.get($item, left), xl)},
 				null
 			);
 			inset-inline-end: if(
 				map.get($item, right),
-				#{t2c(map.get($item, right), map.get($sizes, xl), vw)},
+				#{t2c(map.get($item, right), xl)},
 				null
 			);
 			width: locks($width / 3, $width);
