@@ -56,7 +56,12 @@ module.exports = {
 		"scss/dollar-variable-no-missing-interpolation": true,
 		"scss/double-slash-comment-whitespace-inside": `always`,
 		"scss/map-keys-quotes": `always`,
-		"scss/no-duplicate-dollar-variables": true,
+		"scss/no-duplicate-dollar-variables": [
+			true,
+			{
+				ignoreInsideAtRules: [`if`, `else`],
+			},
+		],
 		"scss/operator-no-unspaced": null,
 		"scss/selector-no-redundant-nesting-selector": true,
 		"plugin/declaration-block-no-ignored-properties": true,
