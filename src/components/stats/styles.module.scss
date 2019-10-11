@@ -1,7 +1,3 @@
-@use "styles/functions" as *;
-@use "styles/mixins" as *;
-@use "styles/vars" as *;
-
 .stats {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));

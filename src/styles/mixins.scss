@@ -1,5 +1,6 @@
 @use "sass:map";
-@use "styles/functions" as *;
+@use "sass:string";
+@use "functions" as *;
 @use "vars" as *;
 
 @mixin breakpoint($size) {
@@ -14,10 +15,11 @@
 
 @mixin font-face($name, $filename, $weight: 400, $style: normal, $ext: woff2) {
 	@font-face {
-		font-family: quote($name);
+		font-family: string.quote($name);
 		font-weight: $weight;
 		font-style: $style;
-		src: url(quote("../fonts/" + $filename + "." + $ext)) format(quote($ext));
+		src: url(string.quote("../fonts/" + $filename + "." + $ext))
+			format(string.quote($ext));
 	}
 }
 

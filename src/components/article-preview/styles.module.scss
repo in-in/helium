@@ -1,7 +1,3 @@
-@use "styles/functions" as *;
-@use "styles/mixins" as *;
-@use "styles/vars" as *;
-
 .article-preview {
 	display: grid;
 	gap: t2c(64, xl);

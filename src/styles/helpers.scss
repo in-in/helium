@@ -1,6 +1,6 @@
-@import "vars";
-@import "functions";
-@import "mixins";
+@forward "vars";
+@forward "functions";
+@forward "mixins";
 
 .visually-hidden {
 	position: absolute;

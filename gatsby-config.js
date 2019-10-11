@@ -41,7 +41,10 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-sass`,
 			options: {
-				includePaths: [`src/`],
+				// eslint-disable-next-line global-require
+				implementation: require(`sass`),
+				data: `@use "styles/helpers" as *;`,
+				includePaths: [path.resolve(__dirname, `src`)],
 				cssLoaderOptions: {
 					localIdentName: `[local]--[hash:base64:5]`,
 					camelCase: false,

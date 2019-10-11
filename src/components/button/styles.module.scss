@@ -1,7 +1,3 @@
-@use "styles/functions" as *;
-@use "styles/mixins" as *;
-@use "styles/vars" as *;
-
 .button {
 	$root: compose(&);
 	$button_font_size: 13;
