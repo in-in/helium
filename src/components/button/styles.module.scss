@@ -12,7 +12,7 @@
 	padding-inline-start: var(--button_padding_r_l);
 	padding-inline-end: var(--button_padding_r_l);
 	border-radius: rem(var(--border_radius));
-	font-family: "Quicksand", sans-serif;
+	font-family: $font_quicksand;
 	font-size: rem($button_font_size);
 	font-weight: 700;
 	line-height: 1.5;
