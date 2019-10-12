@@ -1,3 +1,5 @@
+@use "sass:color" as *;
+
 $base_font: 16;
 
 $sizes: (
@@ -10,35 +12,35 @@ $sizes: (
 
 // blue_cobalt
 $blue_cobalt: hsl(229, 68%, 34%);
-$blue_cobalt--d_10: darken($blue_cobalt, 10);
-$blue_cobalt--d_20: darken($blue_cobalt, 20);
-$blue_cobalt--l_10: lighten($blue_cobalt, 10);
-$blue_cobalt--l_20: lighten($blue_cobalt, 20);
+$blue_cobalt--d_10: adjust($blue_cobalt, $lightness: -10%);
+$blue_cobalt--d_20: adjust($blue_cobalt, $lightness: -20%);
+$blue_cobalt--l_10: adjust($blue_cobalt, $lightness: 10%);
+$blue_cobalt--l_20: adjust($blue_cobalt, $lightness: 20%);
 
 // blue_cornflower
-$blue_cornflower: adjust-color(
+$blue_cornflower: adjust(
 	$blue_cobalt,
 	$hue: -2,
 	$saturation: 55%,
 	$lightness: 27%
 );
-$blue_cornflower--l_10: lighten($blue_cornflower, 10);
-$blue_cornflower--l_20: lighten($blue_cornflower, 20);
-$blue_cornflower--l_30: lighten($blue_cornflower, 30);
+$blue_cornflower--l_10: adjust($blue_cornflower, $lightness: 10%);
+$blue_cornflower--l_20: adjust($blue_cornflower, $lightness: 20%);
+$blue_cornflower--l_30: adjust($blue_cornflower, $lightness: 30%);
 
 // gray_french
-$gray_french: adjust-color(
+$gray_french: adjust(
 	$blue_cobalt,
 	$hue: -3,
 	$saturation: -55%,
 	$lightness: 41%
 );
-$gray_french--d_10: darken($gray_french, 10);
-$gray_french--d_20: darken($gray_french, 20);
-$gray_french--d_40: darken($gray_french, 40);
-$gray_french--d_50: darken($gray_french, 50);
-$gray_french--l_10: lighten($gray_french, 10);
-$gray_french--l_20: lighten($gray_french, 20);
+$gray_french--d_10: adjust($gray_french, $lightness: -10%);
+$gray_french--d_20: adjust($gray_french, $lightness: -20%);
+$gray_french--d_40: adjust($gray_french, $lightness: -40%);
+$gray_french--d_50: adjust($gray_french, $lightness: -50%);
+$gray_french--l_10: adjust($gray_french, $lightness: 10%);
+$gray_french--l_20: adjust($gray_french, $lightness: 20%);
 
-$white: hsl(0, 0%, 100%);
-$crystal: rgba(255, 255, 255, 0);
+$white: #fff;
+$crystal: rgb(255, 255, 255, 0);

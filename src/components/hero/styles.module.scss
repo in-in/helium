@@ -109,7 +109,7 @@ $clouds: (
 		inset-inline-start: 0;
 		z-index: 0;
 		width: 100%;
-		background-color: rgba($blue_cornflower--l_20, 0.2);
+		background-color: rgb($blue_cornflower--l_20, 0.2);
 		opacity: 0.5;
 
 		@include breakpoint(m) {

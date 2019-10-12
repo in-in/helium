@@ -44,8 +44,8 @@
 		--width: #{rem(272)};
 		--height: #{aspect-ratio(var(--width), 1/1)};
 		--border-radius: #{rem(var(--border_radius))};
-		--gradient1: rgba(255, 227, 154, 0.7);
-		--gradient2: rgba(255, 159, 90, 0);
+		--gradient1: rgb(255, 227, 154, 0.7);
+		--gradient2: rgb(255, 159, 90, 0);
 
 		composes: picture from "../picture/styles.module.scss";
 		position: relative;
@@ -86,13 +86,13 @@
 		}
 
 		&:nth-child(2) {
-			--gradient1: rgba(255, 53, 53, 0.4);
-			--gradient2: rgba(255, 179, 90, 0);
+			--gradient1: rgb(255, 53, 53, 0.4);
+			--gradient2: rgb(255, 179, 90, 0);
 		}
 
 		&:nth-child(3) {
-			--gradient1: rgba(53, 170, 255, 0.68);
-			--gradient2: rgba(90, 136, 255, 0);
+			--gradient1: rgb(53, 170, 255, 0.68);
+			--gradient2: rgb(90, 136, 255, 0);
 		}
 
 		&:not(:nth-child(1)) {
