@@ -1,72 +1,4 @@
-$clouds: (
-	"1": (
-		"top": 176,
-		"left": 0,
-		"width": 148,
-		"transform": translateX(-50%),
-	),
-	"2": (
-		"top": 88,
-		"left": 256,
-		"width": 44,
-	),
-	"3": (
-		"bottom": 152,
-		"left": 248,
-		"width": 24,
-	),
-	"4": (
-		"bottom": 144,
-		"left": 264,
-		"width": 48,
-	),
-	"5": (
-		"bottom": 144,
-		"left": 300,
-		"width": 32,
-	),
-	"6": (
-		"bottom": 168,
-		"left": 312,
-		"width": 20,
-	),
-	"7": (
-		"right": 256,
-		"bottom": 40,
-		"width": 104,
-	),
-	"8": (
-		"right": 240,
-		"bottom": 80,
-		"width": 48,
-	),
-	"9": (
-		"right": 200,
-		"bottom": 40,
-		"width": 64,
-	),
-	"10": (
-		"top": 40,
-		"right": 200,
-		"width": 32,
-	),
-	"11": (
-		"top": 56,
-		"right": 136,
-		"width": 80,
-	),
-	"12": (
-		"top": 88,
-		"right": 136,
-		"width": 48,
-	),
-	"13": (
-		"right": 0,
-		"bottom": 120,
-		"width": 112,
-		"transform": translateX(50%),
-	),
-);
+@use "data";
 
 .hero {
 	$hero_height: 560;
@@ -118,6 +50,6 @@ $clouds: (
 	}
 
 	&__cloud {
-		@include cloud($clouds, $hero_height);
+		@include cloud(data.$clouds, $hero_height);
 	}
 }
