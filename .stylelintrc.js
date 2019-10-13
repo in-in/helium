@@ -139,6 +139,8 @@ module.exports = {
 				`overflow-inline`,
 				`overflow-x`,
 				`overflow-y`,
+				`object-fit`,
+				`object-position`,
 				`shape-outside`,
 				`shape-margin`,
 				`shape-image-threshold`,
