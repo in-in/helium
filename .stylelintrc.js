@@ -39,6 +39,7 @@ module.exports = {
 			},
 		],
 		"a11y/content-property-no-static-value": true,
+		"a11y/media-prefers-reduced-motion": null,
 		"a11y/no-obsolete-attribute": true,
 		"a11y/no-obsolete-element": true,
 		"csstools/use-nesting": `always`,

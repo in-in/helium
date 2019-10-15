@@ -81,19 +81,11 @@
 	transition-property: background;
 	transition-duration: var(--transition_duration);
 
-	@media screen and (prefers-reduced-motion: reduce) {
-		transition: none;
-	}
-
 	&:active {
 		background-color: $crystal;
 		background-size: 100%;
 		transition-property: background-size;
 		transition-duration: 0s;
-
-		@media screen and (prefers-reduced-motion: reduce) {
-			transition: none;
-		}
 	}
 }
 
