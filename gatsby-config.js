@@ -43,7 +43,7 @@ module.exports = {
 			options: {
 				// eslint-disable-next-line global-require
 				implementation: require(`sass`),
-				data: `@use "styles/helpers" as *;`,
+				data: `@use "styles/config" as *;`,
 				includePaths: [path.resolve(__dirname, `src`)],
 				cssLoaderOptions: {
 					localIdentName: `[local]--[hash:base64:5]`,
