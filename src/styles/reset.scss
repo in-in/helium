@@ -10,6 +10,13 @@ html {
 	box-sizing: inherit;
 	margin: 0;
 	padding: 0;
+
+	@media (prefers-reduced-motion: reduce) {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 h1,
@@ -47,9 +54,20 @@ button {
 	user-select: none;
 }
 
+input,
+button,
 textarea,
-input {
+select {
 	word-spacing: inherit;
 	letter-spacing: inherit;
 	font: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
