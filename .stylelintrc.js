@@ -1,5 +1,5 @@
 module.exports = {
-	extends: [`stylelint-config-standard`, `stylelint-a11y/recommended`],
+	extends: [`stylelint-config-standard`],
 	plugins: [
 		`stylelint-a11y`,
 		`stylelint-declaration-block-no-ignored-properties`,
@@ -39,6 +39,8 @@ module.exports = {
 		"a11y/media-prefers-reduced-motion": null,
 		"a11y/no-obsolete-attribute": true,
 		"a11y/no-obsolete-element": true,
+		"a11y/no-outline-none": true,
+		"a11y/selector-pseudo-class-focus": null,
 		"csstools/use-nesting": `always`,
 		"at-rule-no-unknown": null,
 		"scss/at-function-parentheses-space-before": `never`,
