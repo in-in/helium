@@ -38,6 +38,7 @@
 		composes: $root;
 		background-color: $blue_cornflower--l_30;
 		color: $blue_cobalt--l_10;
+
 		@include hover() {
 			background-color: $blue_cornflower--l_20;
 			color: $blue_cobalt;

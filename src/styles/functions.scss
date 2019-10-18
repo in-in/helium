@@ -12,17 +12,25 @@
 
 	@if meta.type-of($context) == number {
 		$result: calc((#{$target} / #{$context}) * 100);
-	} @else if map.has-key($sizes, $context) {
+	}
+
+	@else if map.has-key($sizes, $context) {
 		$result: calc((#{$target} / #{map.get($sizes, $context)}) * 100);
-	} @else {
+	}
+
+	@else {
 		@error "Unknown context argument <#{$context}>";
 	}
 
 	@if $unit == p {
 		@return (calc(#{$result} * 1%));
-	} @else if $unit == vw {
+	}
+
+	@else if $unit == vw {
 		@return (calc(#{$result} * 1vw));
-	} @else {
+	}
+
+	@else {
 		@error "Unknown unit <#{$unit}>";
 	}
 }
