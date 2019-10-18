@@ -60,7 +60,6 @@ module.exports = {
 				ignoreInsideAtRules: [`if`, `else`],
 			},
 		],
-		"scss/no-duplicate-mixins": true,
 		"scss/operator-no-unspaced": null,
 		"scss/selector-no-redundant-nesting-selector": true,
 		"plugin/declaration-block-no-ignored-properties": true,
