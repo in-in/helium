@@ -1,9 +1,5 @@
 module.exports = {
-	extends: [
-		`stylelint-config-standard`,
-		`stylelint-a11y/recommended`,
-		`stylelint-config-prettier`,
-	],
+	extends: [`stylelint-config-standard`, `stylelint-a11y/recommended`],
 	plugins: [
 		`stylelint-a11y`,
 		`stylelint-declaration-block-no-ignored-properties`,
@@ -12,6 +8,7 @@ module.exports = {
 		`stylelint-use-nesting`,
 	],
 	rules: {
+		indentation: `tab`,
 		"declaration-block-no-duplicate-properties": true,
 		"selector-pseudo-class-no-unknown": true,
 		"shorthand-property-no-redundant-values": true,
@@ -63,6 +60,7 @@ module.exports = {
 				ignoreInsideAtRules: [`if`, `else`],
 			},
 		],
+		"scss/no-duplicate-mixins": true,
 		"scss/operator-no-unspaced": null,
 		"scss/selector-no-redundant-nesting-selector": true,
 		"plugin/declaration-block-no-ignored-properties": true,
