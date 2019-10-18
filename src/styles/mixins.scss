@@ -8,7 +8,9 @@
 		@media (min-width: map.get($sizes, $size) + px) {
 			@content;
 		}
-	} @else {
+	}
+
+	@else {
 		@error "Unknown size: #{$size}";
 	}
 }
@@ -18,7 +20,8 @@
 		font-family: string.quote($name);
 		font-weight: $weight;
 		font-style: $style;
-		src: url(string.quote("../fonts/" + $filename + "." + $ext))
+		src:
+			url(string.quote("../fonts/" + $filename + "." + $ext))
 			format(string.quote($ext));
 	}
 }
@@ -58,24 +61,26 @@
 		#{$selector} {
 			@include hover_transition();
 		}
-	} @else {
+	}
+
+	@else {
 		@include hover_transition();
 	}
 
 	@media (hover: hover) {
-		&:hover#{$combinator}#{$selector},
-		&:focus#{$combinator}#{$selector} {
+		&:hover#{$combinator}#{$selector} {
 			@content;
 		}
 	}
 }
 
 @mixin active() {
-	background-image: radial-gradient(
-		circle at center center,
-		$crystal 1%,
-		currentColor 1%
-	);
+	background-image:
+		radial-gradient(
+			circle at center center,
+			$crystal 1%,
+			currentColor 1%
+		);
 	background-position: center;
 	background-size: 15000%;
 	transition-property: background;
@@ -130,32 +135,37 @@
 			$width: map.get($item, width);
 
 			composes: $cloud;
-			inset-block-start: if(
-				map.get($item, top),
-				#{t2c(map.get($item, top), $height, p)},
-				null
-			);
-			inset-block-end: if(
-				map.get($item, bottom),
-				#{t2c(map.get($item, bottom), $height, p)},
-				null
-			);
-			inset-inline-start: if(
-				map.get($item, left),
-				#{t2c(map.get($item, left), xl)},
-				null
-			);
-			inset-inline-end: if(
-				map.get($item, right),
-				#{t2c(map.get($item, right), xl)},
-				null
-			);
+			inset-block-start:
+				if(
+					map.get($item, top),
+					#{t2c(map.get($item, top), $height, p)},
+					null
+				);
+			inset-block-end:
+				if(
+					map.get($item, bottom),
+					#{t2c(map.get($item, bottom), $height, p)},
+					null
+				);
+			inset-inline-start:
+				if(
+					map.get($item, left),
+					#{t2c(map.get($item, left), xl)},
+					null
+				);
+			inset-inline-end:
+				if(
+					map.get($item, right),
+					#{t2c(map.get($item, right), xl)},
+					null
+				);
 			width: locks($width / 3, $width);
-			transform: if(
-				map.get($item, transform),
-				#{map.get($item, transform)},
-				null
-			);
+			transform:
+				if(
+					map.get($item, transform),
+					#{map.get($item, transform)},
+					null
+				);
 			fill: if(map.get($item, fill), #{map.get($item, fill)}, $color);
 		}
 	}

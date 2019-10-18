@@ -1,9 +1,16 @@
-@use "vars" as *;
+@use "config" as *;
 
 :root {
 	--border_radius: 4;
 	--transition_duration: 0.4s;
 	--transition_easeing: ease-in-out;
+}
+
+*:focus {
+	outline: none !important;
+	box-shadow:
+		0 0 0 rem(2) $blue_cobalt--l_20,
+		0 0 0 rem(8) rgb($blue_cornflower--l_30, 0.7) !important;
 }
 
 body {

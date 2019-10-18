@@ -54,16 +54,17 @@
 		$button: compose(&);
 
 		position: absolute;
-		top: 0;
+		top: 50%;
 		z-index: 10;
 		display: none;
 		width: rem(24);
-		height: 100%;
+		height: 50%;
 		box-sizing: content-box;
 		padding-inline: rem(10);
 		background: none;
 		color: $blue_cornflower--l_20;
 		cursor: pointer;
+		transform: translateY(-50%);
 
 		@include breakpoint(m) {
 			display: block;
@@ -75,12 +76,12 @@
 
 		&_prev {
 			composes: $button;
-			left: 0;
+			left: rem(10);
 		}
 
 		&_next {
 			composes: $button;
-			right: 0;
+			right: rem(10);
 		}
 	}
 
