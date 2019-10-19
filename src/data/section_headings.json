@@ -42,5 +42,16 @@
 		"big": false,
 		"left": false,
 		"caption": ""
+	},
+	{
+		"section": "testimonials",
+		"subtitle": "Testimonials",
+		"title": {
+			"text": "Customers's quotes",
+			"accent": [1]
+		},
+		"big": false,
+		"left": true,
+		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an."
 	}
 ]
