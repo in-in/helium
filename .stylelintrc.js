@@ -351,6 +351,7 @@ module.exports = {
 				`user-select`,
 				`fill`,
 				`stroke`,
+				`paint-order`,
 			],
 			{ unspecified: `bottomAlphabetical` },
 		],
