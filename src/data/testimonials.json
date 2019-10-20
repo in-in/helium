@@ -1,0 +1,162 @@
+[
+	{
+		"quote": "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+		"images": [
+			{
+				"width": 320,
+				"sources": {
+					"x1": "quote_1.png",
+					"x2": "quote_1@2x.png",
+					"x3": "quote_1@3x.png"
+				}
+			},
+			{
+				"width": 0,
+				"alt": "quote_1",
+				"sources": {
+					"x1": "quote_1@3x.png"
+				}
+			}
+		]
+	},
+	{
+		"quote": "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+		"images": [
+			{
+				"width": 320,
+				"sources": {
+					"x1": "quote_2.png",
+					"x2": "quote_2@2x.png",
+					"x3": "quote_2@3x.png"
+				}
+			},
+			{
+				"width": 0,
+				"alt": "quote_2",
+				"sources": {
+					"x1": "quote_2@3x.png"
+				}
+			}
+		]
+	},
+	{
+		"quote": "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+		"images": [
+			{
+				"width": 320,
+				"sources": {
+					"x1": "quote_3.png",
+					"x2": "quote_3@2x.png",
+					"x3": "quote_3@3x.png"
+				}
+			},
+			{
+				"width": 0,
+				"alt": "quote_3",
+				"sources": {
+					"x1": "quote_3@3x.png"
+				}
+			}
+		]
+	},
+	{
+		"quote": "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+		"images": [
+			{
+				"width": 320,
+				"sources": {
+					"x1": "quote_4.png",
+					"x2": "quote_4@2x.png",
+					"x3": "quote_4@3x.png"
+				}
+			},
+			{
+				"width": 0,
+				"alt": "quote_4",
+				"sources": {
+					"x1": "quote_4@3x.png"
+				}
+			}
+		]
+	},
+	{
+		"quote": "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+		"images": [
+			{
+				"width": 320,
+				"sources": {
+					"x1": "quote_5.png",
+					"x2": "quote_5@2x.png",
+					"x3": "quote_5@3x.png"
+				}
+			},
+			{
+				"width": 0,
+				"alt": "quote_5",
+				"sources": {
+					"x1": "quote_5@3x.png"
+				}
+			}
+		]
+	},
+	{
+		"quote": "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+		"images": [
+			{
+				"width": 320,
+				"sources": {
+					"x1": "quote_6.png",
+					"x2": "quote_6@2x.png",
+					"x3": "quote_6@3x.png"
+				}
+			},
+			{
+				"width": 0,
+				"alt": "quote_6",
+				"sources": {
+					"x1": "quote_6@3x.png"
+				}
+			}
+		]
+	},
+	{
+		"quote": "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+		"images": [
+			{
+				"width": 320,
+				"sources": {
+					"x1": "quote_7.png",
+					"x2": "quote_7@2x.png",
+					"x3": "quote_7@3x.png"
+				}
+			},
+			{
+				"width": 0,
+				"alt": "quote_7",
+				"sources": {
+					"x1": "quote_7@3x.png"
+				}
+			}
+		]
+	},
+	{
+		"quote": "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+		"images": [
+			{
+				"width": 320,
+				"sources": {
+					"x1": "quote_8.png",
+					"x2": "quote_8@2x.png",
+					"x3": "quote_8@3x.png"
+				}
+			},
+			{
+				"width": 0,
+				"alt": "quote_8",
+				"sources": {
+					"x1": "quote_8@3x.png"
+				}
+			}
+		]
+	}
+]

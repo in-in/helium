@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Container from "../container"
 import Heading from "../heading"
 import Text from "../text"
+import Quote from "../quote"
 import st from "./styles.module.scss"
 
 const Testimonials = () => {
@@ -11,6 +12,21 @@ const Testimonials = () => {
 			allSectionHeadingsJson(filter: { section: { eq: "testimonials" } }) {
 				nodes {
 					...sectionHeadings
+				}
+			}
+			allTestimonialsJson {
+				nodes {
+					id
+					quote
+					images {
+						alt
+						width
+						sources {
+							x1
+							x2
+							x3
+						}
+					}
 				}
 			}
 		}
@@ -28,7 +44,9 @@ const Testimonials = () => {
 						))}
 					</div>
 					<div className={st.testimonials__carousel}>
-						<p>testimonials__carousel</p>
+						{data.allTestimonialsJson.nodes.map(item => (
+							<Quote key={item.id} quote={item.quote} images={item.images} />
+						))}
 					</div>
 				</div>
 			</Container>
