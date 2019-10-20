@@ -12,7 +12,7 @@ import {
 import Icon from "../icon"
 import st from "./styles.module.scss"
 
-const Carousel = ({ children, parentClass = `` }) => {
+const Carousel = ({ children, parentClass }) => {
 	const params = {
 		Swiper,
 		modules: [Navigation, Pagination, A11y, EffectFade, Lazy],
@@ -61,7 +61,11 @@ const Carousel = ({ children, parentClass = `` }) => {
 
 Carousel.propTypes = {
 	children: PropTypes.node.isRequired,
-	parentClass: PropTypes.string.isRequired,
+	parentClass: PropTypes.string,
+}
+
+Carousel.defaultProps = {
+	parentClass: ``,
 }
 
 export default Carousel
