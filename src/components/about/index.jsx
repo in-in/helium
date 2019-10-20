@@ -25,9 +25,7 @@ const About = () => {
 		<section className={st.about}>
 			<Container>
 				{data.allSectionHeadingsJson.nodes.map(item => (
-					<header className={st.about__header} key={item.id}>
-						<Heading {...item} />
-					</header>
+					<Heading {...item} parentClass={st.about__header} key={item.id} />
 				))}
 				<Features />
 				<div className={st.about__button}>

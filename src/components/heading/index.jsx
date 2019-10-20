@@ -19,19 +19,20 @@ const strongify = ({ text, accent }) => {
 	return result
 }
 
-const Heading = ({ title, subtitle, left, big }) => (
-	<div className={left ? st.heading_left : st.heading}>
+const Heading = ({ title, subtitle, left, big, parentClass }) => (
+	<header className={`${parentClass} ${left ? st.heading_left : st.heading}`}>
 		<p className={st.subtitle}>{subtitle}</p>
 		{big ? (
 			<h1 className={st.title_big}>{strongify(title)}</h1>
 		) : (
 			<h2 className={st.title}>{strongify(title)}</h2>
 		)}
-	</div>
+	</header>
 )
 
 Heading.propTypes = {
 	subtitle: PropTypes.string.isRequired,
+	parentClass: PropTypes.string,
 	title: PropTypes.shape({
 		text: PropTypes.string,
 		accent: PropTypes.array,
@@ -43,6 +44,7 @@ Heading.propTypes = {
 Heading.defaultProps = {
 	left: false,
 	big: false,
+	parentClass: ``,
 }
 
 export default Heading

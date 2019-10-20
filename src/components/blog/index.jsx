@@ -37,9 +37,7 @@ const Blog = () => {
 		<section className={st.blog}>
 			<Container>
 				{data.allSectionHeadingsJson.nodes.map(item => (
-					<header key={item.id}>
-						<Heading {...item} />
-					</header>
+					<Heading {...item} key={item.id} />
 				))}
 				<div className={st[`blog__carousel-wrapper`]}>
 					<Carousel parentClass={st.blog__carousel}>

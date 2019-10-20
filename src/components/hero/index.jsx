@@ -99,9 +99,7 @@ const Hero = () => {
 		<section className={st.hero}>
 			{data.allSectionHeadingsJson.nodes.map(item => (
 				<Container key={item.id}>
-					<div className={st.hero__heading}>
-						<Heading {...item} />
-					</div>
+					<Heading {...item} parentClass={st.hero__header} />
 					<div className={st.hero__caption}>
 						<Text>{item.caption}</Text>
 					</div>

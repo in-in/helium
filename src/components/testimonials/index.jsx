@@ -18,9 +18,7 @@ const Testimonials = () => {
 		<section className={st.testimonials}>
 			<Container>
 				{data.allSectionHeadingsJson.nodes.map(item => (
-					<header key={item.id}>
-						<Heading {...item} />
-					</header>
+					<Heading {...item} key={item.id} />
 				))}
 			</Container>
 		</section>

@@ -12,19 +12,19 @@
 	&__wrapper {
 		display: grid;
 		grid-template-areas:
-			"header"
+			"text"
 			"showcase";
 		grid-template-columns: 1fr;
 		gap: rem(40);
 
 		@include breakpoint(m) {
-			grid-template-areas: "header showcase showcase";
+			grid-template-areas: "text showcase showcase";
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
-	&__header {
-		grid-area: header;
+	&__text {
+		grid-area: text;
 	}
 
 	&__showcase {
