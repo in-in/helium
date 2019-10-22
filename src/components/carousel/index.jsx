@@ -12,7 +12,7 @@ import {
 import Icon from "../icon"
 import st from "./styles.module.scss"
 
-const Carousel = ({ children, parentClass }) => {
+const Carousel = ({ children, parentClass, nav }) => {
 	const params = {
 		Swiper,
 		modules: [Navigation, Pagination, A11y, EffectFade, Lazy],
@@ -31,8 +31,8 @@ const Carousel = ({ children, parentClass }) => {
 			bulletActiveClass: `${st.carousel__bullet_active}`,
 		},
 		navigation: {
-			prevEl: `.${st.carousel__button_prev.replace(` `, `.`)}`,
-			nextEl: `.${st.carousel__button_next.replace(` `, `.`)}`,
+			prevEl: nav && `.${st.carousel__button_prev.replace(` `, `.`)}`,
+			nextEl: nav && `.${st.carousel__button_next.replace(` `, `.`)}`,
 		},
 		renderPrevButton: () => (
 			<button type="button" className={st.carousel__button_prev}>
@@ -62,10 +62,12 @@ const Carousel = ({ children, parentClass }) => {
 Carousel.propTypes = {
 	children: PropTypes.node.isRequired,
 	parentClass: PropTypes.string,
+	nav: PropTypes.bool,
 }
 
 Carousel.defaultProps = {
 	parentClass: ``,
+	nav: true,
 }
 
 export default Carousel
