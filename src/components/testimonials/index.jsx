@@ -4,6 +4,7 @@ import Container from "../container"
 import Heading from "../heading"
 import Text from "../text"
 import Quote from "../quote"
+import Carousel from "../carousel"
 import st from "./styles.module.scss"
 
 const Testimonials = () => {
@@ -43,10 +44,12 @@ const Testimonials = () => {
 							</Fragment>
 						))}
 					</div>
-					<div className={st.testimonials__carousel}>
-						{data.allTestimonialsJson.nodes.map(item => (
-							<Quote key={item.id} quote={item.quote} images={item.images} />
-						))}
+					<div className={st[`testimonials__carousel-wrapper`]}>
+						<Carousel nav={false}>
+							{data.allTestimonialsJson.nodes.map(item => (
+								<Quote key={item.id} quote={item.quote} images={item.images} />
+							))}
+						</Carousel>
 					</div>
 				</div>
 			</Container>

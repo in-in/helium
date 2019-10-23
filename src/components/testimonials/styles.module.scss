@@ -3,26 +3,29 @@
 	padding-block-end: t2c(104, xl);
 
 	&__wrapper {
-		display: grid;
-		grid-template-areas: "text" "carousel";
-		gap: t2c(72, xl);
+		--gap: #{t2c(72, xl)};
+
+		display: block;
+		overflow: hidden;
 
 		@include breakpoint(s) {
-			grid-template-areas: "text carousel";
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		@include breakpoint(m) {
+			display: grid;
 			grid-template-areas: "text carousel carousel";
 			grid-template-columns: repeat(3, 1fr);
+			gap: var(--gap);
 		}
 	}
 
 	&__text {
 		grid-area: text;
+		margin-block-end: var(--gap);
+
+		@include breakpoint(s) {
+			margin-block-end: 0;
+		}
 	}
 
-	&__carousel {
+	&__carousel-wrapper {
 		grid-area: carousel;
 	}
 
