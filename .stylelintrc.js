@@ -47,12 +47,7 @@ module.exports = {
 		"scss/at-import-no-partial-leading-underscore": true,
 		"scss/at-import-partial-extension-blacklist": [`scss`],
 		"scss/at-mixin-argumentless-call-parentheses": `always`,
-		"scss/at-rule-no-unknown": [
-			true,
-			{
-				ignoreAtRules: [`use`, `forward`],
-			},
-		],
+		"scss/at-rule-no-unknown": true,
 		"scss/dollar-variable-no-missing-interpolation": true,
 		"scss/double-slash-comment-whitespace-inside": `always`,
 		"scss/map-keys-quotes": `always`,
@@ -62,6 +57,7 @@ module.exports = {
 				ignoreInsideAtRules: [`if`, `else`],
 			},
 		],
+		"scss/no-duplicate-mixins": true,
 		"scss/operator-no-unspaced": null,
 		"scss/selector-no-redundant-nesting-selector": true,
 		"plugin/declaration-block-no-ignored-properties": true,
