@@ -90,7 +90,7 @@
 		composes: text from "../text/styles.module.scss";
 		min-width: 100%;
 
-		@include truncate_text(
+		@include truncate_multiline_text(
 			$lh: var(--text_line_height),
 			$breakpoint: 4,
 			$min-height: true

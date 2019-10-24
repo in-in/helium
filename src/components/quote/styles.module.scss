@@ -28,14 +28,14 @@
 	}
 
 	&__name {
-		@include truncate-oneline-text();
+		@include truncate_text();
 
 		font-family: $font_quicksand;
 		font-weight: 500;
 	}
 
 	&__company {
-		@include truncate-oneline-text();
+		@include truncate_text();
 
 		composes: text from "../text/styles.module.scss";
 	}

@@ -1,8 +1,8 @@
 @use "mixins" as *;
 
-@include font-face(Quicksand, quicksand-v9-latin-300, 300);
-@include font-face(Quicksand, quicksand-v9-latin-regular);
-@include font-face(Quicksand, quicksand-v9-latin-500, 500);
-@include font-face(Quicksand, quicksand-v9-latin-700, 700);
-@include font-face(Roboto, roboto-v19-latin-regular);
-@include font-face(Roboto, roboto-v19-latin-500, 500);
+@include font_face(Quicksand, quicksand-v9-latin-300, 300);
+@include font_face(Quicksand, quicksand-v9-latin-regular);
+@include font_face(Quicksand, quicksand-v9-latin-500, 500);
+@include font_face(Quicksand, quicksand-v9-latin-700, 700);
+@include font_face(Roboto, roboto-v19-latin-regular);
+@include font_face(Roboto, roboto-v19-latin-500, 500);

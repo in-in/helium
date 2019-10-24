@@ -115,7 +115,7 @@
 		composes: text from "../text/styles.module.scss";
 		margin-block-end: t2c(40, xl);
 
-		@include truncate_text(
+		@include truncate_multiline_text(
 			$lh: var(--text_line_height),
 			$breakpoint: 4,
 			$min-height: true
