@@ -170,3 +170,9 @@
 		}
 	}
 }
+
+@mixin truncate-oneline-text() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
