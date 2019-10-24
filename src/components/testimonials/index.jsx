@@ -18,6 +18,9 @@ const Testimonials = () => {
 			allTestimonialsJson {
 				nodes {
 					id
+					name
+					company
+					occupation
 					quote
 					images {
 						alt
@@ -46,9 +49,19 @@ const Testimonials = () => {
 					</div>
 					<div className={st[`testimonials__carousel-wrapper`]}>
 						<Carousel nav={false}>
-							{data.allTestimonialsJson.nodes.map(item => (
-								<Quote key={item.id} quote={item.quote} images={item.images} />
-							))}
+							{data.allTestimonialsJson.nodes.map(item => {
+								const { id, quote, images, name, company, occupation } = item
+								return (
+									<Quote
+										key={id}
+										name={name}
+										company={company}
+										occupation={occupation}
+										quote={quote}
+										images={images}
+									/>
+								)
+							})}
 						</Carousel>
 					</div>
 				</div>
