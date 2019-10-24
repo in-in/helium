@@ -9,7 +9,7 @@ const Quote = ({ name, company, occupation, quote, images }) => (
 		<Text classname={st.quote__text}>{quote}</Text>
 		<Picture data={images} classname={st.quote__avatar} />
 		<strong className={st.quote__name}>{name}</strong>
-		<Text classname={st.quote__company}>
+		<Text classname={st.quote__company} as="span">
 			{occupation} at {company}
 		</Text>
 	</blockquote>
