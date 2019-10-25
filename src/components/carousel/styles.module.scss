@@ -8,8 +8,7 @@
 		align-items: center;
 		overflow: hidden;
 		margin-inline: auto;
-		padding-block-start: t2c(120, xl);
-		padding-block-end: t2c(10, xs);
+		padding-block: t2c(10, xs);
 
 		@include breakpoint(m) {
 			padding-inline: t2c(112, xl);
