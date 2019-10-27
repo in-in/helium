@@ -1,11 +1,17 @@
 .quote {
+	--gap: #{rem(16)};
+
 	display: grid;
 	grid-template-rows: auto 1fr min-content;
 	grid-template-columns: auto 1fr;
-	column-gap: rem(16);
+	column-gap: var(--gap);
 	align-items: end;
 	padding-block: t2c(48, xl);
 	padding-inline: t2c(64, xl);
+
+	@include breakpoint(xl) {
+		--gap: #{t2c(16, xl)};
+	}
 
 	&__text {
 		composes: text from "../text/styles.module.scss";
@@ -16,10 +22,16 @@
 	}
 
 	&__avatar {
+		--size: #{rem(64)};
+
 		composes: picture from "../picture/styles.module.scss";
 		grid-row: 2/4;
-		width: rem(64);
-		height: rem(64);
+		width: var(--size);
+		height: var(--size);
+
+		@include breakpoint(xl) {
+			--size: #{t2c(64, xl)};
+		}
 
 		img {
 			width: 100%;
@@ -34,6 +46,10 @@
 
 		font-family: $font_quicksand;
 		font-weight: 500;
+
+		@include breakpoint(xl) {
+			font-size: t2c(16, xl);
+		}
 	}
 
 	&__company {
