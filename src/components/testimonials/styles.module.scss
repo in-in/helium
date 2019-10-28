@@ -15,15 +15,13 @@
 		overflow: hidden;
 
 		@include breakpoint(s) {
-			display: grid;
-			grid-template-areas: "text carousel carousel";
-			grid-template-columns: repeat(3, 1fr);
-			gap: var(--gap);
+			display: flex;
 		}
 	}
 
 	&__text {
-		grid-area: text;
+		width: 100%;
+		min-width: t2c(384, xl);
 		margin-block-end: var(--gap);
 
 		@include breakpoint(s) {
@@ -32,7 +30,11 @@
 	}
 
 	&__carousel-wrapper {
-		grid-area: carousel;
+		@include breakpoint(s) {
+			width: 100%;
+			min-width: t2c(840, xl);
+			margin-inline-start: t2c(72, xl);
+		}
 	}
 
 	&__header {
