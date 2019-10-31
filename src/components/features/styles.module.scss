@@ -11,7 +11,7 @@
 		gap: t2c(32, l);
 
 		&::after {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 50%;
 			z-index: 0;
@@ -87,7 +87,7 @@
 	}
 
 	&__text {
-		composes: text from "../text/styles.module.scss";
+		composes: text from '../text/styles.module.scss';
 		min-width: 100%;
 
 		@include truncate_multiline_text($breakpoint: 4, $min-height: true);

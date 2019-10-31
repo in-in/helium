@@ -1,7 +1,7 @@
-@use "sass:map";
-@use "sass:string";
-@use "functions" as *;
-@use "vars" as *;
+@use 'sass:map';
+@use 'sass:string';
+@use 'functions' as *;
+@use 'vars' as *;
 
 @mixin breakpoint($size) {
 	@if map.get($sizes, $size) {
@@ -11,27 +11,30 @@
 	}
 
 	@else {
-		@error "Unknown size: #{$size}";
+		@error 'Unknown size: #{$size}';
 	}
 }
 
+/* stylelint-disable function-url-quotes */
 @mixin font_face($name, $filename, $weight: 400, $style: normal, $ext: woff2) {
 	@font-face {
 		font-family: string.quote($name);
 		font-weight: $weight;
 		font-style: $style;
+		font-display: swap;
 		src:
 			url(string.quote("../fonts/" + $filename + "." + $ext))
 			format(string.quote($ext));
 	}
 }
+/* stylelint-enable */
 
 @mixin divider($top: true, $bottom: true) {
 	position: relative;
 
 	&::before,
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		inset-inline-start: 0;
 		width: 100%;
@@ -56,7 +59,7 @@
 	transition-timing-function: var(--transition_easeing);
 }
 
-@mixin hover($selector: null, $combinator: " ") {
+@mixin hover($selector: null, $combinator: ' ') {
 	@if $selector {
 		#{$selector} {
 			@include hover_transition();
@@ -111,13 +114,14 @@
 	line-height: $lh;
 
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		right: 0;
 		bottom: 0;
 		z-index: 1;
 		width: calc((#{$lh} * #{$unit}) + 3ch);
-		height: calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
+		height:
+			calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
 		max-height: calc(#{$lh} * #{$unit});
 		background-image: linear-gradient(to right, $crystal, $color-bg 50%);
 	}

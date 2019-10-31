@@ -1,7 +1,7 @@
-@use "sass:map";
-@use "sass:meta";
-@use "sass:string";
-@use "vars" as *;
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:string';
+@use 'vars' as *;
 
 @function compose($classname) {
 	@return string.slice(#{$classname}, 2);
@@ -19,7 +19,7 @@
 	}
 
 	@else {
-		@error "Unknown context argument <#{$context}>";
+		@error 'Unknown context argument <#{$context}>';
 	}
 
 	@if $unit == p {
@@ -31,7 +31,7 @@
 	}
 
 	@else {
-		@error "Unknown unit <#{$unit}>";
+		@error 'Unknown unit <#{$unit}>';
 	}
 }
 

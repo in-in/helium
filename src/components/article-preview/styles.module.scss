@@ -15,7 +15,7 @@
 	}
 
 	&__media {
-		--grid-temp: "main main" ". .";
+		--grid-temp: 'main main' '. .';
 
 		display: grid;
 		grid-template-areas: var(--grid-temp);
@@ -24,15 +24,15 @@
 		align-content: start;
 
 		@include breakpoint(s) {
-			--grid-temp: "main ." "main .";
+			--grid-temp: 'main .' 'main .';
 		}
 
 		@include breakpoint(m) {
-			--grid-temp: "main main" ". .";
+			--grid-temp: 'main main' '. .';
 		}
 
 		@include breakpoint(l) {
-			--grid-temp: "main ." "main .";
+			--grid-temp: 'main .' 'main .';
 		}
 
 		@include breakpoint(xl) {
@@ -47,7 +47,7 @@
 		--gradient1: rgb(255, 227, 154, 0.5);
 		--gradient2: #{$crystal};
 
-		composes: picture from "../picture/styles.module.scss";
+		composes: picture from '../picture/styles.module.scss';
 		position: relative;
 		width: var(--width);
 		height: var(--height);
@@ -55,7 +55,7 @@
 		border-radius: var(--border-radius);
 
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -112,7 +112,7 @@
 	}
 
 	&__excerpt {
-		composes: text from "../text/styles.module.scss";
+		composes: text from '../text/styles.module.scss';
 		margin-block-end: t2c(40, xl);
 
 		@include truncate_multiline_text($breakpoint: 4, $min-height: true);

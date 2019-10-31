@@ -12,8 +12,8 @@
 	&__content {
 		display: grid;
 		grid-template-areas:
-			"logo button"
-			"social social";
+			'logo button'
+			'social social';
 		gap: 1em;
 
 		@include breakpoint(s) {

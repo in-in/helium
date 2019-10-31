@@ -1,4 +1,4 @@
-@use "data";
+@use 'data';
 
 .hero {
 	$hero_height: 560;
@@ -12,7 +12,7 @@
 	@at-root %item {
 		position: relative;
 		z-index: 2;
-		filter: drop-shadow(0 0 0.2em white);
+		filter: drop-shadow(0 0 0.2em $white);
 	}
 
 	&__header {

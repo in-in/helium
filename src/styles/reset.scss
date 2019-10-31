@@ -11,12 +11,14 @@ html {
 	margin: 0;
 	padding: 0;
 
+	/* stylelint-disable declaration-property-unit-whitelist, time-min-milliseconds */
 	@media (prefers-reduced-motion: reduce) {
 		transition-duration: 0.01ms !important;
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		scroll-behavior: auto !important;
 	}
+	/* stylelint-enable */
 }
 
 h1,
@@ -28,7 +30,7 @@ h6,
 p {
 	margin: 0;
 	padding: 0;
-	font-weight: normal;
+	font-weight: 400;
 }
 
 ol,
@@ -41,7 +43,7 @@ a {
 	text-decoration: none;
 }
 
-html svg {
+html svg { /* stylelint-disable-line selector-max-type */
 	display: block;
 	width: 100%;
 	height: auto;
