@@ -58,5 +58,12 @@ module.exports = {
 				],
 			},
 		},
+		{
+			resolve: `@danbruegge/gatsby-plugin-stylelint`,
+			options: {
+				files: [`**/*.{css,scss}`],
+				fix: true,
+			},
+		},
 	],
 }
