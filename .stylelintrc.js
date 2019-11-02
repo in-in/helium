@@ -37,7 +37,13 @@ module.exports = {
 		"block-opening-brace-space-before": `always`,
 		"color-hex-case": `lower`,
 		"color-hex-length": `short`,
-		"color-named": `never`,
+		"color-named": [
+			`never`,
+			{
+				ignore: [`inside-function`],
+				severity: `warning`,
+			},
+		],
 		"color-no-invalid-hex": true,
 		"comment-empty-line-before": [`never`, { ignore: [`stylelint-commands`] }],
 		"comment-no-empty": true,
