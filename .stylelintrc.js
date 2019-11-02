@@ -173,7 +173,7 @@ module.exports = {
 				ignore: [`after-comment`],
 			},
 		],
-		"selector-attribute-brackets-space-inside": `always`,
+		"selector-attribute-brackets-space-inside": `never`,
 		"selector-attribute-operator-blacklist": null,
 		"selector-attribute-operator-space-after": `never`,
 		"selector-attribute-operator-space-before": `never`,
@@ -277,6 +277,7 @@ module.exports = {
 		"order/properties-order": [
 			[
 				`composes`,
+				`all`,
 				`content`,
 				`position`,
 				`inset`,
