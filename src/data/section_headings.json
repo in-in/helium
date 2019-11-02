@@ -53,5 +53,16 @@
 		"big": false,
 		"left": true,
 		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an."
+	},
+	{
+		"section": "help",
+		"subtitle": "Customer help",
+		"title": {
+			"text": "Frequently asked questions",
+			"accent": [1]
+		},
+		"big": false,
+		"left": false,
+		"caption": ""
 	}
 ]
