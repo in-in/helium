@@ -5,7 +5,9 @@ const Icon = ({ filename, classname, hidden }) => {
 	const req = require.context(`../../images/icons`, true, /\.svg$/)
 	const IconTag = req(`./${filename}.svg`)
 
-	return <IconTag aria-hidden={hidden} className={classname} />
+	return (
+		<IconTag aria-hidden={hidden} focusable={!hidden} className={classname} />
+	)
 }
 
 Icon.propTypes = {
