@@ -4,6 +4,10 @@
 		border-bottom: 1px solid $gray_french--l_10;
 		color: $gray_french--d_20;
 
+		&:focus-within {
+			box-shadow: inset rem(4) 0 0 0 $blue_cornflower--l_10;
+		}
+
 		&[data-accordion-open='true'] {
 			color: $gray_french--d_40;
 		}
@@ -18,7 +22,7 @@
 		cursor: pointer;
 
 		&:focus {
-			box-shadow: 0 0 0 rem(2) $blue_cobalt--l_20 !important;
+			box-shadow: none !important;
 		}
 	}
 
