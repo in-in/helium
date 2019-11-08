@@ -6,10 +6,19 @@
 
 		&:focus-within {
 			box-shadow: inset rem(4) 0 0 0 $blue_cornflower--l_10;
+
+			@include breakpoint(xl) {
+				box-shadow: inset t2c(4, xl) 0 0 0 $blue_cornflower--l_10;
+			}
 		}
 
 		&[data-accordion-open='true'] {
 			color: $gray_french--d_40;
+		}
+
+		@include breakpoint(xl) {
+			padding-inline: t2c(24, xl);
+			border-bottom-width: t2c(1, xl);
 		}
 	}
 
@@ -24,6 +33,11 @@
 		&:focus {
 			box-shadow: none !important;
 		}
+
+		@include breakpoint(xl) {
+			padding-block: t2c(24, xl);
+			font-size: t2c(15, xl);
+		}
 	}
 
 	&__icon {
@@ -36,6 +50,11 @@
 		[aria-expanded='true'] & {
 			transform: scale(1, -1);
 		}
+
+		@include breakpoint(xl) {
+			width: t2c(24, xl);
+			margin-inline-start: t2c(16, xl);
+		}
 	}
 
 	&__body {
@@ -44,6 +63,10 @@
 
 		[data-accordion-open='true'] & {
 			animation: slide-down 2s ease-in-out;
+		}
+
+		@include breakpoint(xl) {
+			margin-block-end: t2c(24, xl);
 		}
 	}
 }
@@ -55,5 +78,9 @@
 
 	100% {
 		max-height: rem(3000);
+
+		@include breakpoint(xl) {
+			max-height: t2c(3000, xl);
+		}
 	}
 }
