@@ -78,13 +78,13 @@
 }
 
 @mixin active() {
+	background-position: center;
 	background-image:
 		radial-gradient(
 			circle at center center,
 			$crystal 1%,
 			currentColor 1%
 		);
-	background-position: center;
 	background-size: 15000%;
 	transition-property: background;
 	transition-duration: var(--transition_duration);
@@ -120,8 +120,7 @@
 		bottom: 0;
 		z-index: 1;
 		width: calc((#{$lh} * #{$unit}) + 3ch);
-		height:
-			calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
+		height: calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
 		max-height: calc(#{$lh} * #{$unit});
 		background-image: linear-gradient(to right, $crystal, $color-bg 50%);
 	}
