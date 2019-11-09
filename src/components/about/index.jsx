@@ -29,9 +29,13 @@ const About = () => {
 				))}
 				<Features />
 				<div className={st.about__button}>
-					<Button variant="primary">Read more</Button>
+					<Button variant="primary" as="a">
+						Read more
+					</Button>
 					<Text classname={st.about__text}>or</Text>
-					<Button variant="primary">Get started</Button>
+					<Button variant="primary" as="a">
+						Get started
+					</Button>
 				</div>
 			</Container>
 

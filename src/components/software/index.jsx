@@ -36,7 +36,9 @@ const Software = () => {
 								<Button variant="secondary" icon="triangle">
 									View video
 								</Button>
-								<Button variant="plain">See features</Button>
+								<Button variant="plain" as="a">
+									See features
+								</Button>
 							</ButtonGroup>
 						</div>
 					</div>

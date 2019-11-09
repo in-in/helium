@@ -21,7 +21,9 @@ const Header = () => (
 					<Social />
 				</div>
 				<div className={st.header__item_button}>
-					<Button variant="primary">Get started</Button>
+					<Button variant="primary" as="a">
+						Get started
+					</Button>
 				</div>
 			</HeaderContent>
 		</Container>

@@ -19,7 +19,9 @@ const ArticlePreview = ({ title, excerpt, images }) => (
 		<div>
 			<h2 className={st[`article-preview__title`]}>{title}</h2>
 			<Text classname={st[`article-preview__excerpt`]}>{excerpt}</Text>
-			<Button variant="primary">Read now</Button>
+			<Button variant="primary" as="a">
+				Read now
+			</Button>
 		</div>
 	</article>
 )
