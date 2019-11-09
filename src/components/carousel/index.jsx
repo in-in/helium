@@ -47,7 +47,6 @@ const Carousel = ({ children, parentClass, nav }) => {
 	}
 
 	return (
-		// eslint-disable-next-line react/jsx-props-no-spreading
 		<ReactIdSwiper {...params}>
 			{children.map((child, i) => (
 				// eslint-disable-next-line react/no-array-index-key

@@ -5,6 +5,6 @@ module.exports = {
 	rules: {
 		quotes: [`error`, `backtick`],
 		"prettier/prettier": `error`,
-		"react/jsx-props-no-spreading": [`error`, { exceptions: [`Heading`] }],
+		"react/jsx-props-no-spreading": 0,
 	},
 }
