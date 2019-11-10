@@ -28,6 +28,8 @@
 		justify-content: space-between;
 		width: 100%;
 		padding-block: rem(24);
+		font-size: rem(18);
+		line-height: 1.5;
 		cursor: pointer;
 
 		&:focus {
@@ -36,7 +38,7 @@
 
 		@include breakpoint(xl) {
 			padding-block: t2c(24, xl);
-			font-size: t2c(15, xl);
+			font-size: t2c(18, xl);
 		}
 	}
 
