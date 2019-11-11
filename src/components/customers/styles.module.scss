@@ -46,6 +46,7 @@
 		display: flex;
 		flex-wrap: nowrap;
 		overflow-x: auto;
+		scroll-snap-type: x;
 		padding: rem(16);
 
 		@include breakpoint(m) {
@@ -61,14 +62,11 @@
 		display: flex;
 		flex-shrink: 0;
 		align-items: center;
-		margin-inline-end: locks(40, 80);
+		scroll-snap-align: center;
+		padding-inline: locks(20, 40);
 
 		@include breakpoint(xl) {
-			margin-inline-end: t2c(80, xl);
-		}
-
-		&:last-child {
-			margin-inline-end: 0;
+			padding-inline: t2c(40, xl);
 		}
 	}
 
