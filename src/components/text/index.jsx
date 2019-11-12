@@ -8,7 +8,9 @@ const Text = ({ parentClass, children, as, modifier }) => {
 		? modifier.map(item => st[`text_${item}`]).join(` `)
 		: st.text
 
-	return <Component className={parentClass || classname}>{children}</Component>
+	return (
+		<Component className={`${classname} ${parentClass}`}>{children}</Component>
+	)
 }
 
 Text.propTypes = {
@@ -19,7 +21,7 @@ Text.propTypes = {
 }
 
 Text.defaultProps = {
-	parentClass: null,
+	parentClass: ``,
 	modifier: null,
 	as: `p`,
 }

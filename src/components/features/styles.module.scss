@@ -86,7 +86,6 @@
 	}
 
 	&__text {
-		composes: text from '../text/styles.module.scss';
 		min-width: 100%;
 
 		@include truncate_multiline_text($breakpoint: 4, $min-height: true);

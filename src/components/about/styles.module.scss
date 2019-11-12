@@ -27,7 +27,6 @@
 	}
 
 	&__text {
-		composes: text from '../text/styles.module.scss';
 		padding-block: 2ex;
 		text-transform: uppercase;
 		font-weight: 500;

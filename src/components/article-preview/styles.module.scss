@@ -112,7 +112,6 @@
 	}
 
 	&__excerpt {
-		composes: text from '../text/styles.module.scss';
 		margin-block-end: t2c(40, xl);
 
 		@include truncate_multiline_text($breakpoint: 4, $min-height: true);
