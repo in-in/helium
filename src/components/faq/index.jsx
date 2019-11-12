@@ -8,7 +8,7 @@ const Faq = ({ question, answer, link, accordionHeader }) => {
 	return (
 		<div className={st.faq}>
 			{!accordionHeader && <h3 className={st.faq__question}>{question}</h3>}
-			<Text classname={st.faq__answer}>{answer}</Text>
+			<Text parentClass={st.faq__answer}>{answer}</Text>
 			<Button variant="dim" classname={st.faq__link} as="a" href={link}>
 				Go to documentation
 			</Button>

@@ -28,7 +28,7 @@ const Features = () => {
 					/>
 					<div className={st.features__content}>
 						<h3 className={st.features__title}>{item.title}</h3>
-						<Text classname={st.features__text}>{item.desc}</Text>
+						<Text parentClass={st.features__text}>{item.desc}</Text>
 					</div>
 				</li>
 			))}

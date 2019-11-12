@@ -6,10 +6,10 @@ import st from "./styles.module.scss"
 
 const Quote = ({ name, company, occupation, quote, images }) => (
 	<blockquote className={st.quote}>
-		<Text classname={st.quote__text}>{quote}</Text>
+		<Text parentClass={st.quote__text}>{quote}</Text>
 		<Picture data={images} classname={st.quote__avatar} />
 		<strong className={st.quote__name}>{name}</strong>
-		<Text classname={st.quote__company} as="span">
+		<Text parentClass={st.quote__company} as="span">
 			{occupation} at {company}
 		</Text>
 	</blockquote>

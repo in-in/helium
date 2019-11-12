@@ -32,7 +32,7 @@ const About = () => {
 					<Button variant="primary" as="a">
 						Read more
 					</Button>
-					<Text classname={st.about__text}>or</Text>
+					<Text parentClass={st.about__text}>or</Text>
 					<Button variant="primary" as="a">
 						Get started
 					</Button>

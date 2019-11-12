@@ -2,19 +2,25 @@ import React from "react"
 import PropTypes from "prop-types"
 import st from "./styles.module.scss"
 
-const Text = ({ classname, children, as }) => {
+const Text = ({ parentClass, children, as, modifier }) => {
 	const Component = as
-	return <Component className={classname || st.text}>{children}</Component>
+	const classname = modifier
+		? modifier.map(item => st[`text_${item}`]).join(` `)
+		: st.text
+
+	return <Component className={parentClass || classname}>{children}</Component>
 }
 
 Text.propTypes = {
 	children: PropTypes.node.isRequired,
-	classname: PropTypes.string,
+	parentClass: PropTypes.string,
+	modifier: PropTypes.arrayOf(PropTypes.oneOf([`light`])),
 	as: PropTypes.elementType,
 }
 
 Text.defaultProps = {
-	classname: ``,
+	parentClass: null,
+	modifier: null,
 	as: `p`,
 }
 
