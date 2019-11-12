@@ -1,10 +1,8 @@
 .header {
-	padding-block-start: rem(16);
-	padding-block-end: rem(16);
+	padding-block: rem(16);
 
 	@include breakpoint(xl) {
-		padding-block-start: t2c(16, xl);
-		padding-block-end: t2c(16, xl);
+		padding-block: t2c(16, xl);
 	}
 
 	@include divider($top: false);

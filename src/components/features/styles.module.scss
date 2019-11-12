@@ -33,8 +33,7 @@
 			position: relative;
 			z-index: 1;
 			flex-direction: column;
-			padding-inline-start: t2c(50, xl);
-			padding-inline-end: t2c(50, xl);
+			padding-inline: t2c(50, xl);
 			background-color: $white;
 			text-align: center;
 		}

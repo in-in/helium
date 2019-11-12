@@ -1,12 +1,10 @@
 .software {
-	padding-block-start: locks(72, 168);
-	padding-block-end: locks(72, 168);
+	padding-block: locks(72, 168);
 	background-color: rgb($blue_cornflower--l_20, 0.1);
 
 	@include breakpoint(xl) {
 		height: t2c(776, xl);
-		padding-block-start: t2c(168, xl);
-		padding-block-end: t2c(168, xl);
+		padding-block: t2c(168, xl);
 	}
 
 	&__wrapper {

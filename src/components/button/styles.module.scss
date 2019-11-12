@@ -6,10 +6,8 @@
 
 	display: inline-flex;
 	align-items: center;
-	padding-block-start: var(--button_padding_t_b);
-	padding-block-end: var(--button_padding_t_b);
-	padding-inline-start: var(--button_padding_r_l);
-	padding-inline-end: var(--button_padding_r_l);
+	padding-block: var(--button_padding_t_b);
+	padding-inline: var(--button_padding_r_l);
 	border-radius: rem(var(--border_radius));
 	font-family: $font_quicksand;
 	font-size: rem($button_font_size);
