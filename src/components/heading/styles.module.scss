@@ -8,6 +8,11 @@
 		composes: $root;
 		text-align: left;
 	}
+
+	&_light {
+		composes: $root;
+		color: $white;
+	}
 }
 
 .title {

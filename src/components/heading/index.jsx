@@ -19,32 +19,38 @@ const strongify = ({ text, accent }) => {
 	return result
 }
 
-const Heading = ({ title, subtitle, left, big, parentClass }) => (
-	<header className={`${parentClass} ${left ? st.heading_left : st.heading}`}>
-		<p className={st.subtitle}>{subtitle}</p>
-		{big ? (
-			<h1 className={st.title_big}>{strongify(title)}</h1>
-		) : (
-			<h2 className={st.title}>{strongify(title)}</h2>
-		)}
-	</header>
-)
+const Heading = ({ title, subtitle, big, parentClass, modifier }) => {
+	const classname = modifier
+		? modifier.map(item => st[`heading_${item}`]).join(` `)
+		: st.heading
+
+	return (
+		<header className={`${parentClass} ${classname}`}>
+			<p className={st.subtitle}>{subtitle}</p>
+			{big ? (
+				<h1 className={st.title_big}>{strongify(title)}</h1>
+			) : (
+				<h2 className={st.title}>{strongify(title)}</h2>
+			)}
+		</header>
+	)
+}
 
 Heading.propTypes = {
 	subtitle: PropTypes.string.isRequired,
 	parentClass: PropTypes.string,
+	modifier: PropTypes.arrayOf(PropTypes.oneOf([`left`, `light`])),
 	title: PropTypes.shape({
 		text: PropTypes.string,
 		accent: PropTypes.array,
 	}).isRequired,
-	left: PropTypes.bool,
 	big: PropTypes.bool,
 }
 
 Heading.defaultProps = {
-	left: false,
 	big: false,
 	parentClass: ``,
+	modifier: [],
 }
 
 export default Heading

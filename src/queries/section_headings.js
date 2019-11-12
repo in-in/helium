@@ -9,7 +9,7 @@ export const sectionHeadings = graphql`
 			accent
 		}
 		big
-		left
+		modifier
 		caption
 	}
 `

@@ -7,7 +7,6 @@
 			"accent": [2]
 		},
 		"big": true,
-		"left": false,
 		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata."
 	},
 	{
@@ -18,7 +17,7 @@
 			"accent": [0, 2]
 		},
 		"big": false,
-		"left": true,
+		"modifier": ["left"],
 		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat."
 	},
 	{
@@ -29,7 +28,6 @@
 			"accent": [1, 3]
 		},
 		"big": false,
-		"left": false,
 		"caption": ""
 	},
 	{
@@ -40,7 +38,6 @@
 			"accent": [0, 2]
 		},
 		"big": false,
-		"left": false,
 		"caption": ""
 	},
 	{
@@ -51,7 +48,7 @@
 			"accent": [1]
 		},
 		"big": false,
-		"left": true,
+		"modifier": ["left"],
 		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an."
 	},
 	{
@@ -62,7 +59,17 @@
 			"accent": [1]
 		},
 		"big": false,
-		"left": false,
 		"caption": ""
+	},
+	{
+		"section": "pricing",
+		"subtitle": "Plan your life",
+		"title": {
+			"text": "Get started now",
+			"accent": [1]
+		},
+		"big": false,
+		"modifier": ["light"],
+		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata."
 	}
 ]
