@@ -1,0 +1,61 @@
+@use 'data';
+
+.pricing {
+	position: relative;
+	padding-block: rem(88);
+	background:
+		linear-gradient(
+			200deg,
+			$blue_cornflower 15%,
+			$blue_cobalt--l_20 75%
+		);
+
+	@include breakpoint(xl) {
+		padding-block: t2c(88, xl);
+	}
+
+	* > * { /* stylelint-disable-line selector-max-universal */
+		position: relative;
+		z-index: 1;
+	}
+
+	&__header {
+		margin-block-end: rem(32);
+
+		@include breakpoint(xl) {
+			margin-block-end: t2c(32, xl);
+		}
+	}
+
+	&__text {
+		max-width: rem(712);
+		margin-block-end: rem(56);
+		margin-inline: auto;
+		text-align: center;
+
+		@include breakpoint(xl) {
+			max-width: t2c(712, xl);
+			margin-block-end: t2c(56, xl);
+		}
+	}
+
+	&__button {
+		text-align: center;
+	}
+
+	&__cloud {
+		$pricing_height: 444;
+
+		display: none;
+
+		@include breakpoint(s) {
+			display: block;
+
+			@include cloud(
+				data.$clouds,
+				$pricing_height,
+				rgb($blue_cobalt--l_10, 0.5)
+			);
+		}
+	}
+}

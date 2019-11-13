@@ -1,0 +1,53 @@
+@use 'styles/vars' as *;
+
+$clouds: (
+	'1': (
+		'width': 120,
+		'top': 144,
+		'left': 56,
+	),
+	'2': (
+		'top': 72,
+		'width': 136,
+		'left': 64,
+		'fill': rgb($blue_cornflower--l_20, 0.3),
+	),
+	'3': (
+		'width': 160,
+		'top': 88,
+		'left': 120,
+		'fill': rgb($blue_cornflower--l_20, 0.3),
+	),
+	'4': (
+		'width': 48,
+		'bottom': 96,
+		'left': 112,
+	),
+	'5': (
+		'width': 136,
+		'bottom': 56,
+		'left': 160,
+	),
+	'6': (
+		'width': 168,
+		'bottom': 112,
+		'right': 352,
+	),
+	'7': (
+		'width': 304,
+		'bottom': 72,
+		'right': 104,
+		'fill': rgb($blue_cornflower--l_20, 0.3),
+	),
+	'8': (
+		'width': 136,
+		'bottom': 184,
+		'right': 240,
+		'fill': rgb($blue_cornflower--l_20, 0.3),
+	),
+	'9': (
+		'width': 112,
+		'bottom': 112,
+		'right': 88,
+	),
+);
