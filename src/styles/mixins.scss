@@ -131,7 +131,6 @@
 
 	position: absolute;
 	z-index: 0;
-	fill: $color;
 
 	@each $index, $item in $data {
 		&_#{$index} {
@@ -141,35 +140,40 @@
 			inset-block-start:
 				if(
 					map.get($item, top),
-					#{t2c(map.get($item, top), $height, p)},
+					t2c(map.get($item, top), $height, p),
 					null
 				);
 			inset-block-end:
 				if(
 					map.get($item, bottom),
-					#{t2c(map.get($item, bottom), $height, p)},
+					t2c(map.get($item, bottom), $height, p),
 					null
 				);
 			inset-inline-start:
 				if(
 					map.get($item, left),
-					#{t2c(map.get($item, left), xl)},
+					t2c(map.get($item, left), xl),
 					null
 				);
 			inset-inline-end:
 				if(
 					map.get($item, right),
-					#{t2c(map.get($item, right), xl)},
+					t2c(map.get($item, right), xl),
 					null
 				);
 			width: locks($width / 3, $width);
 			transform:
 				if(
 					map.get($item, transform),
-					#{map.get($item, transform)},
+					map.get($item, transform),
 					null
 				);
-			fill: if(map.get($item, fill), #{map.get($item, fill)}, $color);
+			fill:
+				if(
+					map.get($item, fill),
+					map.get($item, fill),
+					$color
+				);
 		}
 	}
 }
