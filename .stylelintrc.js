@@ -565,6 +565,7 @@ module.exports = {
 				`animation-direction`,
 				`animation-fill-mode`,
 				`pointer-events`,
+				`touch-action`,
 				`unicode-bidi`,
 				`direction`,
 				`columns`,
