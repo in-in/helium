@@ -24,8 +24,10 @@ const Heading = ({ title, subtitle, big, parentClass, modifier }) => {
 		? modifier.map(item => st[`heading_${item}`]).join(` `)
 		: st.heading
 
+	const mixinClass = parentClass ? ` ${parentClass}` : parentClass
+
 	return (
-		<header className={`${parentClass} ${classname}`}>
+		<header className={`${classname}${mixinClass}`}>
 			<p className={st.subtitle}>{subtitle}</p>
 			{big ? (
 				<h1 className={st.title_big}>{strongify(title)}</h1>

@@ -3,11 +3,9 @@ import PropTypes from "prop-types"
 import st from "./styles.module.scss"
 
 const ButtonGroup = ({ parentClass, children }) => {
-	const parentClassList = parentClass ? ` ${parentClass}` : parentClass
+	const mixinClass = parentClass ? ` ${parentClass}` : parentClass
 
-	return (
-		<div className={`${st[`button-group`]}${parentClassList}`}>{children}</div>
-	)
+	return <div className={`${st[`button-group`]}${mixinClass}`}>{children}</div>
 }
 
 ButtonGroup.propTypes = {

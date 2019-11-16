@@ -2,14 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import st from "./styles.module.scss"
 
-const Text = ({ parentClass, children, as, modifier }) => {
+const Text = ({ children, as, parentClass, modifier }) => {
 	const Component = as
 	const classname = modifier
 		? modifier.map(item => st[`text_${item}`]).join(` `)
 		: st.text
+	const mixinClass = parentClass ? ` ${parentClass}` : parentClass
 
 	return (
-		<Component className={`${classname} ${parentClass}`}>{children}</Component>
+		<Component className={`${classname}${mixinClass}`}>{children}</Component>
 	)
 }
 
