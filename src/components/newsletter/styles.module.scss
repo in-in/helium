@@ -1,0 +1,76 @@
+.newsletter {
+	padding-block: rem(120);
+
+	@include breakpoint(xl) {
+		padding-block: t2c(120, xl);
+	}
+
+	@include divider();
+
+	&__wrapper {
+		display: grid;
+		grid-template-areas:
+			'text'
+			'form';
+		grid-template-columns: 1fr;
+		gap: t2c(96, xl);
+
+		@include breakpoint(s) {
+			grid-template-areas: 'text form';
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&__text {
+		grid-area: text;
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr min-content;
+		gap: rem(16);
+		grid-area: form;
+		align-items: end;
+
+		@include breakpoint(xl) {
+			gap: t2c(16, xl);
+		}
+	}
+
+	&__header {
+		margin-block-end: rem(24);
+
+		@include breakpoint(xl) {
+			margin-block-end: t2c(24, xl);
+		}
+	}
+
+	&__input {
+		--font_size: 13;
+		--padding_b: #{locks(8, 16)};
+		--padding_i: #{locks(16, 24)};
+
+		display: inline-flex;
+		width: 100%;
+		padding-block: var(--padding_b);
+		padding-inline: var(--padding_i);
+		border: 0;
+		border-radius: rem(var(--border_radius));
+		background-color: $gray_french--l_20;
+		color: $gray_french--d_40;
+		font-family: $font_quicksand;
+		font-size: rem(var(--font_size));
+		font-weight: 700;
+		line-height: 1.5;
+		appearance: none;
+
+		@include breakpoint(xl) {
+			--font_size: #{t2c(13, xl)};
+			--padding_b: #{t2c(16, xl)};
+			--padding_i: #{t2c(24, xl)};
+
+			border-radius: t2c(var(--border_radius), xl);
+			font-size: var(--font_size);
+		}
+	}
+}

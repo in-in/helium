@@ -10,6 +10,7 @@ import Blog from "../components/blog"
 import Testimonials from "../components/testimonials"
 import Help from "../components/help"
 import Pricing from "../components/pricing"
+import Newsletter from "../components/newsletter"
 
 const IndexPage = () => (
 	<Layout>
@@ -23,7 +24,8 @@ const IndexPage = () => (
 		<Testimonials />
 		<Help />
 		<Pricing />
-		<section>newsletter</section>
+		<Newsletter />
+		<footer>footer</footer>
 	</Layout>
 )
 

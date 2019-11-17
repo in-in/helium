@@ -71,5 +71,15 @@
 		"big": false,
 		"modifier": ["light"],
 		"caption": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata."
+	},
+	{
+		"section": "newsletter",
+		"subtitle": "Latest news",
+		"title": {
+			"text": "Sign up for newsletter",
+			"accent": [0, 1, 3]
+		},
+		"modifier": ["left"],
+		"caption": "Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum."
 	}
 ]
