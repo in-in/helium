@@ -1,7 +1,13 @@
 .newsletter {
+	$BREAKPOINT: 340px;
+	--HUGE_NUMBER: 999;
+	--gap: #{rem(16)};
+
 	padding-block: rem(120);
 
 	@include breakpoint(xl) {
+		--gap: #{t2c(16, xl)};
+
 		padding-block: t2c(120, xl);
 	}
 
@@ -26,14 +32,28 @@
 	}
 
 	&__form {
-		display: grid;
-		grid-template-columns: 1fr min-content;
-		gap: rem(16);
+		display: flex;
 		grid-area: form;
-		align-items: end;
+		flex-wrap: wrap;
+		align-content: flex-end;
+		align-items: flex-end;
 
-		@include breakpoint(xl) {
-			gap: t2c(16, xl);
+		&::before,
+		&::after {
+			content: '';
+			order: 2;
+		}
+
+		&::before {
+			// https://github.com/stylelint/stylelint/issues/4336
+			/* stylelint-disable-next-line function-calc-no-invalid */
+			width: calc(((-#{$BREAKPOINT} + 1px) - -100%) * var(--HUGE_NUMBER));
+			max-width: var(--gap);
+		}
+
+		&::after {
+			width: calc((#{$BREAKPOINT} - 100%) * var(--HUGE_NUMBER));
+			padding-block-end: var(--gap);
 		}
 	}
 
@@ -51,7 +71,9 @@
 		--padding_i: #{locks(16, 24)};
 
 		display: inline-flex;
-		width: 100%;
+		flex-grow: 1;
+		order: 1;
+		width: calc((#{$BREAKPOINT} - 100%) * var(--HUGE_NUMBER));
 		padding-block: var(--padding_b);
 		padding-inline: var(--padding_i);
 		border: 0;
@@ -72,5 +94,10 @@
 			border-radius: t2c(var(--border_radius), xl);
 			font-size: var(--font_size);
 		}
+	}
+
+	&__button {
+		order: 3;
+		margin-inline-start: auto;
 	}
 }
