@@ -3,12 +3,10 @@
 	--HUGE_NUMBER: 999;
 	--gap: #{rem(16)};
 
-	padding-block: rem(120);
+	padding-block: t2c(120, xl);
 
 	@include breakpoint(xl) {
 		--gap: #{t2c(16, xl)};
-
-		padding-block: t2c(120, xl);
 	}
 
 	@include divider();
