@@ -1,6 +1,6 @@
 @import-normalize;
 
-html {
+HTML {
 	box-sizing: border-box;
 }
 
@@ -11,65 +11,65 @@ html {
 	margin: 0;
 	padding: 0;
 
-	/* stylelint-disable declaration-property-unit-whitelist, time-min-milliseconds */
+	/* stylelint-disable time-min-milliseconds */
 	@media (prefers-reduced-motion: reduce) {
-		transition-duration: 0.01ms !important;
-		animation-duration: 0.01ms !important;
+		transition-duration: 0.001s !important;
+		animation-duration: 0.001s !important;
 		animation-iteration-count: 1 !important;
 		scroll-behavior: auto !important;
 	}
 	/* stylelint-enable */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+H1,
+H2,
+H3,
+H4,
+H5,
+H6,
+P {
 	margin: 0;
 	padding: 0;
 	font-weight: 400;
 }
 
-ol,
-ul {
+OL,
+UL {
 	list-style: none;
 }
 
-a {
+A {
 	color: inherit;
 	text-decoration: none;
 }
 
-html svg { /* stylelint-disable-line selector-max-type */
+HTML SVG { /* stylelint-disable-line selector-max-type */
 	display: block;
 	width: 100%;
 	height: auto;
 }
 
-button {
+BUTTON {
 	border: 0;
 	background: none;
 	appearance: none;
 	user-select: none;
 }
 
-input,
-button,
-textarea,
-select {
+INPUT,
+BUTTON,
+TEXTAREA,
+SELECT {
 	word-spacing: inherit;
 	letter-spacing: inherit;
 	font: inherit;
 }
 
-textarea {
+TEXTAREA {
 	resize: none;
 }
 
-img {
+IMG {
 	display: block;
 	max-width: 100%;
 }
