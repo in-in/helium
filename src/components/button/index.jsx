@@ -4,9 +4,10 @@ import Icon from "../icon"
 import st from "./styles.module.scss"
 
 const Button = props => {
-	const { variant, icon, classname, children, as, href } = props
+	const { variant, icon, parentClass, children, as, href } = props
 	const Component = as
 	const buttonProps = {}
+	const mixinClass = parentClass ? ` ${parentClass}` : parentClass
 
 	if (Component === `button`) {
 		buttonProps.type = `button`
@@ -17,7 +18,7 @@ const Button = props => {
 
 	return (
 		<Component
-			className={`${classname} ${st[`button_${variant}`]}`}
+			className={`${st[`button_${variant}`]}${mixinClass}`}
 			{...buttonProps}
 		>
 			{children}
@@ -29,7 +30,7 @@ const Button = props => {
 Button.propTypes = {
 	children: PropTypes.node.isRequired,
 	icon: PropTypes.string,
-	classname: PropTypes.string,
+	parentClass: PropTypes.string,
 	href: PropTypes.string,
 	as: PropTypes.string,
 	variant: PropTypes.oneOf([
@@ -44,7 +45,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
 	icon: ``,
-	classname: ``,
+	parentClass: ``,
 	as: `button`,
 	href: `#0`,
 }

@@ -40,7 +40,7 @@ const Newsletter = () => {
 							type="email"
 							placeholder="Email Address"
 						/>
-						<Button variant="secondary" classname={st.newsletter__button}>
+						<Button variant="secondary" parentClass={st.newsletter__button}>
 							Subscribe
 						</Button>
 					</form>

@@ -1,24 +1,24 @@
 .button {
 	$root: compose(&);
-	$button_font_size: 13;
-	--button_padding_t_b: #{locks(8, 16)};
-	--button_padding_r_l: #{locks(16, 24)};
+	$font_size: 13;
+	--padding_block: #{locks(8, 16)};
+	--padding_inline: #{locks(16, 24)};
 
 	display: inline-flex;
 	align-items: center;
-	padding-block: var(--button_padding_t_b);
-	padding-inline: var(--button_padding_r_l);
+	padding-block: var(--padding_block);
+	padding-inline: var(--padding_inline);
 	border-radius: rem(var(--border_radius));
 	font-family: $font_quicksand;
-	font-size: rem($button_font_size);
+	font-size: rem($font_size);
 	font-weight: 700;
 	line-height: 1.5;
 	cursor: pointer;
 	appearance: none;
 
 	@include breakpoint(xl) {
-		--button_padding_t_b: #{t2c(16, xl)};
-		--button_padding_r_l: #{t2c(24, xl)};
+		--padding_block: #{t2c(16, xl)};
+		--padding_inline: #{t2c(24, xl)};
 
 		border-radius: t2c(var(--border_radius), xl);
 		font-size: t2c(13, xl);
@@ -26,8 +26,8 @@
 
 	&__icon {
 		width: 0.9em;
-		margin-inline-start: em(4, $button_font_size);
-		padding: em(2, $button_font_size);
+		margin-inline-start: em(4, $font_size);
+		padding: em(2, $font_size);
 		fill: currentColor;
 	}
 
@@ -58,7 +58,7 @@
 
 	&_plain {
 		composes: $root;
-		box-shadow: inset 0 0 0 em(1, $button_font_size) currentColor;
+		box-shadow: inset 0 0 0 em(1, $font_size) currentColor;
 		color: $blue_cobalt--l_20;
 
 		@include hover() {
@@ -69,7 +69,7 @@
 
 		&-invert {
 			composes: $root;
-			box-shadow: inset 0 0 0 em(1, $button_font_size) currentColor;
+			box-shadow: inset 0 0 0 em(1, $font_size) currentColor;
 			color: $blue_cornflower--l_30;
 
 			@include hover() {
