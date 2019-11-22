@@ -43,7 +43,6 @@
 	&__picture {
 		--width: #{rem(272)};
 		--height: #{aspect-ratio(var(--width), 1/1)};
-		--border-radius: #{rem(var(--border_radius))};
 		--gradient1: rgb(255, 227, 154, 0.5);
 		--gradient2: #{$crystal};
 
@@ -52,7 +51,7 @@
 		width: var(--width);
 		height: var(--height);
 		overflow: hidden;
-		border-radius: var(--border-radius);
+		border-radius: var(--border_radius);
 
 		&::before {
 			content: '';
@@ -72,7 +71,6 @@
 
 		@include breakpoint(xl) {
 			--width: #{t2c(272, xl)};
-			--border-radius: #{t2c(var(--border_radius), xl)};
 		}
 
 		IMG {

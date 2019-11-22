@@ -1,9 +1,14 @@
 @use 'config' as *;
 
 :root {
-	--border_radius: 4;
+	$br: 4;
+	--border_radius: #{rem($br)};
 	--transition_duration: 0.4s;
 	--transition_easeing: ease-in-out;
+
+	@include breakpoint(xl) {
+		--border_radius: #{t2c($br, xl)};
+	}
 }
 
 *:focus {

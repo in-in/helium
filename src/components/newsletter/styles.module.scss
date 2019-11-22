@@ -75,7 +75,7 @@
 		padding-block: var(--padding_b);
 		padding-inline: var(--padding_i);
 		border: 0;
-		border-radius: rem(var(--border_radius));
+		border-radius: var(--border_radius);
 		background-color: $gray_french--l_20;
 		color: $gray_french--d_40;
 		font-family: $font_quicksand;
@@ -89,7 +89,6 @@
 			--padding_b: #{t2c(16, xl)};
 			--padding_i: #{t2c(24, xl)};
 
-			border-radius: t2c(var(--border_radius), xl);
 			font-size: var(--font_size);
 		}
 	}

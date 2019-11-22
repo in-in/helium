@@ -8,7 +8,7 @@
 	align-items: center;
 	padding-block: var(--padding_block);
 	padding-inline: var(--padding_inline);
-	border-radius: rem(var(--border_radius));
+	border-radius: var(--border_radius);
 	font-family: $font_quicksand;
 	font-size: rem($font_size);
 	font-weight: 700;
@@ -20,7 +20,6 @@
 		--padding_block: #{t2c(16, xl)};
 		--padding_inline: #{t2c(24, xl)};
 
-		border-radius: t2c(var(--border_radius), xl);
 		font-size: t2c(13, xl);
 	}
 
