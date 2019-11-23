@@ -1,0 +1,15 @@
+.footer {
+	padding-block: t2c(96, xl);
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__copyright {
+		width: 100%;
+		padding-block-start: t2c(40, xl);
+	}
+}
