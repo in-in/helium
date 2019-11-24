@@ -12,7 +12,7 @@ const Footer = () => (
 				<Logo />
 				<Social />
 				<Text parentClass={st.footer__copyright}>
-					Copyright &copy; {new Date().getFullYear()}
+					Helium &copy; {new Date().getFullYear()}
 				</Text>
 			</div>
 		</Container>
