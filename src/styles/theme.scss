@@ -1,13 +1,12 @@
 @use 'config' as *;
 
 :root {
-	$br: 4;
-	--border_radius: #{rem($br)};
+	--border_radius: #{rem($border_radius)};
 	--transition_duration: 0.4s;
 	--transition_easeing: ease-in-out;
 
 	@include breakpoint(xl) {
-		--border_radius: #{t2c($br, xl)};
+		--border_radius: #{t2c($border_radius, xl)};
 	}
 }
 

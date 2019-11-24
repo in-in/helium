@@ -1,6 +1,7 @@
 @use 'sass:color' as *;
 
 $base_font: 16;
+$border_radius: 4;
 
 $sizes: (
 	'xs': 320,
@@ -42,6 +43,7 @@ $gray_french--d_50: adjust($gray_french, $lightness: -50%);
 $gray_french--l_10: adjust($gray_french, $lightness: 10%);
 $gray_french--l_20: adjust($gray_french, $lightness: 20%);
 
+// others
 $white: #fff;
 $crystal: rgb(255, 255, 255, 0);
 
