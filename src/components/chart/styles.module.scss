@@ -1,0 +1,96 @@
+$delay_fill: 1s;
+$delay_stroke: 0.24s;
+$stroke_width: 2;
+$timing_function: cubic-bezier(0.47, 0, 0.745, 0.715);
+
+.chart {
+	position: absolute;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	z-index: 0;
+	width: 100%;
+	opacity: 0.5;
+
+	@include breakpoint(m) {
+		opacity: 1;
+	}
+
+	@keyframes background {
+		0% {
+			opacity: 0;
+			fill: url('#a');
+		}
+
+		100% {
+			opacity: 1;
+			fill: url('#a');
+		}
+	}
+
+	PATH:nth-of-type(1) {
+		animation-name: background;
+		animation-duration: 0.7s;
+		animation-timing-function: $timing_function;
+		animation-delay: 0.8s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes main_line {
+		100% {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	PATH:nth-of-type(2) {
+		animation-name: main_line;
+		animation-duration: 1.5s;
+		animation-timing-function: linear;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+		stroke: $blue_cornflower--l_10;
+		stroke-dasharray: t2c(2000, xl);
+		stroke-dashoffset: t2c(2000, xl);
+		stroke-width: $stroke_width;
+	}
+
+	CIRCLE {
+		stroke: $blue_cornflower--l_10;
+		stroke-opacity: 0.9;
+		stroke-width: $stroke_width;
+	}
+
+	@for $i from 1 through 4 {
+		@keyframes circle_stroke_#{$i} {
+			0% {
+				stroke-dasharray: t2c(50, xl);
+				stroke-dashoffset: t2c(50, xl);
+			}
+
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		@keyframes circle_fill_#{$i} {
+			0% {
+				fill: $crystal;
+			}
+
+			100% {
+				fill: $white;
+			}
+		}
+
+		CIRCLE:nth-of-type(#{$i}) {
+			animation-name: circle_stroke_#{$i}, circle_fill_#{$i};
+			animation-duration: 1s, 0.7s;
+			animation-timing-function: $timing_function;
+			animation-delay: $delay_stroke, $delay_fill;
+			animation-fill-mode: both;
+		}
+
+		$delay_stroke: $delay_stroke + 0.12;
+		$delay_fill: $delay_fill + 0.1;
+	}
+}

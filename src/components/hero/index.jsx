@@ -4,6 +4,7 @@ import Container from "../container"
 import Heading from "../heading"
 import Text from "../text"
 import Icon from "../icon"
+import Chart from "../chart"
 import st from "./styles.module.scss"
 
 const clouds = Array(13).fill(0)
@@ -30,7 +31,7 @@ const Hero = () => {
 				</Container>
 			))}
 
-			<Icon hidden filename="chart" classname={st.hero__chart} />
+			<Chart />
 			{clouds.map((item, i) => (
 				<Icon
 					hidden

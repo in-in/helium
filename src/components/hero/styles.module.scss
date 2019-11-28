@@ -8,6 +8,7 @@
 	min-height: ($hero_height / 2) * 1px;
 	max-height: t2c($hero_height, xl);
 	overflow: hidden;
+	background-color: rgb($blue_cornflower--l_20, 0.2);
 
 	@at-root %item {
 		position: relative;
@@ -32,21 +33,6 @@
 		@include breakpoint(xl) {
 			padding-block-start: t2c(48, xl);
 			font-size: t2c(16, xl);
-		}
-	}
-
-	&__chart {
-		position: absolute;
-		inset-block-start: 0;
-		inset-inline-start: 0;
-		z-index: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgb($blue_cornflower--l_20, 0.2);
-		opacity: 0.5;
-
-		@include breakpoint(m) {
-			opacity: 1;
 		}
 	}
 
