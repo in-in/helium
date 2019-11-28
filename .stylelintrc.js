@@ -265,7 +265,7 @@ module.exports = {
 		"scss/no-duplicate-dollar-variables": [
 			true,
 			{
-				ignoreInsideAtRules: [`if`, `else`],
+				ignoreInsideAtRules: [`if`, `else`, `for`],
 			},
 		],
 		"scss/no-duplicate-mixins": true,
