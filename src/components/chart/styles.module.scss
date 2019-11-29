@@ -49,15 +49,15 @@ $timing_function: cubic-bezier(0.47, 0, 0.745, 0.715);
 		animation-direction: normal;
 		animation-fill-mode: forwards;
 		stroke: $blue_cornflower--l_10;
+		stroke-width: $stroke_width;
 		stroke-dasharray: t2c(2000, xl);
 		stroke-dashoffset: t2c(2000, xl);
-		stroke-width: $stroke_width;
 	}
 
 	CIRCLE {
 		stroke: $blue_cornflower--l_10;
-		stroke-opacity: 0.9;
 		stroke-width: $stroke_width;
+		stroke-opacity: 0.9;
 	}
 
 	@for $i from 1 through 4 {
