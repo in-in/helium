@@ -2,21 +2,21 @@
 	{
 		"icon": "overview",
 		"title": "Overview",
-		"desc": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro."
+		"desc": "Tasks can be organized into simple lists, for example, by sections or project themes. For a perfect overview, simply switch to our flexible boards and drag & drop."
 	},
 	{
 		"icon": "files",
 		"title": "Files",
-		"desc": "No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has. Vim ne tacimates neglegentur. Erat diceret omittam at est. Nisl idque mel ea, nominati voluptatum."
+		"desc": "Bring emails, files, tickets and much more to Helium with over 100 integration options to choose from so you can see everything in one place."
 	},
 	{
 		"icon": "chats",
 		"title": "Meeting chats",
-		"desc": "Vim ne tacimates neglegentur. Erat diceret omittam at est."
+		"desc": "The fastest way to get answers to your questions from one of the team members."
 	},
 	{
 		"icon": "save",
 		"title": "Save events",
-		"desc": "Nisl idque mel ea, nominati voluptatum."
+		"desc": "You can choose between stopwatch, drag & drop, or automatic calendar integration to track the time."
 	}
 ]
