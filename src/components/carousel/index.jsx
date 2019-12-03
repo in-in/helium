@@ -17,6 +17,7 @@ const Carousel = ({ children, parentClass, nav }) => {
 		Swiper,
 		modules: [Navigation, Pagination, A11y, EffectFade, Lazy],
 		containerClass: `${st.carousel__container}`,
+		WrapperEl: `ul`,
 		wrapperClass: `${st.carousel__wrapper}`,
 		slideClass: `${st.carousel__slide}`,
 		slideActiveClass: `${st.carousel__slide_active}`,
@@ -50,9 +51,9 @@ const Carousel = ({ children, parentClass, nav }) => {
 		<ReactIdSwiper {...params}>
 			{children.map((child, i) => (
 				// eslint-disable-next-line react/no-array-index-key
-				<div key={i} className={parentClass}>
+				<li key={i} className={parentClass}>
 					{child}
-				</div>
+				</li>
 			))}
 		</ReactIdSwiper>
 	)
