@@ -19,6 +19,7 @@ const Button = props => {
 	return (
 		<Component
 			className={`${st[`button_${variant}`]}${mixinClass}`}
+			onClick={e => e.preventDefault()}
 			{...buttonProps}
 		>
 			{children}
