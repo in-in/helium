@@ -8,11 +8,10 @@ const Customers = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			allCustomersJson(sort: { fields: name, order: ASC }) {
-				edges {
-					node {
-						name
-						url
-					}
+				nodes {
+					id
+					name
+					url
 				}
 			}
 		}
@@ -24,20 +23,20 @@ const Customers = () => {
 				<h2 className="visually-hidden">Customers</h2>
 				<div className={st.customers__wrapper}>
 					<ul className={st.customers__list}>
-						{data.allCustomersJson.edges.map(item => (
-							<li className={st.customers__item} key={item.node.name}>
+						{data.allCustomersJson.nodes.map(item => (
+							<li className={st.customers__item} key={item.id}>
 								<a
 									target="_blank"
 									rel="noopener noreferrer"
-									href={item.node.url}
+									href={item.url}
 									className={st.customers__link}
-									title={item.node.name
-										.split(` `)
-										.map(w => w.charAt(0).toUpperCase() + w.slice(1))
-										.join(` `)}
+									title={item.name}
 								>
 									<Icon
-										filename={`customers/${item.node.name.split(` `).join(``)}`}
+										filename={`customers/${item.name
+											.split(` `)
+											.join(`_`)
+											.toLowerCase()}`}
 										classname={st.customers__logo}
 									/>
 								</a>

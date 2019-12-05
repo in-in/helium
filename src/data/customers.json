@@ -1,22 +1,22 @@
 [
 	{
-		"name": "algolia",
+		"name": "Algolia",
 		"url": "https://www.algolia.com"
 	},
 	{
-		"name": "envato",
+		"name": "Envato",
 		"url": "https://envato.com"
 	},
 	{
-		"name": "microsoft",
+		"name": "Microsoft",
 		"url": "https://www.microsoft.com"
 	},
 	{
-		"name": "stackoverflow",
+		"name": "Stackoverflow",
 		"url": "https://stackoverflow.com"
 	},
 	{
-		"name": "angular",
+		"name": "Angular",
 		"url": "https://angular.io/"
 	}
 ]
