@@ -7,11 +7,10 @@ const Social = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			allSocialItemsJson(sort: { fields: name, order: ASC }) {
-				edges {
-					node {
-						name
-						url
-					}
+				nodes {
+					id
+					name
+					url
 				}
 			}
 		}
@@ -19,16 +18,17 @@ const Social = () => {
 
 	return (
 		<ul className={st.social}>
-			{data.allSocialItemsJson.edges.map(item => (
-				<li className={st.social__item} key={item.node.name}>
+			{data.allSocialItemsJson.nodes.map(item => (
+				<li className={st.social__item} key={item.id}>
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
-						href={item.node.url}
+						href={item.url}
 						className={st.social__link}
+						title={item.name}
 					>
 						<Icon
-							filename={`social/${item.node.name}`}
+							filename={`social/${item.name.toLowerCase()}`}
 							classname={st.social__icon}
 						/>
 					</a>

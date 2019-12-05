@@ -1,18 +1,18 @@
 [
 	{
-		"name": "facebook",
+		"name": "Facebook",
 		"url": "https://www.facebook.com/"
 	},
 	{
-		"name": "medium",
+		"name": "Medium",
 		"url": "https://medium.com/"
 	},
 	{
-		"name": "telegram",
+		"name": "Telegram",
 		"url": "https://telegram.org/"
 	},
 	{
-		"name": "twitter",
+		"name": "Twitter",
 		"url": "https://twitter.com/"
 	}
 ]
