@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "../container"
 import Heading from "../heading"
@@ -17,21 +17,18 @@ const Newsletter = () => {
 		}
 	`)
 
+	const { caption } = data.allSectionHeadingsJson.nodes[0]
+
 	return (
 		<section className={st.newsletter}>
 			<Container>
 				<div className={st.newsletter__wrapper}>
 					<div className={st.newsletter__text}>
-						{data.allSectionHeadingsJson.nodes.map(item => (
-							<Fragment key={item.id}>
-								<Heading
-									{...item}
-									key={item.id}
-									parentClass={st.newsletter__header}
-								/>
-								<Text>{item.caption}</Text>
-							</Fragment>
-						))}
+						<Heading
+							{...data.allSectionHeadingsJson.nodes[0]}
+							parentClass={st.newsletter__header}
+						/>
+						<Text>{caption}</Text>
 					</div>
 					<form className={st.newsletter__form}>
 						<input

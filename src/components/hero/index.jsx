@@ -20,16 +20,19 @@ const Hero = () => {
 		}
 	`)
 
+	const { caption } = data.allSectionHeadingsJson.nodes[0]
+
 	return (
 		<section className={st.hero}>
-			{data.allSectionHeadingsJson.nodes.map(item => (
-				<Container key={item.id}>
-					<Heading {...item} parentClass={st.hero__header} />
-					<div className={st.hero__caption}>
-						<Text>{item.caption}</Text>
-					</div>
-				</Container>
-			))}
+			<Container>
+				<Heading
+					{...data.allSectionHeadingsJson.nodes[0]}
+					parentClass={st.hero__header}
+				/>
+				<div className={st.hero__caption}>
+					<Text>{caption}</Text>
+				</div>
+			</Container>
 
 			<Chart />
 			{clouds.map((item, i) => (

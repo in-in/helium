@@ -28,9 +28,10 @@ const Help = () => {
 	return (
 		<section className={st.help}>
 			<Container>
-				{data.allSectionHeadingsJson.nodes.map(item => (
-					<Heading {...item} key={item.id} parentClass={st.help__header} />
-				))}
+				<Heading
+					{...data.allSectionHeadingsJson.nodes[0]}
+					parentClass={st.help__header}
+				/>
 				<div className={st.help__accordion}>
 					<Accordion>
 						{data.allFaqJson.nodes.map(item => {

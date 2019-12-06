@@ -24,9 +24,10 @@ const About = () => {
 	return (
 		<section className={st.about}>
 			<Container>
-				{data.allSectionHeadingsJson.nodes.map(item => (
-					<Heading {...item} parentClass={st.about__header} key={item.id} />
-				))}
+				<Heading
+					{...data.allSectionHeadingsJson.nodes[0]}
+					parentClass={st.about__header}
+				/>
 				<Features />
 				<div className={st.about__button}>
 					<Button variant="primary" as="a">

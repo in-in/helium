@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "../container"
 import Heading from "../heading"
@@ -21,25 +21,26 @@ const Pricing = () => {
 		}
 	`)
 
+	const { caption } = data.allSectionHeadingsJson.nodes[0]
+
 	return (
 		<section className={st.pricing}>
 			<Container>
-				{data.allSectionHeadingsJson.nodes.map(item => (
-					<Fragment key={item.id}>
-						<Heading {...item} key={item.id} parentClass={st.pricing__header} />
-						<Text parentClass={st.pricing__text} modifier={[`light`]}>
-							{item.caption}
-						</Text>
-						<ButtonGroup parentClass={st.pricing__button}>
-							<Button variant="bright" as="a">
-								View pricing
-							</Button>
-							<Button variant="plain-invert" as="a">
-								Read documentation
-							</Button>
-						</ButtonGroup>
-					</Fragment>
-				))}
+				<Heading
+					{...data.allSectionHeadingsJson.nodes[0]}
+					parentClass={st.pricing__header}
+				/>
+				<Text parentClass={st.pricing__text} modifier={[`light`]}>
+					{caption}
+				</Text>
+				<ButtonGroup parentClass={st.pricing__button}>
+					<Button variant="bright" as="a">
+						View pricing
+					</Button>
+					<Button variant="plain-invert" as="a">
+						Read documentation
+					</Button>
+				</ButtonGroup>
 			</Container>
 			{clouds.map((item, i) => (
 				<Icon

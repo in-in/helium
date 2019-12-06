@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "../container"
 import Heading from "../heading"
@@ -35,17 +35,19 @@ const Testimonials = () => {
 			}
 		}
 	`)
+
+	const { caption } = data.allSectionHeadingsJson.nodes[0]
+
 	return (
 		<section className={st.testimonials}>
 			<Container>
 				<div className={st.testimonials__wrapper}>
 					<div className={st.testimonials__text}>
-						{data.allSectionHeadingsJson.nodes.map(item => (
-							<Fragment key={item.id}>
-								<Heading {...item} parentClass={st.testimonials__header} />
-								<Text>{item.caption}</Text>
-							</Fragment>
-						))}
+						<Heading
+							{...data.allSectionHeadingsJson.nodes[0]}
+							parentClass={st.testimonials__header}
+						/>
+						<Text>{caption}</Text>
 					</div>
 					<div className={st[`testimonials__carousel-wrapper`]}>
 						<Carousel nav={false}>

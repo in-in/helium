@@ -36,9 +36,10 @@ const Blog = () => {
 	return (
 		<section className={st.blog}>
 			<Container>
-				{data.allSectionHeadingsJson.nodes.map(item => (
-					<Heading {...item} key={item.id} parentClass={st.blog__header} />
-				))}
+				<Heading
+					{...data.allSectionHeadingsJson.nodes[0]}
+					parentClass={st.blog__header}
+				/>
 				<div className={st[`blog__carousel-wrapper`]}>
 					<Carousel parentClass={st.blog__carousel}>
 						{data.allArticlesJson.nodes.map(item => {
