@@ -22,6 +22,14 @@ const Picture = ({ classname, data }) => {
 			.forEach(i => {
 				url = i.publicURL
 			})
+		if (!url) {
+			try {
+				throw new Error(`There is no image with name: ${name}`)
+			} catch (e) {
+				// eslint-disable-next-line no-console
+				console.error(e)
+			}
+		}
 		return url
 	}
 
