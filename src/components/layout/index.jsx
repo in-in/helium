@@ -5,12 +5,14 @@ import "../../styles/index.scss"
 
 const Layout = ({ children }) => (
 	<>
-		<Helmet
-			title="Helium"
-			meta={[{ name: `description`, content: `Helium landing page` }]}
-		>
+		<Helmet>
 			<html lang="en" />
-			<style type="text/css">{`
+			<title>Helium</title>
+			<meta
+				name="description"
+				content="Project management platform for agile developers and designers as well as project managers who need a beautiful tool that makes their work really pleasant."
+			/>
+			<style>{`
 				svg {
 					width: 1em;
 					height: 1em;
