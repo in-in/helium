@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby';
 
 export const device = graphql`
 	fragment device on DeviceJson {
@@ -10,6 +10,6 @@ export const device = graphql`
 			}
 		}
 	}
-`
+`;
 
-export default device
+export default device;

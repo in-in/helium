@@ -1,10 +1,10 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Container from "../container"
-import Heading from "../heading"
-import Accordion from "../accordion"
-import Faq from "../faq"
-import st from "./styles.module.scss"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Container from '../container';
+import Heading from '../heading';
+import Accordion from '../accordion';
+import Faq from '../faq';
+import st from './styles.module.scss';
 
 const Help = () => {
 	const data = useStaticQuery(graphql`
@@ -23,7 +23,7 @@ const Help = () => {
 				}
 			}
 		}
-	`)
+	`);
 
 	return (
 		<section className={st.help}>
@@ -34,17 +34,17 @@ const Help = () => {
 				/>
 				<div className={st.help__accordion}>
 					<Accordion>
-						{data.allFaqJson.nodes.map(item => {
-							const { id, question, answer, link } = item
-							return (
-								<Faq key={id} question={question} answer={answer} link={link} />
-							)
+						{data.allFaqJson.nodes.map((item) => {
+							const {
+								id, question, answer, link,
+							} = item;
+							return <Faq key={id} question={question} answer={answer} link={link} />;
 						})}
 					</Accordion>
 				</div>
 			</Container>
 		</section>
-	)
-}
+	);
+};
 
-export default Help
+export default Help;

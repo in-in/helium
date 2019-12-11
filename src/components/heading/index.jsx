@@ -1,30 +1,36 @@
-import React, { Fragment } from "react"
-import PropTypes from "prop-types"
-import st from "./styles.module.scss"
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import st from './styles.module.scss';
 
 const strongify = ({ text, accent }) => {
-	const result = text.split(` `).map((word, i) => {
-		if (accent && accent.some(el => el === i)) {
+	const result = text.split(' ').map((word, i) => {
+		if (accent && accent.some((el) => el === i)) {
 			return (
 				// eslint-disable-next-line react/no-array-index-key
 				<strong key={i} className={st.accent}>
 					{word}
-					{` `}
+					{' '}
 				</strong>
-			)
+			);
 		}
-		// eslint-disable-next-line react/no-array-index-key
-		return <Fragment key={i}>{word} </Fragment>
-	})
-	return result
-}
+		return (
+			// eslint-disable-next-line react/no-array-index-key
+			<Fragment key={i}>
+				{word}
+			</Fragment>
+		);
+	});
+	return result;
+};
 
-const Heading = ({ title, subtitle, big, parentClass, modifier }) => {
+const Heading = ({
+	title, subtitle, big, parentClass, modifier,
+}) => {
 	const classname = modifier
-		? modifier.map(item => st[`heading_${item}`]).join(` `)
-		: st.heading
+		? modifier.map((item) => st[`heading_${item}`]).join(' ')
+		: st.heading;
 
-	const mixinClass = parentClass ? ` ${parentClass}` : parentClass
+	const mixinClass = parentClass ? ` ${parentClass}` : parentClass;
 
 	return (
 		<header className={`${classname}${mixinClass}`}>
@@ -35,24 +41,24 @@ const Heading = ({ title, subtitle, big, parentClass, modifier }) => {
 				<h2 className={st.title}>{strongify(title)}</h2>
 			)}
 		</header>
-	)
-}
+	);
+};
 
 Heading.propTypes = {
 	subtitle: PropTypes.string.isRequired,
 	parentClass: PropTypes.string,
-	modifier: PropTypes.arrayOf(PropTypes.oneOf([`left`, `light`])),
+	modifier: PropTypes.arrayOf(PropTypes.oneOf(['left', 'light'])),
 	title: PropTypes.shape({
 		text: PropTypes.string,
 		accent: PropTypes.array,
 	}).isRequired,
 	big: PropTypes.bool,
-}
+};
 
 Heading.defaultProps = {
 	big: false,
-	parentClass: ``,
+	parentClass: '',
 	modifier: [],
-}
+};
 
-export default Heading
+export default Heading;

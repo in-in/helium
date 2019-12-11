@@ -1,11 +1,11 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Container from "../container"
-import Heading from "../heading"
-import Text from "../text"
-import Quote from "../quote"
-import Carousel from "../carousel"
-import st from "./styles.module.scss"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Container from '../container';
+import Heading from '../heading';
+import Text from '../text';
+import Quote from '../quote';
+import Carousel from '../carousel';
+import st from './styles.module.scss';
 
 const Testimonials = () => {
 	const data = useStaticQuery(graphql`
@@ -34,9 +34,9 @@ const Testimonials = () => {
 				}
 			}
 		}
-	`)
+	`);
 
-	const { caption } = data.allSectionHeadingsJson.nodes[0]
+	const { caption } = data.allSectionHeadingsJson.nodes[0];
 
 	return (
 		<section className={st.testimonials}>
@@ -49,10 +49,12 @@ const Testimonials = () => {
 						/>
 						<Text>{caption}</Text>
 					</div>
-					<div className={st[`testimonials__carousel-wrapper`]}>
+					<div className={st['testimonials__carousel-wrapper']}>
 						<Carousel nav={false}>
-							{data.allTestimonialsJson.nodes.map(item => {
-								const { id, quote, images, name, company, occupation } = item
+							{data.allTestimonialsJson.nodes.map((item) => {
+								const {
+									id, quote, images, name, company, occupation,
+								} = item;
 								return (
 									<Quote
 										key={id}
@@ -62,14 +64,14 @@ const Testimonials = () => {
 										quote={quote}
 										images={images}
 									/>
-								)
+								);
 							})}
 						</Carousel>
 					</div>
 				</div>
 			</Container>
 		</section>
-	)
-}
+	);
+};
 
-export default Testimonials
+export default Testimonials;

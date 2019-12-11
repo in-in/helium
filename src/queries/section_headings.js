@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby';
 
 export const sectionHeadings = graphql`
 	fragment sectionHeadings on SectionHeadingsJson {
@@ -12,6 +12,6 @@ export const sectionHeadings = graphql`
 		modifier
 		caption
 	}
-`
+`;
 
-export default sectionHeadings
+export default sectionHeadings;

@@ -1,10 +1,15 @@
 module.exports = {
-	parser: `babel-eslint`,
-	extends: [`airbnb`, `prettier`, `prettier/react`, `airbnb/hooks`],
-	plugins: [`prettier`],
+	parser: 'babel-eslint',
+	extends: ['airbnb', 'airbnb/hooks'],
 	rules: {
-		quotes: [`error`, `backtick`],
-		"prettier/prettier": `error`,
-		"react/jsx-props-no-spreading": 0,
+		'implicit-arrow-linebreak': 0,
+		'max-len': ['error', 90, 2],
+		'no-tabs': 0,
+		indent: ['error', 'tab', { SwitchCase: 1 }],
+		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+		'react/jsx-indent-props': ['error', 'tab'],
+		'react/jsx-indent': ['error', 'tab'],
+		'react/jsx-one-expression-per-line': 0,
+		'react/jsx-props-no-spreading': 0,
 	},
-}
+};

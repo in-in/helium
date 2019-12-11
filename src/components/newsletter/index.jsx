@@ -1,10 +1,10 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Container from "../container"
-import Heading from "../heading"
-import Text from "../text"
-import Button from "../button"
-import st from "./styles.module.scss"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Container from '../container';
+import Heading from '../heading';
+import Text from '../text';
+import Button from '../button';
+import st from './styles.module.scss';
 
 const Newsletter = () => {
 	const data = useStaticQuery(graphql`
@@ -15,9 +15,9 @@ const Newsletter = () => {
 				}
 			}
 		}
-	`)
+	`);
 
-	const { caption } = data.allSectionHeadingsJson.nodes[0]
+	const { caption } = data.allSectionHeadingsJson.nodes[0];
 
 	return (
 		<section className={st.newsletter}>
@@ -44,7 +44,7 @@ const Newsletter = () => {
 				</div>
 			</Container>
 		</section>
-	)
-}
+	);
+};
 
-export default Newsletter
+export default Newsletter;

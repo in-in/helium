@@ -1,10 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Picture from "../picture"
-import Text from "../text"
-import st from "./styles.module.scss"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Picture from '../picture';
+import Text from '../text';
+import st from './styles.module.scss';
 
-const Quote = ({ name, company, occupation, quote, images }) => (
+const Quote = ({
+	name, company, occupation, quote, images,
+}) => (
 	<blockquote className={st.quote}>
 		<Text parentClass={st.quote__text}>{quote}</Text>
 		<Picture data={images} classname={st.quote__avatar} />
@@ -13,7 +15,7 @@ const Quote = ({ name, company, occupation, quote, images }) => (
 			{occupation} at {company}
 		</Text>
 	</blockquote>
-)
+);
 
 Quote.propTypes = {
 	quote: PropTypes.string.isRequired,
@@ -21,6 +23,6 @@ Quote.propTypes = {
 	company: PropTypes.string.isRequired,
 	occupation: PropTypes.string.isRequired,
 	images: PropTypes.arrayOf(PropTypes.object).isRequired,
-}
+};
 
-export default Quote
+export default Quote;

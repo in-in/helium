@@ -1,14 +1,14 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Container from "../container"
-import Heading from "../heading"
-import Text from "../text"
-import Button from "../button"
-import ButtonGroup from "../button-group"
-import Icon from "../icon"
-import st from "./styles.module.scss"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Container from '../container';
+import Heading from '../heading';
+import Text from '../text';
+import Button from '../button';
+import ButtonGroup from '../button-group';
+import Icon from '../icon';
+import st from './styles.module.scss';
 
-const clouds = Array(9).fill(0)
+const clouds = Array(9).fill(0);
 
 const Pricing = () => {
 	const data = useStaticQuery(graphql`
@@ -19,9 +19,9 @@ const Pricing = () => {
 				}
 			}
 		}
-	`)
+	`);
 
-	const { caption } = data.allSectionHeadingsJson.nodes[0]
+	const { caption } = data.allSectionHeadingsJson.nodes[0];
 
 	return (
 		<section className={st.pricing}>
@@ -30,7 +30,7 @@ const Pricing = () => {
 					{...data.allSectionHeadingsJson.nodes[0]}
 					parentClass={st.pricing__header}
 				/>
-				<Text parentClass={st.pricing__text} modifier={[`light`]}>
+				<Text parentClass={st.pricing__text} modifier={['light']}>
 					{caption}
 				</Text>
 				<ButtonGroup parentClass={st.pricing__button}>
@@ -52,7 +52,7 @@ const Pricing = () => {
 				/>
 			))}
 		</section>
-	)
-}
+	);
+};
 
-export default Pricing
+export default Pricing;

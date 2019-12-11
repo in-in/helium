@@ -1,13 +1,13 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Container from "../container"
-import Heading from "../heading"
-import Text from "../text"
-import Icon from "../icon"
-import Chart from "../chart"
-import st from "./styles.module.scss"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Container from '../container';
+import Heading from '../heading';
+import Text from '../text';
+import Icon from '../icon';
+import Chart from '../chart';
+import st from './styles.module.scss';
 
-const clouds = Array(13).fill(0)
+const clouds = Array(13).fill(0);
 
 const Hero = () => {
 	const data = useStaticQuery(graphql`
@@ -18,9 +18,9 @@ const Hero = () => {
 				}
 			}
 		}
-	`)
+	`);
 
-	const { caption } = data.allSectionHeadingsJson.nodes[0]
+	const { caption } = data.allSectionHeadingsJson.nodes[0];
 
 	return (
 		<section className={st.hero}>
@@ -45,7 +45,7 @@ const Hero = () => {
 				/>
 			))}
 		</section>
-	)
-}
+	);
+};
 
-export default Hero
+export default Hero;

@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import st from "./styles.module.scss"
-import Icon from "../icon"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import st from './styles.module.scss';
+import Icon from '../icon';
 
 const Social = () => {
 	const data = useStaticQuery(graphql`
@@ -14,11 +14,11 @@ const Social = () => {
 				}
 			}
 		}
-	`)
+	`);
 
 	return (
 		<ul className={st.social}>
-			{data.allSocialItemsJson.nodes.map(item => (
+			{data.allSocialItemsJson.nodes.map((item) => (
 				<li className={st.social__item} key={item.id}>
 					<a
 						target="_blank"
@@ -35,7 +35,7 @@ const Social = () => {
 				</li>
 			))}
 		</ul>
-	)
-}
+	);
+};
 
-export default Social
+export default Social;

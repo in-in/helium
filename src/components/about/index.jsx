@@ -1,14 +1,14 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Container from "../container"
-import Heading from "../heading"
-import Features from "../features"
-import Button from "../button"
-import Text from "../text"
-import Icon from "../icon"
-import st from "./styles.module.scss"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Container from '../container';
+import Heading from '../heading';
+import Features from '../features';
+import Button from '../button';
+import Text from '../text';
+import Icon from '../icon';
+import st from './styles.module.scss';
 
-const clouds = Array(10).fill(0)
+const clouds = Array(10).fill(0);
 
 const About = () => {
 	const data = useStaticQuery(graphql`
@@ -19,7 +19,7 @@ const About = () => {
 				}
 			}
 		}
-	`)
+	`);
 
 	return (
 		<section className={st.about}>
@@ -50,7 +50,7 @@ const About = () => {
 				/>
 			))}
 		</section>
-	)
-}
+	);
+};
 
-export default About
+export default About;

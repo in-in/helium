@@ -1,10 +1,10 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Container from "../container"
-import Heading from "../heading"
-import Carousel from "../carousel"
-import ArticlePreview from "../article-preview"
-import st from "./styles.module.scss"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Container from '../container';
+import Heading from '../heading';
+import Carousel from '../carousel';
+import ArticlePreview from '../article-preview';
+import st from './styles.module.scss';
 
 const Blog = () => {
 	const data = useStaticQuery(graphql`
@@ -31,7 +31,7 @@ const Blog = () => {
 				}
 			}
 		}
-	`)
+	`);
 
 	return (
 		<section className={st.blog}>
@@ -40,10 +40,12 @@ const Blog = () => {
 					{...data.allSectionHeadingsJson.nodes[0]}
 					parentClass={st.blog__header}
 				/>
-				<div className={st[`blog__carousel-wrapper`]}>
+				<div className={st['blog__carousel-wrapper']}>
 					<Carousel parentClass={st.blog__carousel}>
-						{data.allArticlesJson.nodes.map(item => {
-							const { title, excerpt, images, id } = item
+						{data.allArticlesJson.nodes.map((item) => {
+							const {
+								title, excerpt, images, id,
+							} = item;
 							return (
 								<ArticlePreview
 									title={title}
@@ -51,13 +53,13 @@ const Blog = () => {
 									images={images}
 									key={id}
 								/>
-							)
+							);
 						})}
 					</Carousel>
 				</div>
 			</Container>
 		</section>
-	)
-}
+	);
+};
 
-export default Blog
+export default Blog;

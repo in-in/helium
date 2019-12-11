@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Container from "../container"
-import Icon from "../icon"
-import st from "./styles.module.scss"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Container from '../container';
+import Icon from '../icon';
+import st from './styles.module.scss';
 
 const Customers = () => {
 	const data = useStaticQuery(graphql`
@@ -15,7 +15,7 @@ const Customers = () => {
 				}
 			}
 		}
-	`)
+	`);
 
 	return (
 		<section className={st.customers}>
@@ -23,7 +23,7 @@ const Customers = () => {
 				<h2 className="visually-hidden">Customers</h2>
 				<div className={st.customers__wrapper}>
 					<ul className={st.customers__list}>
-						{data.allCustomersJson.nodes.map(item => (
+						{data.allCustomersJson.nodes.map((item) => (
 							<li className={st.customers__item} key={item.id}>
 								<a
 									target="_blank"
@@ -34,8 +34,8 @@ const Customers = () => {
 								>
 									<Icon
 										filename={`customers/${item.name
-											.split(` `)
-											.join(`_`)
+											.split(' ')
+											.join('_')
 											.toLowerCase()}`}
 										classname={st.customers__logo}
 									/>
@@ -46,7 +46,7 @@ const Customers = () => {
 				</div>
 			</Container>
 		</section>
-	)
-}
+	);
+};
 
-export default Customers
+export default Customers;
