@@ -1,15 +1,14 @@
 @import-normalize;
 
-HTML {
-	box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
 }
 
 *,
-*::before,
-*::after {
-	box-sizing: inherit;
-	margin: 0;
-	padding: 0;
+::before,
+::after {
+	box-sizing: border-box;
 
 	/* stylelint-disable time-min-milliseconds */
 	@media (prefers-reduced-motion: reduce) {
