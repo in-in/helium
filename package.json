@@ -17,7 +17,7 @@
 	],
 	"dependencies": {
 		"@danbruegge/gatsby-plugin-stylelint": "3.4.1",
-		"gatsby": "2.18.10",
+		"gatsby": "2.18.12",
 		"gatsby-plugin-manifest": "2.2.33",
 		"gatsby-plugin-react-helmet": "3.1.18",
 		"gatsby-plugin-react-svg": "2.1.2",
@@ -33,7 +33,7 @@
 		"swiper": "5.2.1"
 	},
 	"devDependencies": {
-		"@arkweid/lefthook": "0.6.6",
+		"@arkweid/lefthook": "0.6.7",
 		"autoprefixer": "9.7.3",
 		"babel-eslint": "10.0.3",
 		"browserslist": "4.8.2",
