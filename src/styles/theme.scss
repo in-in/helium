@@ -21,3 +21,7 @@ BODY {
 	background-color: $white;
 	font-family: $font_roboto;
 }
+
+::selection {
+	background-color: $blue_cornflower--l_30;
+}

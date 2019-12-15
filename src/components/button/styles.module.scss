@@ -15,6 +15,7 @@
 	line-height: 1.5;
 	cursor: pointer;
 	appearance: none;
+	user-select: none;
 
 	@include breakpoint(xl) {
 		--padding_block: #{t2c(16, xl)};
