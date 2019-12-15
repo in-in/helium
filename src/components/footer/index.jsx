@@ -11,7 +11,7 @@ const Footer = () => (
 			<div className={st.footer__wrapper}>
 				<Logo />
 				<Social />
-				<Text parentClass={st.footer__copyright}>
+				<Text as="small" parentClass={st.footer__copyright}>
 					Helium &copy;
 					{new Date().getFullYear()}
 				</Text>
