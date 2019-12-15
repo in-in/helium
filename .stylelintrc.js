@@ -552,6 +552,7 @@ module.exports = {
 				'filter',
 				'resize',
 				'cursor',
+				'caret-color',
 				'appearance',
 				'transition',
 				'transition-property',
