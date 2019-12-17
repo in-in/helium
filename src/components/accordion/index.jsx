@@ -32,7 +32,7 @@ const AccordionItem = ({ children }) => {
 		<li className={st.accordion__item} role="region">
 			<h3>
 				<button
-					className={st.accordion__button}
+					className={st.accordion__header}
 					type="button"
 					aria-expanded={collapse}
 					onClick={toggle}
