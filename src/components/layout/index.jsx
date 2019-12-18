@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import RobotoRegular from '../../fonts/roboto-v19-latin-regular.woff2';
 import QuicksandRegular from '../../fonts/quicksand-v9-latin-regular.woff2';
 import '../../styles/index.scss';
+import '../../styles/print.scss';
 
 const Layout = ({ children }) => (
 	<>

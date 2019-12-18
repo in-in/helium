@@ -1,0 +1,59 @@
+@media print {
+	* {
+		overflow: hidden !important;
+		background: none !important;
+		box-shadow: none !important;
+		color: #222 !important;
+		text-shadow: none !important;
+		font-family: serif !important;
+	}
+
+	::before,
+	::after {
+		display: none;
+	}
+
+	FORM,
+	.swiper-slide-duplicate,
+	[class*='button'],
+	[class*='cloud'],
+	[class*='pagination'],
+	[class^='button'],
+	[class^='chart'],
+	[class^='device'],
+	[class^='newsletter'],
+	[class^='social'] {
+		display: none !important;
+	}
+
+	[class^='article-preview'] {
+		grid-template-columns: min-content 1fr !important;
+		max-width: none !important;
+	}
+
+	[class^='carousel__wrapper'] {
+		display: block !important;
+		border: none !important;
+	}
+
+	[class^='carousel__slide']:not(.swiper-slide-duplicate) {
+		display: block !important;
+		width: 100% !important;
+		height: auto !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+
+	[class^='container'] {
+		padding-inline: 0 !important;
+	}
+
+	[class^='accordion__body'] {
+		display: block !important;
+	}
+
+	[class^='logo'] *,
+	[class^='customers'] * {
+		fill: currentColor !important;
+	}
+}
