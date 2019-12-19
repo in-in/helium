@@ -5,6 +5,7 @@ const postcssLogical = require('postcss-logical');
 
 module.exports = {
 	siteMetadata: {
+		title: 'Helium',
 		siteUrl: 'http://localhost/',
 	},
 	plugins: [
