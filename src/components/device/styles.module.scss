@@ -54,7 +54,6 @@
 	&__picture {
 		$picture: compose(&);
 
-		composes: picture from '../picture/styles.module.scss';
 		position: absolute;
 		inset-block-start: var(--picture_gap_top);
 		inset-inline-start: var(--picture_gap_left);
@@ -63,11 +62,6 @@
 		height: 100%;
 		max-height: calc(100% - (var(--picture_gap_top) + var(--picture_gap_bottom)));
 		outline: t2c(1, 825) solid $gray_french--l_20;
-
-		IMG {
-			width: 100%;
-			height: 100%;
-		}
 
 		&_laptop {
 			--picture_gap_left: #{t2c(12, 95, p)};
