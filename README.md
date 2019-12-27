@@ -70,9 +70,6 @@ npm run serve
 	1. [Photo by Hello I'm Nik 🇬🇧 on Unsplash](https://unsplash.com/photos/-UrLUw40GkA)
 	1. [Photo by Hacker Noon on Unsplash](https://unsplash.com/photos/SWDxRmJ5wvA)
 
-## License
-MIT
-
 ---
 
 > GitHub [@in-in](https://github.com/in-in)
