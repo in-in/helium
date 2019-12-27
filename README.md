@@ -6,14 +6,23 @@
   <br>
 </h1>
 
-Helium is a responsive, elegant and user friendly landing page powered by Gatsby. The project, based on modern web technologies, works seamlessly on all major web browsers, tablets and phones.
+<p align="center">Helium is a responsive, elegant and user friendly landing page powered by Gatsby. The project, based on modern web technologies, works seamlessly on all major web browsers, tablets and phones.</p>
+
+<h4 align="center">
+	<a href="/in-in/helium/blob/master/README.md#target-browsers">Target Browsers</a>
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="/in-in/helium/blob/master/README.md#key-features">Key Features</a>
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="/in-in/helium/blob/master/README.md#how-to-use">How To Use</a>
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="/in-in/helium/blob/master/README.md#credits">Credits</a>
+</h4>
 
 ## Target Browsers
 
 ![Target Browsers](https://user-images.githubusercontent.com/8797432/71485711-93fcb500-2823-11ea-82eb-c9dc802a53d5.png "Target Browsers")
 
 <p align="right">powered by <a href="https://browserl.ist/" title="Browserslist">Browserslist</a></p>
-
 
 ## Key Features
 
@@ -72,4 +81,4 @@ npm run serve
 
 ---
 
-> GitHub [@in-in](https://github.com/in-in)
+> <sub>Built with ❤︎ by <a href="https://github.com/in-in">in-in</a></sub>
