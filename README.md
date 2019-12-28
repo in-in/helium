@@ -24,6 +24,9 @@
 
 <p align="right">powered by <a href="https://browserl.ist/" title="Browserslist">Browserslist</a></p>
 
+## Design
+Helium on [Figma](https://www.figma.com/file/OglK88QZl9TWF02CrNiiHsYS/helium?node-id=0%3A1)
+
 ## Key Features
 
 * Responsive Layout
@@ -63,6 +66,7 @@ npm run serve
 
 ## Credits
 
+- Design Based on [Clean and simple website freebie](https://dribbble.com/shots/4609742--Clean-and-simple-website-freebie) by Maciej Kałaska
 - Customer Logos: [SVGPORN](https://svgporn.com/)
 - Icons For Features Section: [Feather](https://github.com/feathericons/feather)
 - Icons For Stats Section: [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
