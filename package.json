@@ -6,7 +6,6 @@
 		"build": "gatsby build",
 		"develop": "GATSBY_TELEMETRY_DISABLED=1 gatsby develop --https --key-file $KEY_FILE_LOCALHOST --cert-file $CERT_FILE_LOCALHOST -H 0.0.0.0 -p 8000",
 		"gen": "plop",
-		"now-build": "npm run build",
 		"serve": "gatsby serve",
 		"start": "npm run develop"
 	},
