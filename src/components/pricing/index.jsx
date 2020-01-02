@@ -48,7 +48,7 @@ const Pricing = () => {
 					filename="cloud"
 					// eslint-disable-next-line react/no-array-index-key
 					key={i}
-					classname={st[`pricing__cloud_${i + 1}`]}
+					parentClass={st[`pricing__cloud_${i + 1}`]}
 				/>
 			))}
 		</section>

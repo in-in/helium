@@ -22,7 +22,7 @@ const Stats = () => {
 			<h2 className="visually-hidden">Our statistics</h2>
 			{data.allStatsJson.nodes.map((item) => (
 				<div className={st['stats-block']} key={item.id}>
-					<Icon filename={item.icon} classname={st['stats-block__icon']} />
+					<Icon filename={item.icon} parentClass={st['stats-block__icon']} />
 					<strong className={st['stats-block__number']}>{item.number}</strong>
 					<p className={st['stats-block__desc']}>{item.desc}</p>
 				</div>

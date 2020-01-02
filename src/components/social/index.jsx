@@ -29,7 +29,7 @@ const Social = () => {
 					>
 						<Icon
 							filename={`social/${item.name.toLowerCase()}`}
-							classname={st.social__icon}
+							parentClass={st.social__icon}
 						/>
 					</a>
 				</li>

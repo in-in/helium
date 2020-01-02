@@ -25,7 +25,7 @@ const Button = (props) => {
 			{...buttonProps}
 		>
 			{children}
-			{icon && <Icon filename={icon} classname={st.button__icon} />}
+			{icon && <Icon filename={icon} parentClass={st.button__icon} />}
 		</Component>
 	);
 };

@@ -4,7 +4,7 @@ import Icon from '../icon';
 
 const Logo = () => (
 	<a href="/" className={st.logo}>
-		<Icon filename="logo" classname={st.logo__icon} />
+		<Icon filename="logo" parentClass={st.logo__icon} />
 	</a>
 );
 

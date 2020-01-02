@@ -46,7 +46,7 @@ const About = () => {
 					filename="cloud"
 					// eslint-disable-next-line react/no-array-index-key
 					key={i}
-					classname={st[`about__cloud_${i + 1}`]}
+					parentClass={st[`about__cloud_${i + 1}`]}
 				/>
 			))}
 		</section>

@@ -9,10 +9,10 @@ const Device = () => (
 		{
 			devices.map((name) => (
 				<li className={st[`device__item_${name}`]}>
-					<Icon filename={`device/${name}`} classname={st.device__mockup} />
+					<Icon filename={`device/${name}`} parentClass={st.device__mockup} />
 					<Icon
 						filename={`device/device_${name}`}
-						classname={st[`device__picture_${name}`]}
+						parentClass={st[`device__picture_${name}`]}
 					/>
 				</li>
 			))

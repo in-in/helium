@@ -37,7 +37,7 @@ const Customers = () => {
 											.split(' ')
 											.join('_')
 											.toLowerCase()}`}
-										classname={st.customers__logo}
+										parentClass={st.customers__logo}
 									/>
 								</a>
 							</li>

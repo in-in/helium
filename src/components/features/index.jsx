@@ -22,7 +22,7 @@ const Features = () => {
 		<ul className={st.features}>
 			{data.allFeaturesJson.nodes.map((item) => (
 				<li className={st.features__item} key={item.id}>
-					<Icon filename={`features/${item.icon}`} classname={st.features__icon} />
+					<Icon filename={`features/${item.icon}`} parentClass={st.features__icon} />
 					<div className={st.features__content}>
 						<h3 className={st.features__title}>{item.title}</h3>
 						<Text parentClass={st.features__text} title={item.desc}>

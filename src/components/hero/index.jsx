@@ -41,7 +41,7 @@ const Hero = () => {
 					filename="cloud"
 					// eslint-disable-next-line react/no-array-index-key
 					key={i}
-					classname={st[`hero__cloud_${i + 1}`]}
+					parentClass={st[`hero__cloud_${i + 1}`]}
 				/>
 			))}
 		</section>

@@ -10,6 +10,8 @@ $timing_function: cubic-bezier(0.47, 0, 0.745, 0.715);
 	z-index: 0;
 	width: 100%;
 	opacity: 0.5;
+	fill: $white;
+	stroke: $blue_cornflower--l_10;
 
 	@include breakpoint(m) {
 		opacity: 1;
