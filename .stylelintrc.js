@@ -218,7 +218,12 @@ module.exports = {
 		'selector-pseudo-element-colon-notation': 'double',
 		'selector-pseudo-element-no-unknown': true,
 		'selector-pseudo-element-whitelist': null,
-		'selector-type-case': 'upper',
+		'selector-type-case': [
+			'upper',
+			{
+				ignoreTypes: ['circle', 'path'],
+			},
+		],
 		'selector-type-no-unknown': true,
 		'shorthand-property-no-redundant-values': true,
 		'string-no-newline': true,
