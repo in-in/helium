@@ -10,8 +10,6 @@ $timing_function: cubic-bezier(0.47, 0, 0.745, 0.715);
 	z-index: 0;
 	width: 100%;
 	opacity: 0.5;
-	fill: $white;
-	stroke: $blue_cornflower--l_10;
 
 	@include breakpoint(m) {
 		opacity: 1;
@@ -29,7 +27,7 @@ $timing_function: cubic-bezier(0.47, 0, 0.745, 0.715);
 		}
 	}
 
-	PATH:nth-of-type(1) {
+	path:nth-of-type(1) {
 		animation-name: background;
 		animation-duration: 0.7s;
 		animation-timing-function: $timing_function;
@@ -43,7 +41,7 @@ $timing_function: cubic-bezier(0.47, 0, 0.745, 0.715);
 		}
 	}
 
-	PATH:nth-of-type(2) {
+	path:nth-of-type(2) {
 		animation-name: main_line;
 		animation-duration: 1.5s;
 		animation-timing-function: linear;
@@ -56,7 +54,7 @@ $timing_function: cubic-bezier(0.47, 0, 0.745, 0.715);
 		stroke-dashoffset: t2c(2000, xl);
 	}
 
-	CIRCLE {
+	circle {
 		stroke: $blue_cornflower--l_10;
 		stroke-width: $stroke_width;
 		stroke-opacity: 0.9;
@@ -84,7 +82,7 @@ $timing_function: cubic-bezier(0.47, 0, 0.745, 0.715);
 			}
 		}
 
-		CIRCLE:nth-of-type(#{$i}) {
+		circle:nth-of-type(#{$i}) {
 			animation-name: circle_stroke_#{$i}, circle_fill_#{$i};
 			animation-duration: 1s, 0.7s;
 			animation-timing-function: $timing_function;
