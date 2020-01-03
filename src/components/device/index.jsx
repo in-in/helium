@@ -8,7 +8,7 @@ const Device = () => (
 	<ul className={st.device}>
 		{
 			devices.map((name) => (
-				<li className={st[`device__item_${name}`]}>
+				<li className={st[`device__item_${name}`]} key={name}>
 					<Icon filename={`device/${name}`} parentClass={st.device__mockup} />
 					<Icon
 						filename={`device/device_${name}`}
