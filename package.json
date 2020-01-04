@@ -35,7 +35,7 @@
 		"@arkweid/lefthook": "0.7.0",
 		"autoprefixer": "9.7.3",
 		"babel-eslint": "10.0.3",
-		"browserslist": "4.8.2",
+		"browserslist": "4.8.3",
 		"eslint": "6.8.0",
 		"eslint-config-airbnb": "18.0.1",
 		"eslint-plugin-import": "2.19.1",
@@ -45,10 +45,10 @@
 		"plop": "2.5.3",
 		"postcss-logical": "4.0.2",
 		"postcss-normalize": "8.0.1",
-		"sass": "1.24.0",
+		"sass": "1.24.2",
 		"stylelint": "12.0.1",
 		"stylelint-a11y": "1.2.2",
-		"stylelint-order": "3.1.1",
+		"stylelint-order": "4.0.0",
 		"stylelint-scss": "3.13.0",
 		"stylelint-use-nesting": "1.2.1"
 	}
