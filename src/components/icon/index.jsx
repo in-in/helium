@@ -23,7 +23,7 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-	hidden: null,
+	hidden: true,
 	parentClass: '',
 };
 

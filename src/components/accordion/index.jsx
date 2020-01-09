@@ -38,7 +38,7 @@ const AccordionItem = ({ children }) => {
 					onClick={toggle}
 				>
 					{children.props.question}
-					<Icon hidden filename="chevron" parentClass={st.accordion__icon} />
+					<Icon filename="chevron" parentClass={st.accordion__icon} />
 				</button>
 			</h3>
 

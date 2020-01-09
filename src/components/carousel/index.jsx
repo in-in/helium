@@ -37,12 +37,12 @@ const Carousel = ({ children, parentClass, nav }) => {
 		},
 		renderPrevButton: () => (
 			<button type="button" className={st.carousel__button_prev}>
-				<Icon hidden filename="long-arrow-l" parentClass={st.carousel__icon} />
+				<Icon filename="long-arrow-l" parentClass={st.carousel__icon} />
 			</button>
 		),
 		renderNextButton: () => (
 			<button type="button" className={st.carousel__button_next}>
-				<Icon hidden filename="long-arrow-r" parentClass={st.carousel__icon} />
+				<Icon filename="long-arrow-r" parentClass={st.carousel__icon} />
 			</button>
 		),
 	};
