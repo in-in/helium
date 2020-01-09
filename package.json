@@ -4,9 +4,9 @@
 	"private": true,
 	"scripts": {
 		"build": "gatsby build",
-		"develop": "GATSBY_TELEMETRY_DISABLED=1 gatsby develop --https --key-file $KEY_FILE_LOCALHOST --cert-file $CERT_FILE_LOCALHOST -H 0.0.0.0 -p 8000",
+		"develop": "GATSBY_TELEMETRY_DISABLED=1 gatsby develop --https --key-file $KEY_FILE_LOCALHOST --cert-file $CERT_FILE_LOCALHOST -H 0.0.0.0",
 		"gen": "plop",
-		"serve": "gatsby serve",
+		"serve": "GATSBY_TELEMETRY_DISABLED=1 gatsby serve -H 0.0.0.0",
 		"start": "npm run develop"
 	},
 	"browserslist": [
