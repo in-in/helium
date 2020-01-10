@@ -23,11 +23,11 @@
 	}
 
 	&__header {
-		all: inherit;
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
 		padding-block: rem(24);
+		color: inherit;
 		font-size: rem(18);
 		line-height: 1.5;
 		cursor: pointer;
