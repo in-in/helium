@@ -52,12 +52,17 @@
 	}
 
 	&__icon {
-		width: rem(72);
-		height: rem(72);
+		--size: #{rem(72)};
+
+		width: var(--size);
+		height: var(--size);
 		overflow: visible;
 		padding: rem(20);
-		border-radius: 50%;
-		background-color: rgb($blue_cornflower--l_20, 0.1);
+		background-image:
+			radial-gradient(
+				rgb($blue_cornflower--l_20, 0.1) calc(var(--size) / 2 - 1px),
+				$crystal calc(var(--size) / 2)
+			);
 		color: $blue_cornflower;
 
 		@include breakpoint(m) {
