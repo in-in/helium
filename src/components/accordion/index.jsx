@@ -21,6 +21,7 @@ const AccordionItem = ({ children }) => {
 		setCollapse(!collapse);
 		parent.setAttribute('data-accordion-open', !collapse);
 		body.hidden = collapse;
+		e.target.focus();
 	};
 
 	const changeProps = () =>
