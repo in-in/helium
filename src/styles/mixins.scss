@@ -85,13 +85,13 @@
 	background-position: center;
 	background-image:
 		radial-gradient(
-			circle at center center,
-			$crystal 1%,
+			circle,
+			$crystal calc(1% - 1px),
 			currentColor 1%
 		);
 	background-size: 15000%;
-	transition-property: background;
-	transition-duration: var(--transition_duration);
+	transition-property: background-size;
+	transition-duration: calc(var(--transition_duration) / 2);
 
 	&:active {
 		background-color: $crystal;
