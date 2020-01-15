@@ -10,7 +10,7 @@
 		"start": "npm run develop"
 	},
 	"browserslist": [
-		"last 2 versions and > 0.4%",
+		"last 2 versions and > 0.5%",
 		"not ie <= 11",
 		"not op_mini all"
 	],
