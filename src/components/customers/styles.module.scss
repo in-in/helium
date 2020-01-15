@@ -73,6 +73,7 @@
 	&__link {
 		display: block;
 		padding: rem(4);
+		line-height: 0;
 
 		@include breakpoint(xl) {
 			padding: t2c(4, xl);
