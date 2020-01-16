@@ -20,7 +20,7 @@
 
 ## Target Browsers
 
-![Target Browsers](https://user-images.githubusercontent.com/8797432/72414896-576a0c80-3784-11ea-9ce2-db04f8b24a49.png "Target Browsers")
+![Target Browsers](https://user-images.githubusercontent.com/8797432/72534731-5a4e2580-3888-11ea-9a93-9813b384b96d.png "Target Browsers")
 
 <p align="right">powered by <a href="https://browserl.ist/" title="Browserslist">Browserslist</a></p>
 
