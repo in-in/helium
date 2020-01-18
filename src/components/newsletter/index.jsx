@@ -45,6 +45,8 @@ const Newsletter = () => {
 						/>
 						<Button
 							variant="secondary"
+							type="submit"
+							onclick={(e) => e}
 							parentClass={st.newsletter__button}
 						>
 							Subscribe

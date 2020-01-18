@@ -5,14 +5,14 @@ import st from './styles.module.scss';
 
 const Button = (props) => {
 	const {
-		variant, icon, parentClass, children, as, href,
+		variant, icon, parentClass, children, as, href, type, onclick,
 	} = props;
 	const Component = as;
 	const buttonProps = {};
 	const mixinClass = parentClass ? ` ${parentClass}` : parentClass;
 
 	if (Component === 'button') {
-		buttonProps.type = 'button';
+		buttonProps.type = type;
 	} else if (Component === 'a') {
 		buttonProps.role = 'button';
 		buttonProps.href = href;
@@ -21,7 +21,7 @@ const Button = (props) => {
 	return (
 		<Component
 			className={`${st[`button_${variant}`]}${mixinClass}`}
-			onClick={(e) => e.preventDefault()}
+			onClick={onclick}
 			{...buttonProps}
 		>
 			{children}
@@ -36,6 +36,8 @@ Button.propTypes = {
 	parentClass: PropTypes.string,
 	href: PropTypes.string,
 	as: PropTypes.string,
+	type: PropTypes.string,
+	onclick: PropTypes.func,
 	variant: PropTypes.oneOf([
 		'primary',
 		'secondary',
@@ -51,6 +53,8 @@ Button.defaultProps = {
 	parentClass: '',
 	as: 'button',
 	href: '#0',
+	type: 'button',
+	onclick: (e) => e.preventDefault(),
 };
 
 export default Button;
