@@ -30,14 +30,23 @@ const Newsletter = () => {
 						/>
 						<Text>{caption}</Text>
 					</div>
-					<form className={st.newsletter__form}>
+					<form
+						action="https://app.form2chat.io/f/a1ec111"
+						method="POST"
+						acceptCharset="UTF-8"
+						className={st.newsletter__form}
+					>
 						<input
 							aria-label="Email"
+							name="email"
 							className={st.newsletter__input}
 							type="email"
 							placeholder="Email Address"
 						/>
-						<Button variant="secondary" parentClass={st.newsletter__button}>
+						<Button
+							variant="secondary"
+							parentClass={st.newsletter__button}
+						>
 							Subscribe
 						</Button>
 					</form>
