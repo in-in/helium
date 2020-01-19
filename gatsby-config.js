@@ -2,6 +2,7 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const postcssNormalize = require('postcss-normalize');
 const postcssLogical = require('postcss-logical');
+const sass = require('sass');
 
 module.exports = {
 	siteMetadata: {
@@ -42,8 +43,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-sass',
 			options: {
-				// eslint-disable-next-line global-require
-				implementation: require('sass'),
+				implementation: sass,
 				data: '@use "styles/config" as *;',
 				includePaths: [path.resolve(__dirname, 'src')],
 				cssLoaderOptions: {
