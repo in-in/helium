@@ -7,7 +7,7 @@
 				{
 					"width": 320,
 					"sources": {
-						"x1": "ap_1_main.jpg",
+						"x1": "ap_1_main@1x.jpg",
 						"x2": "ap_1_main@2x.jpg",
 						"x3": "ap_1_main@3x.jpg"
 					}
@@ -24,7 +24,7 @@
 				{
 					"width": 320,
 					"sources": {
-						"x1": "ap_1_thumb1.jpg",
+						"x1": "ap_1_thumb1@1x.jpg",
 						"x2": "ap_1_thumb1@2x.jpg",
 						"x3": "ap_1_thumb1@3x.jpg"
 					}
@@ -41,7 +41,7 @@
 				{
 					"width": 320,
 					"sources": {
-						"x1": "ap_1_thumb2.jpg",
+						"x1": "ap_1_thumb2@1x.jpg",
 						"x2": "ap_1_thumb2@2x.jpg",
 						"x3": "ap_1_thumb2@3x.jpg"
 					}
@@ -64,7 +64,7 @@
 				{
 					"width": 320,
 					"sources": {
-						"x1": "ap_2_main.jpg",
+						"x1": "ap_2_main@1x.jpg",
 						"x2": "ap_2_main@2x.jpg",
 						"x3": "ap_2_main@3x.jpg"
 					}
@@ -81,7 +81,7 @@
 				{
 					"width": 320,
 					"sources": {
-						"x1": "ap_2_thumb1.jpg",
+						"x1": "ap_2_thumb1@1x.jpg",
 						"x2": "ap_2_thumb1@2x.jpg",
 						"x3": "ap_2_thumb1@3x.jpg"
 					}
@@ -98,7 +98,7 @@
 				{
 					"width": 320,
 					"sources": {
-						"x1": "ap_2_thumb2.jpg",
+						"x1": "ap_2_thumb2@1x.jpg",
 						"x2": "ap_2_thumb2@2x.jpg",
 						"x3": "ap_2_thumb2@3x.jpg"
 					}
@@ -121,7 +121,7 @@
 				{
 					"width": 320,
 					"sources": {
-						"x1": "ap_3_main.jpg",
+						"x1": "ap_3_main@1x.jpg",
 						"x2": "ap_3_main@2x.jpg",
 						"x3": "ap_3_main@3x.jpg"
 					}
@@ -138,7 +138,7 @@
 				{
 					"width": 320,
 					"sources": {
-						"x1": "ap_3_thumb1.jpg",
+						"x1": "ap_3_thumb1@1x.jpg",
 						"x2": "ap_3_thumb1@2x.jpg",
 						"x3": "ap_3_thumb1@3x.jpg"
 					}
@@ -155,7 +155,7 @@
 				{
 					"width": 320,
 					"sources": {
-						"x1": "ap_3_thumb2.jpg",
+						"x1": "ap_3_thumb2@1x.jpg",
 						"x2": "ap_3_thumb2@2x.jpg",
 						"x3": "ap_3_thumb2@3x.jpg"
 					}

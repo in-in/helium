@@ -8,7 +8,7 @@
 			{
 				"width": 320,
 				"sources": {
-					"x1": "quote_1.png",
+					"x1": "quote_1@1x.png",
 					"x2": "quote_1@2x.png",
 					"x3": "quote_1@3x.png"
 				}
@@ -31,7 +31,7 @@
 			{
 				"width": 320,
 				"sources": {
-					"x1": "quote_2.png",
+					"x1": "quote_2@1x.png",
 					"x2": "quote_2@2x.png",
 					"x3": "quote_2@3x.png"
 				}
@@ -54,7 +54,7 @@
 			{
 				"width": 320,
 				"sources": {
-					"x1": "quote_3.png",
+					"x1": "quote_3@1x.png",
 					"x2": "quote_3@2x.png",
 					"x3": "quote_3@3x.png"
 				}
@@ -77,7 +77,7 @@
 			{
 				"width": 320,
 				"sources": {
-					"x1": "quote_4.png",
+					"x1": "quote_4@1x.png",
 					"x2": "quote_4@2x.png",
 					"x3": "quote_4@3x.png"
 				}
@@ -100,7 +100,7 @@
 			{
 				"width": 320,
 				"sources": {
-					"x1": "quote_5.png",
+					"x1": "quote_5@1x.png",
 					"x2": "quote_5@2x.png",
 					"x3": "quote_5@3x.png"
 				}
