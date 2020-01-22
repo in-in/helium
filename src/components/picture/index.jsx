@@ -9,43 +9,62 @@ const Picture = ({ classname, data }) => {
 			images: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
 				nodes {
 					publicURL
-					base
+					extension
 				}
 			}
 		}
 	`);
 
-	const getUrl = (name) => {
-		let url = '';
-		query.images.nodes
-			.filter((img) => img.base === name)
-			.forEach((i) => {
-				url = i.publicURL;
-			});
-		if (!url) {
-			try {
-				throw new Error(`There is no image with name: ${name}`);
-			} catch (e) {
-				// eslint-disable-next-line no-console
-				console.error(e);
-			}
+	function setType(ext) {
+		switch (ext) {
+			case 'jpg':
+			case 'jpeg':
+				return 'image/jpeg';
+			case 'png':
+				return 'image/png';
+			case 'webp':
+				return 'image/webp';
+			default:
+				return '';
 		}
-		return url;
-	};
+	}
+
+	function getInfo(name) {
+		const images = query.images.nodes;
+		const types = new Set();
+		const sources = {};
+		const allURLs = images.filter((i) => i.publicURL.includes(name));
+		const paths = allURLs.map((i) => i.publicURL);
+
+		allURLs.forEach((j) => { types.add(j.extension); });
+		types.forEach((el) => {
+			sources[el] = paths.filter((p) => p.endsWith(`.${el}`));
+		});
+
+		return Object.entries(sources);
+	}
 
 	return (
 		<picture className={classname || st.picture}>
 			{data
 				.sort((a, b) => b.width - a.width)
-				.map((item) => (item.width > 0 ? (
-					<source
-						key={item.width}
-						srcSet={Object.entries(item.sources).map((i) =>
-							`${getUrl(i[1])} ${i[0].slice('1')}x`)}
-						media={`(min-width: ${item.width}px)`}
-					/>
+				.map((item) => ((item.width > 0) ? (
+					getInfo(item.source).map((i) => (
+						<source
+							key={i[0]}
+							srcSet={i[1].map((src, inx) =>
+								`${src} ${inx + 1}x`)}
+							media={`(min-width: ${item.width}px)`}
+							type={setType(i[0])}
+						/>
+					))
 				) : (
-					<img key={item.width} src={getUrl(item.sources.x1)} alt={item.alt} />
+					<img
+						key={item.alt}
+						src={getInfo(item.source)
+							.filter((i) => i[0] !== 'webp').map((src) => src[1][0])}
+						alt={item.alt}
+					/>
 				)))}
 		</picture>
 	);

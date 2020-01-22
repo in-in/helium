@@ -11,7 +11,7 @@ const ArticlePreview = ({ title, excerpt, images }) => (
 			{images.map((item) => (
 				<Picture
 					data={item}
-					key={item[0].sources.x1}
+					key={item[0].source}
 					classname={st['article-preview__picture']}
 				/>
 			))}

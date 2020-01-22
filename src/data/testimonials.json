@@ -7,18 +7,11 @@
 		"images": [
 			{
 				"width": 320,
-				"sources": {
-					"x1": "quote_1@1x.png",
-					"x2": "quote_1@2x.png",
-					"x3": "quote_1@3x.png"
-				}
+				"source": "quote_1"
 			},
 			{
-				"width": 0,
 				"alt": "Leanne Graham.",
-				"sources": {
-					"x1": "quote_1@3x.png"
-				}
+				"source": "quote_1"
 			}
 		]
 	},
@@ -30,18 +23,11 @@
 		"images": [
 			{
 				"width": 320,
-				"sources": {
-					"x1": "quote_2@1x.png",
-					"x2": "quote_2@2x.png",
-					"x3": "quote_2@3x.png"
-				}
+				"source": "quote_2"
 			},
 			{
-				"width": 0,
 				"alt": "Barry Spence.",
-				"sources": {
-					"x1": "quote_2@3x.png"
-				}
+				"source": "quote_2"
 			}
 		]
 	},
@@ -53,18 +39,11 @@
 		"images": [
 			{
 				"width": 320,
-				"sources": {
-					"x1": "quote_3@1x.png",
-					"x2": "quote_3@2x.png",
-					"x3": "quote_3@3x.png"
-				}
+				"source": "quote_3"
 			},
 			{
-				"width": 0,
 				"alt": "Ervin Howell.",
-				"sources": {
-					"x1": "quote_3@3x.png"
-				}
+				"source": "quote_3"
 			}
 		]
 	},
@@ -76,18 +55,11 @@
 		"images": [
 			{
 				"width": 320,
-				"sources": {
-					"x1": "quote_4@1x.png",
-					"x2": "quote_4@2x.png",
-					"x3": "quote_4@3x.png"
-				}
+				"source": "quote_4"
 			},
 			{
-				"width": 0,
 				"alt": "Clementine Bauch.",
-				"sources": {
-					"x1": "quote_4@3x.png"
-				}
+				"source": "quote_4"
 			}
 		]
 	},
@@ -99,18 +71,11 @@
 		"images": [
 			{
 				"width": 320,
-				"sources": {
-					"x1": "quote_5@1x.png",
-					"x2": "quote_5@2x.png",
-					"x3": "quote_5@3x.png"
-				}
+				"source": "quote_5"
 			},
 			{
-				"width": 0,
 				"alt": "Patricia Lebsack.",
-				"sources": {
-					"x1": "quote_5@3x.png"
-				}
+				"source": "quote_5"
 			}
 		]
 	}

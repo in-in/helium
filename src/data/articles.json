@@ -6,52 +6,31 @@
 			[
 				{
 					"width": 320,
-					"sources": {
-						"x1": "ap_1_main@1x.jpg",
-						"x2": "ap_1_main@2x.jpg",
-						"x3": "ap_1_main@3x.jpg"
-					}
+					"source": "ap_1_main"
 				},
 				{
-					"width": 0,
 					"alt": "Three men sitting while using laptops and watching man beside whiteboard.",
-					"sources": {
-						"x1": "ap_1_main@3x.jpg"
-					}
+					"source": "ap_1_main"
 				}
 			],
 			[
 				{
 					"width": 320,
-					"sources": {
-						"x1": "ap_1_thumb1@1x.jpg",
-						"x2": "ap_1_thumb1@2x.jpg",
-						"x3": "ap_1_thumb1@3x.jpg"
-					}
+					"source": "ap_1_thumb1"
 				},
 				{
-					"width": 0,
 					"alt": "Turned-on laptop.",
-					"sources": {
-						"x1": "ap_1_thumb1@3x.jpg"
-					}
+					"source": "ap_1_thumb1"
 				}
 			],
 			[
 				{
 					"width": 320,
-					"sources": {
-						"x1": "ap_1_thumb2@1x.jpg",
-						"x2": "ap_1_thumb2@2x.jpg",
-						"x3": "ap_1_thumb2@3x.jpg"
-					}
+					"source": "ap_1_thumb2"
 				},
 				{
-					"width": 0,
 					"alt": "Person using a desktop computer.",
-					"sources": {
-						"x1": "ap_1_thumb2@3x.jpg"
-					}
+					"source": "ap_1_thumb2"
 				}
 			]
 		]
@@ -63,52 +42,31 @@
 			[
 				{
 					"width": 320,
-					"sources": {
-						"x1": "ap_2_main@1x.jpg",
-						"x2": "ap_2_main@2x.jpg",
-						"x3": "ap_2_main@3x.jpg"
-					}
+					"source": "ap_2_main"
 				},
 				{
-					"width": 0,
 					"alt": "Man in gray shirt facing sticky notes.",
-					"sources": {
-						"x1": "ap_2_main@3x.jpg"
-					}
+					"source": "ap_2_main"
 				}
 			],
 			[
 				{
 					"width": 320,
-					"sources": {
-						"x1": "ap_2_thumb1@1x.jpg",
-						"x2": "ap_2_thumb1@2x.jpg",
-						"x3": "ap_2_thumb1@3x.jpg"
-					}
+					"source": "ap_2_thumb1"
 				},
 				{
-					"width": 0,
 					"alt": "Black marker on notebook.",
-					"sources": {
-						"x1": "ap_2_thumb1@3x.jpg"
-					}
+					"source": "ap_2_thumb1"
 				}
 			],
 			[
 				{
 					"width": 320,
-					"sources": {
-						"x1": "ap_2_thumb2@1x.jpg",
-						"x2": "ap_2_thumb2@2x.jpg",
-						"x3": "ap_2_thumb2@3x.jpg"
-					}
+					"source": "ap_2_thumb2"
 				},
 				{
-					"width": 0,
 					"alt": "Pile of assorted-title books.",
-					"sources": {
-						"x1": "ap_2_thumb2@3x.jpg"
-					}
+					"source": "ap_2_thumb2"
 				}
 			]
 		]
@@ -120,52 +78,31 @@
 			[
 				{
 					"width": 320,
-					"sources": {
-						"x1": "ap_3_main@1x.jpg",
-						"x2": "ap_3_main@2x.jpg",
-						"x3": "ap_3_main@3x.jpg"
-					}
+					"source": "ap_3_main"
 				},
 				{
-					"width": 0,
 					"alt": "Cappuccino art on white ceramic mug beside a laptop.",
-					"sources": {
-						"x1": "ap_3_main@3x.jpg"
-					}
+					"source": "ap_3_main"
 				}
 			],
 			[
 				{
 					"width": 320,
-					"sources": {
-						"x1": "ap_3_thumb1@1x.jpg",
-						"x2": "ap_3_thumb1@2x.jpg",
-						"x3": "ap_3_thumb1@3x.jpg"
-					}
+					"source": "ap_3_thumb1"
 				},
 				{
-					"width": 0,
 					"alt": "White mug beside laptop.",
-					"sources": {
-						"x1": "ap_3_thumb1@3x.jpg"
-					}
+					"source": "ap_3_thumb1"
 				}
 			],
 			[
 				{
 					"width": 320,
-					"sources": {
-						"x1": "ap_3_thumb2@1x.jpg",
-						"x2": "ap_3_thumb2@2x.jpg",
-						"x3": "ap_3_thumb2@3x.jpg"
-					}
+					"source": "ap_3_thumb2"
 				},
 				{
-					"width": 0,
 					"alt": "Eyeglasses with black frame on a laptop.",
-					"sources": {
-						"x1": "ap_3_thumb2@3x.jpg"
-					}
+					"source": "ap_3_thumb2"
 				}
 			]
 		]

@@ -22,11 +22,7 @@ const Blog = () => {
 					images {
 						alt
 						width
-						sources {
-							x1
-							x2
-							x3
-						}
+						source
 					}
 				}
 			}
