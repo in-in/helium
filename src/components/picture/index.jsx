@@ -40,8 +40,7 @@ const Picture = ({ classname, data }) => {
 		types.forEach((el) => {
 			sources[el] = paths.filter((p) => p.endsWith(`.${el}`));
 		});
-
-		return Object.entries(sources);
+		return Object.entries(sources).sort().reverse();
 	}
 
 	return (
@@ -49,15 +48,16 @@ const Picture = ({ classname, data }) => {
 			{data
 				.sort((a, b) => b.width - a.width)
 				.map((item) => ((item.width > 0) ? (
-					getInfo(item.source).map((i) => (
-						<source
-							key={i[0]}
-							srcSet={i[1].map((src, inx) =>
-								`${src} ${inx + 1}x`)}
-							media={`(min-width: ${item.width}px)`}
-							type={setType(i[0])}
-						/>
-					))
+					getInfo(item.source)
+						.map((i) => (
+							<source
+								key={i[0]}
+								srcSet={i[1].map((src, inx) =>
+									`${src} ${inx + 1}x`)}
+								media={`(min-width: ${item.width}px)`}
+								type={setType(i[0])}
+							/>
+						))
 				) : (
 					<img
 						key={item.alt}
