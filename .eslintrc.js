@@ -3,7 +3,11 @@ module.exports = {
 	extends: ['airbnb', 'airbnb/hooks'],
 	rules: {
 		'implicit-arrow-linebreak': 0,
-		'max-len': ['error', 90, 2],
+		'max-len': [
+			'error', 90, 2, {
+				ignoreStrings: true,
+			},
+		],
 		'no-tabs': 0,
 		indent: ['error', 'tab', { SwitchCase: 1 }],
 		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
