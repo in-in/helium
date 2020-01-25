@@ -7,7 +7,7 @@ const sass = require('sass');
 module.exports = {
 	siteMetadata: {
 		title: 'Helium',
-		siteUrl: 'http://localhost/',
+		siteUrl: 'https://helium.now.sh',
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
