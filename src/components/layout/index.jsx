@@ -12,13 +12,19 @@ const Layout = ({ children }) => {
 		query {
 			site {
 				siteMetadata {
-					siteUrl
 					title
+					description
+				}
+			}
+			allFile(filter: {base: {glob: "favicon*"}}) {
+				nodes {
+					publicURL
 				}
 			}
 		}
 	`);
-	const { title } = data.site.siteMetadata;
+	const { title, description } = data.site.siteMetadata;
+	const favicon = data.allFile.nodes[0].publicURL;
 
 	return (
 		<>
@@ -27,9 +33,7 @@ const Layout = ({ children }) => {
 				<title>{title}</title>
 				<meta
 					name="description"
-					content="Project management platform for agile developers and
-				designers as well as project managers who need a beautiful tool
-				that makes their work really pleasant."
+					content={description}
 				/>
 				<link
 					rel="preload"
@@ -45,6 +49,17 @@ const Layout = ({ children }) => {
 					type="font/woff2"
 					crossOrigin=""
 				/>
+
+				<meta property="og:type" content="website" />
+				<meta property="og:site_name" content={title} />
+				<meta property="og:description" content={description} />
+				<meta property="og:image" content={favicon} />
+
+				<meta name="twitter:card" content="summary" />
+				<meta name="twitter:title" content={title} />
+				<meta name="twitter:description" content={description} />
+				<meta name="twitter:image" content={favicon} />
+
 				<noscript>
 					{`To use ${title}, please enable JavaScript.`}
 				</noscript>

@@ -8,6 +8,7 @@ module.exports = {
 	siteMetadata: {
 		title: 'Helium',
 		siteUrl: 'https://helium.now.sh',
+		description: 'Project management platform for agile developers and designers as well as project managers who need a beautiful tool that makes their work really pleasant.',
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
