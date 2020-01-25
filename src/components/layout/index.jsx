@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
 				siteMetadata {
 					title
 					description
+					siteUrl
 				}
 			}
 			allFile(filter: {base: {glob: "favicon*"}}) {
@@ -23,8 +24,8 @@ const Layout = ({ children }) => {
 			}
 		}
 	`);
-	const { title, description } = data.site.siteMetadata;
-	const favicon = data.allFile.nodes[0].publicURL;
+	const { title, description, siteUrl } = data.site.siteMetadata;
+	const favicon = siteUrl + data.allFile.nodes[0].publicURL;
 
 	return (
 		<>
