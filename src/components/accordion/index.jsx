@@ -30,7 +30,7 @@ const AccordionItem = ({ children }) => {
 		}));
 
 	return (
-		<li className={st.accordion__item} role="region">
+		<li className={st.accordion__item}>
 			<h3>
 				<button
 					className={st.accordion__header}
@@ -43,7 +43,7 @@ const AccordionItem = ({ children }) => {
 				</button>
 			</h3>
 
-			<div className={st.accordion__body} hidden>
+			<div className={st.accordion__body} hidden role="region">
 				{changeProps()}
 			</div>
 		</li>
