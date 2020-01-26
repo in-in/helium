@@ -52,7 +52,7 @@ Button.defaultProps = {
 	icon: '',
 	parentClass: '',
 	as: 'button',
-	href: '#0',
+	href: '//:0',
 	type: 'button',
 	onclick: (e) => e.preventDefault(),
 };
