@@ -31,6 +31,7 @@ const Customers = () => {
 									href={item.url}
 									className={st.customers__link}
 									title={item.name}
+									aria-label={item.name}
 								>
 									<Icon
 										filename={`customers/${item.name

@@ -26,6 +26,7 @@ const Social = () => {
 						href={item.url}
 						className={st.social__link}
 						title={item.name}
+						aria-label={item.name}
 					>
 						<Icon
 							filename={`social/${item.name.toLowerCase()}`}
