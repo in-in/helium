@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
 	return (
 		<>
 			<Helmet>
-				<html lang="en" />
+				<html lang="en" dir="ltr" />
 				<title>{title}</title>
 				<meta
 					name="description"
