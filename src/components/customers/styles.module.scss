@@ -49,7 +49,7 @@
 		scroll-snap-type: x;
 		padding: rem(16);
 
-		@include breakpoint(m) {
+		@include breakpoint(l) {
 			justify-content: center;
 		}
 
