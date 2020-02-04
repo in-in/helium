@@ -2,26 +2,26 @@
 	{
 		"question": "How secure is Helium?",
 		"answer": "All traffic on Helium works through SSL/TLS protocol, the most powerful and reliable protocol for safe communication. Your data is stored in the U.S. in Amazon Web Services (AWS) and is continuously copied from a remote location for disaster recovery. No one can access the data without written permission and we only ask if it is really necessary for debugging.",
-		"link": "//:1"
+		"link": "//1"
 	},
 	{
 		"question": "How do I increase the storage size?",
 		"answer": "At the moment Helium is still in beta, so we have a fixed limit on the storage size (500 MB per organization). After the beta-version the user will have much more space for storing and downloading files, and the size will depend on what paid tariff plan he buys.",
-		"link": "//:2"
+		"link": "//2"
 	},
 	{
 		"question": "Can I try the app for free before I purchase it?",
 		"answer": "You can try out the server products within 30 days (with the possibility of prolongation up to 60 days maximum) before purchase that will allow you to see and use Helium software before purchase. Helium is a full-featured server version of each of our products for trial use. What you use during the test you will get when you buy it.",
-		"link": "//:3"
+		"link": "//3"
 	},
 	{
 		"question": "How do I export my personal data?",
 		"answer": "You can download a .json file with your personal information by visiting your account and clicking the \"Get Personal Data\" button at the bottom of the settings page.",
-		"link": "//:4"
+		"link": "//4"
 	},
 	{
 		"question": "How do I delete my Helium account?",
 		"answer": "You can easily delete your Helium account by visiting it and clicking the \"Delete this account\" link at the bottom of the settings page. The app will send you an e-mail asking you to confirm the deletion of your account. As soon as you confirm this, your account will be deleted.",
-		"link": "//:5"
+		"link": "//5"
 	}
 ]
