@@ -31,8 +31,7 @@ Helium on [Figma](https://www.figma.com/file/OglK88QZl9TWF02CrNiiHsYS/helium?nod
 
 * Responsive Layout
 * Seo Friendly HTML Code
-* Google Web Fonts
-* Valid HTML and CSS Code
+* Web Fonts
 * Swiper Carousel
 * Works in All Major Browsers
 
@@ -48,7 +47,7 @@ npm start
 **Create new component**
 
 ```shell
-npm run gen component-name
+npm run gen <component-name>
 ```
 
 **Create a production build**
