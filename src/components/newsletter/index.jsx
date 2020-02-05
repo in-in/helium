@@ -42,6 +42,7 @@ const Newsletter = () => {
 							className={st.newsletter__input}
 							type="email"
 							placeholder="Email Address"
+							required
 						/>
 						<Button
 							variant="secondary"
