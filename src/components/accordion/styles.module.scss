@@ -64,26 +64,8 @@
 		overflow: hidden;
 		margin-block-end: rem(24);
 
-		[data-accordion-open='true'] & {
-			animation: slide-down 2s ease-in-out;
-		}
-
 		@include breakpoint(xl) {
 			margin-block-end: t2c(24, xl);
-		}
-	}
-}
-
-@keyframes slide-down {
-	0% {
-		max-height: 0;
-	}
-
-	100% {
-		max-height: rem(3000);
-
-		@include breakpoint(xl) {
-			max-height: t2c(3000, xl);
 		}
 	}
 }
