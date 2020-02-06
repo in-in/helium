@@ -17,14 +17,14 @@
 	],
 	"dependencies": {
 		"@danbruegge/gatsby-plugin-stylelint": "4.0.0",
-		"gatsby": "2.18.25",
-		"gatsby-plugin-manifest": "2.2.37",
-		"gatsby-plugin-react-helmet": "3.1.21",
+		"gatsby": "2.19.12",
+		"gatsby-plugin-manifest": "2.2.41",
+		"gatsby-plugin-react-helmet": "3.1.22",
 		"gatsby-plugin-react-svg": "3.0.0",
 		"gatsby-plugin-robots-txt": "1.5.0",
-		"gatsby-plugin-sass": "2.1.27",
-		"gatsby-source-filesystem": "2.1.46",
-		"gatsby-transformer-json": "2.2.25",
+		"gatsby-plugin-sass": "2.1.28",
+		"gatsby-source-filesystem": "2.1.48",
+		"gatsby-transformer-json": "2.2.26",
 		"prop-types": "15.7.2",
 		"react": "16.12.0",
 		"react-dom": "16.12.0",
@@ -33,15 +33,15 @@
 		"swiper": "5.3.0"
 	},
 	"devDependencies": {
-		"@arkweid/lefthook": "0.7.0",
+		"@arkweid/lefthook": "0.7.1",
 		"autoprefixer": "9.7.4",
 		"babel-eslint": "10.0.3",
-		"browserslist": "4.8.3",
+		"browserslist": "4.8.6",
 		"eslint": "6.8.0",
 		"eslint-config-airbnb": "18.0.1",
-		"eslint-plugin-import": "2.20.0",
+		"eslint-plugin-import": "2.20.1",
 		"eslint-plugin-jsx-a11y": "6.2.3",
-		"eslint-plugin-react": "7.18.0",
+		"eslint-plugin-react": "7.18.3",
 		"eslint-plugin-react-hooks": "2.3.0",
 		"plop": "2.5.3",
 		"postcss-logical": "4.0.2",
@@ -50,7 +50,7 @@
 		"stylelint": "13.0.0",
 		"stylelint-a11y": "1.2.2",
 		"stylelint-order": "4.0.0",
-		"stylelint-scss": "3.13.0",
-		"stylelint-use-nesting": "1.2.1"
+		"stylelint-scss": "3.14.2",
+		"stylelint-use-nesting": "2.0.0"
 	}
 }
