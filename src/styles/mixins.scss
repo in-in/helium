@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'sass:string';
+@use 'sass:color';
 @use 'functions' as *;
 @use 'vars' as *;
 
@@ -81,13 +82,13 @@
 	}
 }
 
-@mixin active() {
+@mixin active($color) {
 	background-position: center;
 	background-image:
 		radial-gradient(
 			circle,
 			$crystal calc(1% - 1px),
-			currentColor 1%
+			color.scale($color, $lightness: -50%) 1%
 		);
 	background-size: 15000%;
 	transition-property: background-size;
@@ -96,6 +97,7 @@
 	&:active {
 		background-color: $crystal;
 		background-size: 100%;
+		color: color.scale($color, $lightness: 80%);
 		transition-property: background-size;
 		transition-duration: 0s;
 	}

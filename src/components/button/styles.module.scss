@@ -41,7 +41,7 @@
 			color: $blue_cobalt;
 		}
 
-		@include active();
+		@include active($blue_cobalt--l_10);
 	}
 
 	&_secondary {
@@ -53,7 +53,7 @@
 			background-color: $blue_cobalt--l_10;
 		}
 
-		@include active();
+		@include active($white);
 	}
 
 	&_plain {
@@ -65,7 +65,7 @@
 			color: $blue_cobalt--l_10;
 		}
 
-		@include active();
+		@include active($blue_cobalt--l_20);
 
 		&-invert {
 			composes: $root;
@@ -75,6 +75,8 @@
 			@include hover() {
 				color: $blue_cornflower--l_30;
 			}
+
+			@include active($white);
 		}
 	}
 
@@ -88,7 +90,7 @@
 			color: $gray_french--d_50;
 		}
 
-		@include active();
+		@include active($gray_french--d_40);
 	}
 
 	&_bright {
@@ -101,6 +103,6 @@
 			color: $blue_cobalt--d_20;
 		}
 
-		@include active();
+		@include active($blue_cobalt--d_10);
 	}
 }
